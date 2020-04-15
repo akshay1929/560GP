@@ -4,6 +4,12 @@
 --CREATE SCHEMA Product;
 --GO
 
+--CREATE SCHEMA Warehouse;
+--GO
+
+--CREATE SCHEMA Users;
+--GO
+
 DROP TABLE IF EXISTS Sales.Employees;
 DROP TABLE IF EXISTS Sales.Orders;
 DROP TABLE IF EXISTS Sales.OrderLines;
@@ -11,6 +17,26 @@ DROP TABLE IF EXISTS Product.ProductType;
 DROP TABLE IF EXISTS Product.Inventory;
 DROP TABLE IF EXISTS Warehouse.Shipment;
 DROP TABLE IF EXISTS Users.Member;
+
+CREATE TABLE Users.Member
+(
+    MemberID INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
+    Email NVARCHAR(128) NOT NULL,
+    FirstName NVARCHAR(32) NOT NULL,
+    LastName NVARCHAR(32) NOT NULL,
+    Phone INT NOT NULL,
+    BillingAddress NVARCHAR(128) NOT NULL,
+    Points INT NOT NULL,
+    JoinedOn DATETIMEOFFSET NOT NULL DEFAULT(SYSDATETIMEOFFSET()),
+    BirthDate DATETIMEOFFSET NOT NULL DEFAULT(SYSDATETIMEOFFSET()),
+    [Status] NVARCHAR(32) NOT NULL,
+
+    UNIQUE    
+    (      
+        Email,
+        Phone   
+    )
+);
 
 CREATE TABLE Sales.Employees
 (
@@ -25,21 +51,26 @@ CREATE TABLE Sales.Employees
         EmployeeID,
         Email
     )
-)
+);
+
 
 CREATE TABLE Sales.Orders
 (
     OrderID INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
-    MemberID INT NOT NULL,
-    EmployeeID INT NOT NULL,
+    MemberID INT NOT NULL FOREIGN KEY
+        REFERENCES Users.Member(MemberID),
+    EmployeeID INT NOT NULL FOREIGN KEY
+        REFERENCES Sales.Employees(EmployeeID),
+    ProductID INT NOT NULL,
     OrderDate DATETIMEOFFSET NOT NULL DEFAULT SYSDATETIMEOFFSET()
 
     UNIQUE 
     (
         MemberID,
-        EmployeeID
+        EmployeeID,
+        ProductID
     )
-)
+);
 
 CREATE TABLE Sales.OrderLines
 (
@@ -49,7 +80,7 @@ CREATE TABLE Sales.OrderLines
     ProductID INT NOT NULL,
     Quantity INT NOT NULL,
     UnitPrice FLOAT NOT NULL
-)
+);
 
 CREATE TABLE Product.Inventory
 (
@@ -72,40 +103,16 @@ CREATE TABLE Product.ProductType
 CREATE TABLE Warehouse.Shipment
 (
     ShipmentID INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
-    ProductID INT NOT NULL,
-    OrderID INT NOT NULL,
+    ProductID INT NOT NULL FOREIGN KEY
+        REFERENCES Product.Inventory(ProductID),
+    OrderID INT NOT NULL FOREIGN KEY
+        REFERENCES Sales.Orders(OrderID),
     ShipmentDate DATETIMEOFFSET NOT NULL DEFAULT(SYSDATETIMEOFFSET()),
     ShipmentAddress NVARCHAR(128) NOT NULL DEFAULT(SYSDATETIMEOFFSET()),
 
-    CONSTRAINT [UK_Warehouse_Shipment_ProductID] UNIQUE   
+    UNIQUE   
     (      
         ProductID   
     ),
-
-    CONSTRAINT [FK_Warehouse_Shipment_Product_Inventory] FOREIGN KEY
-    (
-        ProductID,
-        OrderID
-    )
-    REFERENCES Clubs.Club(ClubID)
 );
 
-CREATE TABLE Users.Member
-(
-    MemberID INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
-    Email NVARCHAR(128) NOT NULL,
-    FirstName NVARCHAR(32) NOT NULL,
-    LastName NVARCHAR(32) NOT NULL,
-    Phone INT NOT NULL,
-    BillingAddress NVARCHAR(128) NOT NULL,
-    Points INT NOT NULL,
-    JoinedOn DATETIMEOFFSET NOT NULL DEFAULT(SYSDATETIMEOFFSET()),
-    BirthDate DATETIMEOFFSET NOT NULL DEFAULT(SYSDATETIMEOFFSET()),
-    [Status] NVARCHAR(32) NOT NULL,
-
-    CONSTRAINT [UK_Users_Member_Email_Phone] UNIQUE   
-    (      
-        Email,
-        Phone   
-    ),
-);
