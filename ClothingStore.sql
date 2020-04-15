@@ -9,6 +9,8 @@ DROP TABLE IF EXISTS Sales.Orders;
 DROP TABLE IF EXISTS Sales.OrderLines;
 DROP TABLE IF EXISTS Product.ProductType;
 DROP TABLE IF EXISTS Product.Inventory;
+DROP TABLE IF EXISTS Warehouse.Shipment;
+DROP TABLE IF EXISTS Users.Member;
 
 CREATE TABLE Sales.Employees
 (
@@ -65,4 +67,45 @@ CREATE TABLE Product.ProductType
 	[Description] NVARCHAR(128) NOT NULL,
 	Price FLOAT NOT NULL,
 	Rating FLOAT NOT NULL
+);
+
+CREATE TABLE Warehouse.Shipment
+(
+    ShipmentID INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
+    ProductID INT NOT NULL,
+    OrderID INT NOT NULL,
+    ShipmentDate DATETIMEOFFSET NOT NULL DEFAULT(SYSDATETIMEOFFSET()),
+    ShipmentAddress NVARCHAR(128) NOT NULL DEFAULT(SYSDATETIMEOFFSET()),
+
+    CONSTRAINT [UK_Warehouse_Shipment_ProductID] UNIQUE   
+    (      
+        ProductID   
+    ),
+
+    CONSTRAINT [FK_Warehouse_Shipment_Product_Inventory] FOREIGN KEY
+    (
+        ProductID,
+        OrderID
+    )
+    REFERENCES Clubs.Club(ClubID)
+);
+
+CREATE TABLE Users.Member
+(
+    MemberID INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
+    Email NVARCHAR(128) NOT NULL,
+    FirstName NVARCHAR(32) NOT NULL,
+    LastName NVARCHAR(32) NOT NULL,
+    Phone INT NOT NULL,
+    BillingAddress NVARCHAR(128) NOT NULL,
+    Points INT NOT NULL,
+    JoinedOn DATETIMEOFFSET NOT NULL DEFAULT(SYSDATETIMEOFFSET()),
+    BirthDate DATETIMEOFFSET NOT NULL DEFAULT(SYSDATETIMEOFFSET()),
+    [Status] NVARCHAR(32) NOT NULL,
+
+    CONSTRAINT [UK_Users_Member_Email_Phone] UNIQUE   
+    (      
+        Email,
+        Phone   
+    ),
 );
