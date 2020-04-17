@@ -53,6 +53,12 @@ CREATE TABLE Sales.Employees
     )
 );
 
+CREATE TABLE Warehouse.Shipment
+(
+    ShipmentID INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
+    ShipmentDate DATETIMEOFFSET NOT NULL DEFAULT(SYSDATETIMEOFFSET()),
+    ShipmentAddress NVARCHAR(128) NOT NULL DEFAULT(SYSDATETIMEOFFSET())
+);
 
 CREATE TABLE Sales.Orders
 (
@@ -61,25 +67,22 @@ CREATE TABLE Sales.Orders
         REFERENCES Users.Member(MemberID),
     EmployeeID INT NOT NULL FOREIGN KEY
         REFERENCES Sales.Employees(EmployeeID),
-    ProductID INT NOT NULL,
-    OrderDate DATETIMEOFFSET NOT NULL DEFAULT SYSDATETIMEOFFSET()
+    ShipmentID INT NOT NULL FOREIGN KEY
+        REFERENCES Warehouse.Shipment(ShipmentID),
+    OrderDate DATETIMEOFFSET NOT NULL DEFAULT SYSDATETIMEOFFSET(),
+    ShipmentAddress NVARCHAR(128) NOT NULL DEFAULT(SYSDATETIMEOFFSET())
 
     UNIQUE 
     (
         MemberID,
-        EmployeeID,
-        ProductID
+        EmployeeID
     )
 );
 
-CREATE TABLE Sales.OrderLines
+CREATE TABLE Product.ProductType
 (
-    OrderLineID INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
-    OrderID INT NOT NULL FOREIGN KEY
-        REFERENCES Sales.Orders(OrderID),
-    ProductID INT NOT NULL,
-    Quantity INT NOT NULL,
-    UnitPrice FLOAT NOT NULL
+	ProductTypeID INT NOT NULL PRIMARY KEY,
+    [Name] NVARCHAR(32) NOT NULL
 );
 
 CREATE TABLE Product.Inventory
@@ -87,32 +90,24 @@ CREATE TABLE Product.Inventory
 	ProductID INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
 	SKU INT NOT NULL UNIQUE,
 	ProductName NVARCHAR(32) NOT NULL,
-	Quantity INT NOT NULL
+    ProductTypeID INT NOT NULL FOREIGN KEY
+        REFERENCES Product.ProductType(ProductTypeID),
+	Quantity INT NOT NULL,
+    [Description] NVARCHAR(128) NOT NULL,
+    Price FLOAT NOT NULL,
+	Rating FLOAT NOT NULL  
 );
 
-CREATE TABLE Product.ProductType
+CREATE TABLE Sales.OrderLines
 (
-	ProductType NVARCHAR(32) NOT NULL PRIMARY KEY,
-	ProductID INT NOT NULL FOREIGN KEY
-		REFERENCES Product.Inventory(ProductID),
-	[Description] NVARCHAR(128) NOT NULL,
-	Price FLOAT NOT NULL,
-	Rating FLOAT NOT NULL
-);
-
-CREATE TABLE Warehouse.Shipment
-(
-    ShipmentID INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
-    ProductID INT NOT NULL FOREIGN KEY
-        REFERENCES Product.Inventory(ProductID),
+    OrderLineID INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
     OrderID INT NOT NULL FOREIGN KEY
         REFERENCES Sales.Orders(OrderID),
-    ShipmentDate DATETIMEOFFSET NOT NULL DEFAULT(SYSDATETIMEOFFSET()),
-    ShipmentAddress NVARCHAR(128) NOT NULL DEFAULT(SYSDATETIMEOFFSET()),
-
-    UNIQUE   
-    (      
-        ProductID   
-    ),
+    ProductID INT NOT NULL FOREIGN KEY
+        REFERENCES Product.Inventory(ProductID),
+    Quantity INT NOT NULL,
+    UnitPrice FLOAT NOT NULL
 );
+
+
 
