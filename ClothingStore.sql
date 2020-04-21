@@ -10,12 +10,12 @@
 --CREATE SCHEMA Users;
 --GO
 
-DROP TABLE IF EXISTS Sales.Employees;
-DROP TABLE IF EXISTS Sales.Orders;
+DROP TABLE IF EXISTS Warehouse.Shipment;
 DROP TABLE IF EXISTS Sales.OrderLines;
+DROP TABLE IF EXISTS Sales.Orders;
+DROP TABLE IF EXISTS Sales.Employees;
 DROP TABLE IF EXISTS Product.ProductType;
 DROP TABLE IF EXISTS Product.Inventory;
-DROP TABLE IF EXISTS Warehouse.Shipment;
 DROP TABLE IF EXISTS Users.Member;
 
 CREATE TABLE Users.Member
