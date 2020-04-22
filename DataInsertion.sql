@@ -19,82 +19,7 @@ VALUES
 SELECT *
 FROM Sales.Employees
 
-SELECT *
-FROM Users.Member
 
-SELECT *
-FROM Warehouse.Shipment
-
-INSERT Sales.Orders(OrderDate, ShipmentAddress)
-VALUES 
-    (N'05-11-2020 11:00:00.0000000 -05:00', N'762-4876 Risus. Av.'), 
-    (N'27-07-2020 12:00:00.0000000 -05:00', N'7182 Ornare. Av.'), 
-    (N'05-10-2020 13:00:00.0000000 -05:00', N'P.O. Box 387, 2496 Odio St.'), 
-    (N'26-05-2019 14:00:00.0000000 -05:00', N'792-140 Dapibus St.'), 
-    (N'01-10-2019 15:00:00.0000000 -05:00', N'376-1818 Fermentum Rd.'), 
-    (N'14-11-2019 16:00:00.0000000 -05:00', N'Ap #385-9042 Scelerisque St.'), 
-    (N'04-10-2019 17:00:00.0000000 -05:00', N'Ap #188-4974 Donec Road'), 
-    (N'04-01-2020 18:00:00.0000000 -05:00', N'486-6876 Diam. Avenue'), 
-    (N'16-04-2020 19:00:00.0000000 -05:00', N'P.O. Box 490, 1718 Elit. Rd.'), 
-    (N'15-11-2019 10:55:00.0000000 -05:00', N'537-6249 Adipiscing Rd.'), 
-    (N'23-04-2020 15:50:00.0000000 -05:00', N'158-1921 Odio Rd.'), 
-    (N'25-02-2021 18:40:00.0000000 -05:00', N'612 Sagittis Road'), 
-    (N'19-03-2021 12:30:00.0000000 -05:00', N'Ap #448-6685 Est Av.'), 
-    (N'02-03-2021 11:20:00.0000000 -05:00', N'Ap #276-1618 Orci. St.'), 
-    (N'02-05-2019 17:10:00.0000000 -05:00', N'Ap #241-3034 Cursus Av.'); 
-    /*
-    ((SELECT M.MemberID FROM Users.Member M), N'05-11-2020 11:00:00.0000000 -05:00', N'762-4876 Risus. Av.'), 
-    ((SELECT M.MemberID FROM Users.Member M), N'27-07-2020 12:00:00.0000000 -05:00', N'7182 Ornare. Av.'), 
-    ((SELECT M.MemberID FROM Users.Member M), N'05-10-2020 13:00:00.0000000 -05:00', N'P.O. Box 387, 2496 Odio St.'), 
-    ((SELECT M.MemberID FROM Users.Member M), N'26-05-2019 14:00:00.0000000 -05:00', N'792-140 Dapibus St.'), 
-    ((SELECT M.MemberID FROM Users.Member M), N'01-10-2019 15:00:00.0000000 -05:00', N'376-1818 Fermentum Rd.'), 
-    ((SELECT M.MemberID FROM Users.Member M), N'14-11-2019 16:00:00.0000000 -05:00', N'Ap #385-9042 Scelerisque St.'), 
-    ((SELECT M.MemberID FROM Users.Member M), N'04-10-2019 17:00:00.0000000 -05:00', N'Ap #188-4974 Donec Road'), 
-    ((SELECT M.MemberID FROM Users.Member M), N'04-01-2020 18:00:00.0000000 -05:00', N'486-6876 Diam. Avenue'), 
-    ((SELECT M.MemberID FROM Users.Member M), N'16-04-2020 19:00:00.0000000 -05:00', N'P.O. Box 490, 1718 Elit. Rd.'), 
-    ((SELECT M.MemberID FROM Users.Member M), N'15-11-2019 10:55:00.0000000 -05:00', N'537-6249 Adipiscing Rd.'), 
-    ((SELECT M.MemberID FROM Users.Member M), N'23-04-2020 15:50:00.0000000 -05:00', N'158-1921 Odio Rd.'), 
-    ((SELECT M.MemberID FROM Users.Member M), N'25-02-2021 18:40:00.0000000 -05:00', N'612 Sagittis Road'), 
-    ((SELECT M.MemberID FROM Users.Member M), N'19-03-2021 12:30:00.0000000 -05:00', N'Ap #448-6685 Est Av.'), 
-    ((SELECT M.MemberID FROM Users.Member M), N'02-03-2021 11:20:00.0000000 -05:00', N'Ap #276-1618 Orci. St.'), 
-    ((SELECT M.MemberID FROM Users.Member M), N'02-05-2019 17:10:00.0000000 -05:00', N'Ap #241-3034 Cursus Av.');
-    */
-
-INSERT Sales.OrderLines(Quantity, UnitPrice)
-VALUES    
-    (2, 29.5), 
-    (5, 38.17), 
-    (6, 58.5), 
-    (4, 42.23), 
-    (8, 97.8), 
-    (9, 74.5), 
-    (1, 52.03), 
-    (3, 80.54), 
-    (4, 66.63), 
-    (8, 60.7), 
-    (6, 92.02), 
-    (5, 86.42), 
-    (7, 74.25), 
-    (9, 17.61), 
-    (4, 81.08); 
-
-INSERT Warehouse.Shipment(ShipmentDate, ShipmentAddress)
-VALUES 
-    (N'2018-10-09 11:00:00.0000000 -05:00', N'8 W Cerritos Ave #54'),
-    (N'2018-08-19 11:00:00.0000000 -05:00', N'7 W Jackson Blvd'),
-    (N'2019-11-25 11:00:00.0000000 -05:00', N'87895 Concord Rd'),
-    (N'2018-04-03 11:00:00.0000000 -05:00', N'6 Greenleaf Ave'),
-    (N'2020-04-16 11:00:00.0000000 -05:00', N'56 E Morehead St'),
-    (N'2017-09-09 11:00:00.0000000 -05:00', N'2 Sw Nyberg Rd'),
-    (N'2018-01-02 11:00:00.0000000 -05:00', N'105 Richmond Valley Rd'),
-    (N'2017-12-15 11:00:00.0000000 -05:00', N'14302 Pennsylvania Ave'),
-    (N'2018-05-26 11:00:00.0000000 -05:00', N'59 N Groesbeck Hwy'),
-    (N'2018-02-19 11:00:00.0000000 -05:00', N'278 Bayview Ave'),
-    (N'2019-06-23 11:00:00.0000000 -05:00', N'74989 Brandon St'),
-    (N'2018-10-31 11:00:00.0000000 -05:00', N'31 Douglas Blvd #950'),
-    (N'2020-03-30 11:00:00.0000000 -05:00', N'82 Us Highway 46'),
-    (N'2018-10-27 11:00:00.0000000 -05:00', N'1 N San Saba'),
-    (N'2019-11-09 11:00:00.0000000 -05:00', N'82 Winsor St #54');
 
 
 INSERT Users.Member(Email, FirstName, LastName, Phone, BillingAddress, Points, JoinedOn, BirthDate, [Status])
@@ -115,6 +40,76 @@ VALUES
     (N'jacqueline.rowling@yahoo.com', N'Jacqueline', N'Rowling', N'814-865-8113', N'1 N San Saba', N'90', N'2018-03-27', N'1991-02-28', N'Active'),
     (N'jgabisi@hotmail.com', N'Janey', N'Gabisi', N'608-967-7194', N'40 Cambridge Ave', N'40', N'2019-06-14', N'1982-08-31', N'Inactive'); 
 
+SELECT *
+FROM Users.Member
+
+
+INSERT Warehouse.Shipment(ShipmentDate, ShipmentAddress)
+VALUES 
+    (N'2018-10-09 11:00:00.0000000 -05:00', N'8 W Cerritos Ave #54'),
+    (N'2018-08-19 11:00:00.0000000 -05:00', N'7 W Jackson Blvd'),
+    (N'2019-11-25 11:00:00.0000000 -05:00', N'87895 Concord Rd'),
+    (N'2018-04-03 11:00:00.0000000 -05:00', N'6 Greenleaf Ave'),
+    (N'2020-04-16 11:00:00.0000000 -05:00', N'56 E Morehead St'),
+    (N'2017-09-09 11:00:00.0000000 -05:00', N'2 Sw Nyberg Rd'),
+    (N'2018-01-02 11:00:00.0000000 -05:00', N'105 Richmond Valley Rd'),
+    (N'2017-12-15 11:00:00.0000000 -05:00', N'14302 Pennsylvania Ave'),
+    (N'2018-05-26 11:00:00.0000000 -05:00', N'59 N Groesbeck Hwy'),
+    (N'2018-02-19 11:00:00.0000000 -05:00', N'278 Bayview Ave'),
+    (N'2019-06-23 11:00:00.0000000 -05:00', N'74989 Brandon St'),
+    (N'2018-10-31 11:00:00.0000000 -05:00', N'31 Douglas Blvd #950'),
+    (N'2020-03-30 11:00:00.0000000 -05:00', N'82 Us Highway 46'),
+    (N'2018-10-27 11:00:00.0000000 -05:00', N'1 N San Saba'),
+    (N'2019-11-09 11:00:00.0000000 -05:00', N'82 Winsor St #54');
+
+
+
+SELECT *
+FROM Warehouse.Shipment
+
+INSERT Sales.Orders(MemberID, EmployeeID, ShipmentID, OrderDate, ShipmentAddress)
+VALUES 
+    (1, 1, 1, N'2020-08-14', N'762-4876 Risus. Av.'), 
+    (2, 2, 2, N'2020-03-13', N'7182 Ornare. Av.'), 
+    (3, 3, 3, N'2019-11-05', N'P.O. Box 387, 2496 Odio St.'), 
+    (4, 4, 4, N'2020-07-13', N'792-140 Dapibus St.'), 
+    (5, 5, 5, N'2019-10-28', N'376-1818 Fermentum Rd.'), 
+    (6, 6, 6, N'2020-08-07', N'Ap #385-9042 Scelerisque St.'), 
+    (7, 7, 7, N'2020-07-02', N'Ap #188-4974 Donec Road'), 
+    (8, 8, 8, N'2019-08-28', N'486-6876 Diam. Avenue'), 
+    (9, 9, 9, N'2020-11-07', N'P.O. Box 490, 1718 Elit. Rd.'), 
+    (10, 10, 10, N'2021-02-27', N'537-6249 Adipiscing Rd.'), 
+    (11, 11, 11, N'2020-07-03', N'158-1921 Odio Rd.'), 
+    (12, 12, 12, N'2019-06-20', N'612 Sagittis Road'), 
+    (13, 13, 13, N'2020-07-13', N'Ap #448-6685 Est Av.'), 
+    (14, 14, 14, N'2019-09-15', N'Ap #276-1618 Orci. St.'), 
+    (15, 15, 15, N'2019-12-18', N'Ap #241-3034 Cursus Av.'); 
+
+
+
+SELECT *
+FROM Sales.Orders
+
+
+
+INSERT Product.ProductType([Name])
+VALUES 
+	(N'Crop Tops'),
+	(N'Shirts & Blouses'),
+	(N'Denim Jeans'),
+	(N'Loungewear Shorts'),
+	(N'Denim Shorts'),
+	(N'Mini Dress'),
+	(N'Dresses'),
+	(N'Playsuits & Rompers'),
+	(N'Coats'),
+	(N'Jackets'),
+	(N'Mini Skirts'),
+	(N'Midi Skirts');
+
+
+SELECT *
+FROM Product.ProductType
 
 INSERT Product(SKU, ProductName, Quantity, [Description], Price, Rating, ProductTypeID)
 VALUES 
@@ -134,23 +129,27 @@ VALUES
     (N'UL23ZOXC', N'Teddy Coat', 500, N'Oversized faux fur coat. Collared neckline. Front zip fastening. Twin front pockets. Elasticated cuffs and band. 100% Polyester', 67.55, 4.4, 9),
     (N'EV77KGZB', N'Polly Puffer Jacket', 500, N'Puffer jacket. Front zip fastening. Twin pockets at front. High neckline. Corduroy design. 100% cotton', 75.08, 4.6, 10); 
 
+
 SELECT *
 FROM Product
 
-INSERT Product.ProductType([Name])
-VALUES 
-	(N'Crop Tops'),
-	(N'Shirts & Blouses'),
-	(N'Denim Jeans'),
-	(N'Loungewear Shorts'),
-	(N'Denim Shorts'),
-	(N'Mini Dress'),
-	(N'Dresses'),
-	(N'Playsuits & Rompers'),
-	(N'Coats'),
-	(N'Jackets'),
-	(N'Mini Skirts'),
-	(N'Midi Skirts');
+INSERT Sales.OrderLines(OrderID, ProductID, Quantity, UnitPrice)
+VALUES    
+    (1, 1, 2, 29.5), 
+    (2, 2, 5, 38.17), 
+    (3, 3, 6, 58.5), 
+    (4, 4, 4, 42.23), 
+    (5, 5, 8, 97.8), 
+    (6, 6, 9, 74.5), 
+    (7, 7, 1, 52.03), 
+    (8, 8, 3, 80.54), 
+    (9, 9, 4, 66.63), 
+    (10, 10, 8, 60.7), 
+    (11, 11, 6, 92.02), 
+    (12, 12, 5, 86.42), 
+    (13, 8, 7, 74.25), 
+    (14, 4, 9, 17.61), 
+    (15, 9, 4, 81.08); 
 
 SELECT *
-FROM Product.ProductType
+FROM Sales.OrderLines
