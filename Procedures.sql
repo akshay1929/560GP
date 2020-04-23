@@ -1,9 +1,28 @@
-/*Report #2*/
-SELECT M.FirstName, M.LastName, M.Points, M.[Status]
-FROM Users.Member M
-ORDER BY M.Points DESC
+/* Report #1 */
+SELECT 
+	P.ProductId, 
+	P.SKU, P.ProductName, 
+	P.Quantity,
+	P.[Description], 
+	P.Price, 
+	P.Rating
+FROM 
+	Product P
+ORDER BY 
+	P.Rating DESC
 
-/*Report #3*/
+/* Report #2 */
+SELECT 
+	M.FirstName, 
+	M.LastName, 
+	M.Points, 
+	M.[Status]
+FROM 
+	Users.Member M
+ORDER BY 
+	M.Points DESC
+
+/* Report #3 */
 SELECT 
     COUNT(O.OrderID) AS TotalOrders,
     SUM(IIF(MONTH(O.OrderDate) = 01, 1, 0)) AS JanOrderPlaced,
@@ -18,15 +37,70 @@ SELECT
     SUM(IIF(MONTH(O.OrderDate) = 10, 1, 0)) AS OctOrderPlaced,
     SUM(IIF(MONTH(O.OrderDate) = 11, 1, 0)) AS NovOrderPlaced,
     SUM(IIF(MONTH(O.OrderDate) = 12, 1, 0)) AS DecOrderPlaced
-FROM Sales.Orders O
+FROM 
+	Sales.Orders O
 
-/*Question #7*/
-SELECT P.ProductTypeID, P.ProductName, P.Quantity
-FROM Product P
-WHERE P.ProductTypeID = 2
+/* Question #1 */
+DECLARE @GivenEmail NVARCHAR(128);
+SET @GivenEmail = 'ilene.eroman@hotmail.com';
 
-/*Question #8*/
-SELECT OL.OrderID, P.ProductName, OL.Quantity 
-FROM Sales.OrderLines OL
-    INNER JOIN Product P ON P.ProductID = OL.ProductID
-WHERE OL.OrderID = 2
+SELECT
+	M.MemberID,
+	M.Email,
+	M.FirstName,
+	M.LastName
+FROM
+	Users.Member M
+WHERE
+	M.Email = @GivenEmail
+
+/* Question #2 */
+DECLARE @GivenEmployeeID INT;
+SET @GivenEmployeeID = 5;
+
+SELECT
+	E.EmployeeID,
+	E.Salary
+FROM
+	Sales.Employees E
+WHERE
+	E.EmployeeID = @GivenEmployeeID
+
+/* Question #3 */
+DECLARE @GivenProductID INT;
+SET @GivenProductID = 1;
+
+SELECT
+	P.ProductID,
+	P.Quantity
+FROM
+	Product P
+WHERE
+	P.ProductID = @GivenProductID
+
+/* Question #7 */
+DECLARE @GivenProductTypeID INT;
+SET @GivenProductTypeID = 1;
+
+SELECT 
+	P.ProductTypeID,
+	P.ProductName, 
+	P.Quantity
+FROM 
+	Product P
+WHERE 
+	P.ProductTypeID = @GivenProductTypeID
+
+/* Question #8 */
+DECLARE @GivenOrderID INT;
+SET @GivenOrderID = 2;
+
+SELECT 
+	OL.OrderID, 
+	P.ProductName, 
+	OL.Quantity 
+FROM 
+	Sales.OrderLines OL
+		INNER JOIN Product P ON P.ProductID = OL.ProductID
+WHERE 
+	OL.OrderID = @GivenOrderID
