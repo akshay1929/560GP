@@ -40,6 +40,15 @@ SELECT
 FROM 
 	Sales.Orders O
 
+
+-- Report 4:
+SELECT PT.[Name], COUNT(P.ProductID) AS OrderCount, P.SKU
+FROM Product.ProductType PT
+    INNER JOIN Product P ON P.ProductTypeID = PT.ProductTypeID
+GROUP BY PT.[Name], P.SKU
+ORDER BY COUNT(P.ProductID) DESC, P.SKU DESC
+
+
 /* Question #1 */
 DECLARE @GivenEmail NVARCHAR(128);
 SET @GivenEmail = 'ilene.eroman@hotmail.com';
@@ -77,6 +86,30 @@ FROM
 	Product P
 WHERE
 	P.ProductID = @GivenProductID
+
+-- Question 4:
+DECLARE @Memberid INT --= ''
+SELECT M.MemberID, M.Status
+FROM Users.Member M
+WHERE M.MemberID = @Memberid
+GROUP BY M.MemberID, M.Status
+ORDER BY M.MemberID ASC
+
+-- Question 5:
+DECLARE @Address NVARCHAR(128) --= ''
+SELECT S.ShipmentID, S.ShipmentAddress, O.OrderID
+FROM Sales.Orders O
+    INNER JOIN Warehouse.Shipment S ON S.ShipmentAddress = O.ShipmentAddress
+WHERE S.ShipmentAddress = @Address
+GROUP BY S.ShipmentID, S.ShipmentAddress, O.OrderID
+ORDER BY S.ShipmentID ASC
+
+-- Question 6:
+DECLARE @Role NVARCHAR(32) --= ''
+SELECT E.EmployeeRole, COUNT(EmployeeID) AS SumOfEmployees
+FROM Sales.Employees E
+WHERE E.EmployeeRole = @Role
+GROUP BY E.EmployeeRole
 
 /* Question #7 */
 DECLARE @GivenProductTypeID INT;
