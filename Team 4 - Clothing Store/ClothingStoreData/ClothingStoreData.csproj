@@ -70,5 +70,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Delegate\" />
+    <Folder Include="Models\" />
+    <Folder Include="Sql\Data\" />
+    <Folder Include="Sql\Procedures\" />
+    <Folder Include="Sql\Schemas\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Sql\Tables\DropTables.sql" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
