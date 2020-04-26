@@ -46,6 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Delegate\FetchProductQuantityDelegate.cs" />
+    <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\ProductType.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -70,29 +73,34 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Delegate\" />
-    <Folder Include="Models\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <EmbeddedResource Include="Sql\Tables\DropTables.sql" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Sql\Data\Product.ProductType.sql" />
+    <Content Include="Sql\Data\Product.sql" />
     <Content Include="Sql\Data\Users.Member.sql" />
     <Content Include="Sql\Data\Warehouse.Shipment.sql" />
     <Content Include="Sql\Data\Sales.Employees.sql" />
     <Content Include="Sql\Data\Sales.OrderLines.sql" />
     <Content Include="Sql\Data\Sales.Orders.sql" />
+    <Content Include="Sql\Procedures\Users.GetMemberId.sql" />
+    <Content Include="Sql\Procedures\Product.RetrieveHighestRatings.sql" />
+    <Content Include="Sql\Procedures\Sales.FetchEmployeeSalary.sql" />
+    <Content Include="Sql\Procedures\Product.FetchProductQuantity.sql" />
     <Content Include="Sql\Procedures\Product.GetProductTypeCount.sql" />
     <Content Include="Sql\Procedures\Sales.GetEmployeeCount.sql" />
     <Content Include="Sql\Procedures\Warehouse.GetShipmentAddress.sql" />
-    <Content Include="Sql\Procedures\Users.GetMemberID.sql" />
+    <Content Include="Sql\Procedures\Users.FetchMemberStatus.sql" />
     <Content Include="Sql\Procedures\Product.GetOrderIdName.sql" />
     <Content Include="Sql\Procedures\Product.GetProductIdName.sql" />
     <Content Include="Sql\Schemas\Product.sql" />
     <Content Include="Sql\Schemas\Sales.sql" />
     <Content Include="Sql\Schemas\Users.sql" />
     <Content Include="Sql\Schemas\Warehouse.sql" />
+    <Content Include="Sql\Tables\Product.ProductType.sql" />
+    <Content Include="Sql\Tables\Product.sql" />
     <Content Include="Sql\Tables\Warehouse.Shipment.sql" />
     <Content Include="Sql\Tables\Users.Member.sql" />
     <Content Include="Sql\Tables\Sales.Employees.sql" />
