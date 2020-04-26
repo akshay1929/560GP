@@ -73,7 +73,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj">
+      <Project>{02c8a051-13f6-4522-806d-f31299cc6368}</Project>
+      <Name>DataAccess</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Sql\Tables\DropTables.sql" />
   </ItemGroup>

@@ -7,5 +7,6 @@ namespace ClothingStoreData.Delegate
 {
     class FetchProductQuantityDelegate : NonQueryDataDelegate<Product>
     {
+
     }
 }
