@@ -73,12 +73,23 @@
   <ItemGroup>
     <Folder Include="Delegate\" />
     <Folder Include="Models\" />
-    <Folder Include="Sql\Data\" />
-    <Folder Include="Sql\Procedures\" />
-    <Folder Include="Sql\Schemas\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Sql\Tables\DropTables.sql" />
+    <EmbeddedResource Include="Sql\Tables\DropTables.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Sql\Data\Sales.Employees.sql" />
+    <Content Include="Sql\Data\Sales.OrderLines.sql" />
+    <Content Include="Sql\Data\Sales.Orders.sql" />
+    <Content Include="Sql\Procedures\Product.GetOrderIdName.sql" />
+    <Content Include="Sql\Procedures\Product.GetProductIdName.sql" />
+    <Content Include="Sql\Schemas\Product.sql" />
+    <Content Include="Sql\Schemas\Sales.sql" />
+    <Content Include="Sql\Schemas\Users.sql" />
+    <Content Include="Sql\Schemas\Warehouse.sql" />
+    <Content Include="Sql\Tables\Sales.Employees.sql" />
+    <Content Include="Sql\Tables\Sales.OrderLines.sql" />
+    <Content Include="Sql\Tables\Sales.Orders.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
