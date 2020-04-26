@@ -78,15 +78,23 @@
     <EmbeddedResource Include="Sql\Tables\DropTables.sql" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Sql\Data\Users.Member.sql" />
+    <Content Include="Sql\Data\Warehouse.Shipment.sql" />
     <Content Include="Sql\Data\Sales.Employees.sql" />
     <Content Include="Sql\Data\Sales.OrderLines.sql" />
     <Content Include="Sql\Data\Sales.Orders.sql" />
+    <Content Include="Sql\Procedures\Product.GetProductTypeCount.sql" />
+    <Content Include="Sql\Procedures\Sales.GetEmployeeCount.sql" />
+    <Content Include="Sql\Procedures\Warehouse.GetShipmentAddress.sql" />
+    <Content Include="Sql\Procedures\Users.GetMemberID.sql" />
     <Content Include="Sql\Procedures\Product.GetOrderIdName.sql" />
     <Content Include="Sql\Procedures\Product.GetProductIdName.sql" />
     <Content Include="Sql\Schemas\Product.sql" />
     <Content Include="Sql\Schemas\Sales.sql" />
     <Content Include="Sql\Schemas\Users.sql" />
     <Content Include="Sql\Schemas\Warehouse.sql" />
+    <Content Include="Sql\Tables\Warehouse.Shipment.sql" />
+    <Content Include="Sql\Tables\Users.Member.sql" />
     <Content Include="Sql\Tables\Sales.Employees.sql" />
     <Content Include="Sql\Tables\Sales.OrderLines.sql" />
     <Content Include="Sql\Tables\Sales.Orders.sql" />
