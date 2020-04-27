@@ -1,5 +1,6 @@
+IF OBJECT_ID(N'Sales.Employee') IS NULL
 BEGIN
-	CREATE TABLE Sales.Employees
+	CREATE TABLE Sales.Employee
 	(
 	    MemberID INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
 		Email NVARCHAR(128) NOT NULL,
@@ -12,10 +13,15 @@ BEGIN
 		BirthDate DATETIMEOFFSET NOT NULL DEFAULT(SYSDATETIMEOFFSET()),
 		[Status] NVARCHAR(32) NOT NULL,
 
-		UNIQUE    
-		(      
-		    Email,
-		    Phone   
+		CONSTRAINT [PK_Sales_Employee_MemberID] PRIMARY KEY CLUSTERED
+		(
+			MemberID ASC
+		)
+
+		CONSTRAINT [UK_Sales_Email_Phone] PRIMARY KEY CLUSTERED
+		(
+			Email,
+		    Phone  
 		)
 	);
 END
