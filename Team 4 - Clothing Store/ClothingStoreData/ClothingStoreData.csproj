@@ -47,6 +47,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Delegate\FetchProductQuantityDelegate.cs" />
+    <Compile Include="Models\Member.cs" />
+    <Compile Include="Models\Shipment.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\ProductType.cs" />
     <Compile Include="Program.cs" />
