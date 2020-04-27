@@ -47,7 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Delegate\FetchProductQuantityDelegate.cs" />
+    <Compile Include="Delegate\GetEmployeeDataDelegate.cs" />
+    <Compile Include="Delegate\GetOrderDataDelegate.cs" />
+    <Compile Include="Models\Employees.cs" />
     <Compile Include="Models\Member.cs" />
+    <Compile Include="Models\OrderLines.cs" />
+    <Compile Include="Models\Orders.cs" />
     <Compile Include="Models\Shipment.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\ProductType.cs" />

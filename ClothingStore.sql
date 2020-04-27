@@ -51,7 +51,6 @@ CREATE TABLE Sales.Employees
 
     UNIQUE
     (
-        EmployeeID,
         Email
     )
 );
