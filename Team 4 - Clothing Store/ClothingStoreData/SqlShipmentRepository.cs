@@ -6,7 +6,7 @@ using System;
 
 namespace PersonData
 {
-    public class SqlShipmentRepository : IOrdersRepository
+    public class SqlShipmentRepository : IOrderRepository
     {
         private readonly SqlCommandExecutor executor;
 
