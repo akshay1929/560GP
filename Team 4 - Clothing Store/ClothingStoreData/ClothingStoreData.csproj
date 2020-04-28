@@ -46,12 +46,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Delegate\CreateProductDataDelegate.cs" />
     <Compile Include="Delegate\RetrieveHighestRatingsDataDelegate.cs" />
     <Compile Include="Delegate\FetchEmployeeSalaryDataDelegate.cs" />
     <Compile Include="Delegate\GetMemberIdDataDelegate.cs" />
     <Compile Include="Delegate\FetchProductQuantityDataDelegate.cs" />
     <Compile Include="Delegate\GetProductDataDelegate.cs" />
     <Compile Include="Delegate\GetOrderDataDelegate.cs" />
+    <Compile Include="IOrderRepository.cs" />
+    <Compile Include="IProductRepository.cs" />
     <Compile Include="Models\Employees.cs" />
     <Compile Include="Models\Member.cs" />
     <Compile Include="Models\OrderLines.cs" />
@@ -61,6 +64,8 @@
     <Compile Include="Models\ProductType.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlOrderRepository.cs" />
+    <Compile Include="SqlProductRepository.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
