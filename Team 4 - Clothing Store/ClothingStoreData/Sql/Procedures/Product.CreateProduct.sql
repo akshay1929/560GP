@@ -1,4 +1,4 @@
-CREATE OR ALTER PROCEDURE Person.CreateProduct
+CREATE OR ALTER PROCEDURE Product.CreateProduct
    @SKU NVARCHAR(32),
    @ProductName NVARCHAR(64),
    @ProductTypeId INT,

@@ -8,20 +8,10 @@ namespace ClothingStoreData.Delegate
 {
     class RetrieveHighestRatingsDataDelegate : DataReaderDelegate<IReadOnlyList<Product>>
     {
-        private readonly int productid;
 
-        public RetrieveHighestRatingsDataDelegate(int productid)
+        public RetrieveHighestRatingsDataDelegate()
            : base("Product.RetrieveHighestRatings")
         {
-            this.productid = productid;
-        }
-
-        public override void PrepareCommand(SqlCommand command)
-        {
-            base.PrepareCommand(command);
-
-            var p = command.Parameters.Add("ProductId", SqlDbType.Int);
-            p.Value = productid;
         }
 
         public override IReadOnlyList<Product> Translate(SqlCommand command, IDataRowReader reader)

@@ -1,5 +1,5 @@
 CREATE OR ALTER PROCEDURE Product.GetOrderIdName
-   @GivenOrderID INT;
+   @GivenOrderID INT
 AS
 
 SELECT 

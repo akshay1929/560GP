@@ -7,23 +7,23 @@ using DataAccess;
 using ClothingStoreData.Models;
 using System.Data.SqlClient;
 
+
 namespace ClothingStoreData.Delegate
 {
-   
-    public class GetProductTypeCountDataDelegate : DataReaderDelegate<Product>
+    class GetProductIdNameDataDelegate : DataReaderDelegate<Product>
     {
-        private readonly int productID;
-        public GetProductTypeCountDataDelegate(int s)
-         : base("Product.GetProductTypeCount")
+        private readonly ProductType productTypeID;
+        public GetProductIdNameDataDelegate(ProductType p)
+           : base("Product.GetProductIdName")
         {
-            this.productID = s;
+            this.productTypeID = p;
         }
 
         public override void PrepareCommand(SqlCommand command)
         {
             base.PrepareCommand(command);
 
-            command.Parameters.AddWithValue("ProductID", productID);
+            command.Parameters.AddWithValue("ProductTypeID", productTypeID);
         }
 
         public override Product Translate(SqlCommand command, IDataRowReader reader)
@@ -33,13 +33,14 @@ namespace ClothingStoreData.Delegate
 
             return new Product(
                reader.GetString("SKU"),
-               reader.GetString("ProductName"),
-               (ProductType)reader.GetByte("ProductType"),
+                reader.GetString("ProductName"),
+               productTypeID,
                reader.GetInt32("Quantity"),
-               reader.GetString("Description"),
-               reader.GetFloat("Price"),
-               reader.GetFloat("Rating")
+                reader.GetString("Description"),
+                reader.GetFloat("Price"),
+                reader.GetFloat("Rating")
                );
+
         }
     }
 }

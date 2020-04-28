@@ -14,6 +14,10 @@ namespace ClothingStoreData
 
         Product FetchProductQuantity(int quantity);
 
+        IReadOnlyList<Product> RetrieveHighestRatings();
+
+        Product GetProductIdName(ProductType producttype);
+
         Product CreateProduct(string sku, string productname,
            ProductType producttypeId, int quantity, string description, float price, float rating);
     }

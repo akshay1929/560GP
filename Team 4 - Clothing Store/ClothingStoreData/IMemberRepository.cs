@@ -5,14 +5,12 @@ namespace PersonData
 {
     public interface IMemberRepository
     {
-        IReadOnlyList<Member> RetrieveMember();
+        // IReadOnlyList<Member> RetrieveMember();
 
-        Member FetchMember(int MemberID);
+        Member FetchMemberStatus(int MemberID);
 
-        Member GetMember(string Email);
+        Member GetMemberId(string Email);
 
-        Member GetMemberPhone(string Phone);
-
-        Member CreateMember(string Email, string Phone, string firstName, string lastName, string BillingAddress, int Points, string Status);
+        // Member CreateMember(string Email, string Phone, string firstName, string lastName, string BillingAddress, int Points, string Status);
     }
 }

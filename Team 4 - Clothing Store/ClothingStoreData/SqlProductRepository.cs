@@ -12,7 +12,7 @@ namespace ClothingStoreData
         private readonly SqlCommandExecutor executor;
         public Product GetProduct(ProductType p)
         {
-            var d = new GetProductDataDelegate(p);
+            var d = new GetProductIdNameDataDelegate(p);
             return executor.ExecuteReader(d);
         }
 
@@ -20,6 +20,17 @@ namespace ClothingStoreData
         {
             var d = new FetchProductQuantityDataDelegate(quantity);
             return executor.ExecuteReader(d);
+        }
+
+        public Product GetProductIdName(ProductType producttypeid)
+        {
+            var d = new GetProductIdNameDataDelegate(producttypeid);
+            return executor.ExecuteReader(d);
+        }
+
+        public IReadOnlyList<Product> RetrieveHighestRatings()
+        {
+            return executor.ExecuteReader(new RetrieveHighestRatingsDataDelegate());
         }
 
 

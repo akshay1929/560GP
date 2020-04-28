@@ -6,19 +6,19 @@ using System.Collections.Generic;
 
 namespace ClothingStoreData
 {
-    public class SqlOrderRepository
+    public class SqlMemberRepository
     {
         private readonly SqlCommandExecutor executor;
 
-        public Orders GetOrder(int id)
+        public Member FetchMemberStatus(int memberid)
         {
-            var d = new GetOrderDataDelegate(id);
+            var d = new FetchMemberStatusDataDelegate(memberid);
             return executor.ExecuteReader(d);
         }
 
-        public Orders GetOrderId(string shipmentAddress)
+        public Member GetMemberId(string email)
         {
-            var d = new GetOrderIdDataDelegate(shipmentAddress);
+            var d = new GetMemberIdDataDelegate(email);
             return executor.ExecuteReader(d);
         }
     }

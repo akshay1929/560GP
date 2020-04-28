@@ -10,11 +10,12 @@ using System.Data.SqlClient;
 
 namespace ClothingStoreData.Delegate
 {
-    class GetShipmentAddressDataDelegate : DataReaderDelegate<Shipment>
+    class GetOrderIdDataDelegate : DataReaderDelegate<Orders>
     {
         private readonly string shipmentAddress;
-        public GetShipmentAddressDataDelegate(string s)
-           : base("Warehouse.GetShipmentAddress")
+
+        public GetOrderIdDataDelegate(string s)
+           : base("Warehouse.GetOrderId")
         {
             this.shipmentAddress = s;
         }
@@ -26,15 +27,18 @@ namespace ClothingStoreData.Delegate
             command.Parameters.AddWithValue("ShipmentAddress", shipmentAddress);
         }
 
-        public override Shipment Translate(SqlCommand command, IDataRowReader reader)
+        public override Orders Translate(SqlCommand command, IDataRowReader reader)
         {
             if (!reader.Read())
                 return null;
 
-            return new Shipment(
-               reader.GetString("ShipmentAddress")
-               );
-
+            return new Orders(
+               reader.GetInt32("OrderID"),
+               reader.GetInt32("MemberID"),
+               reader.GetInt32("EmployeeID"),
+               reader.GetInt32("ShipmentID"),
+               reader.GetDateTimeOffset("OrderDate"),
+               shipmentAddress);
         }
     }
 }

@@ -1,5 +1,5 @@
 CREATE OR ALTER PROCEDURE Warehouse.GetShipmentAddress
-   @GivenAddress NVARCHAR(128);
+   @GivenAddress NVARCHAR(128)
 AS
 
 SELECT S.ShipmentID, S.ShipmentAddress, O.OrderID

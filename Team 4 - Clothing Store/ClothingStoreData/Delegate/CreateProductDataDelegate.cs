@@ -23,7 +23,7 @@ namespace ClothingStoreData.Delegate
 
         public CreateProductDataDelegate(string sku, string productname,
            ProductType producttypeId, int quantity, string description, float price, float rating)
-           : base("Person.CreateProduct")
+           : base("Product.CreateProduct")
         {
             this.sku = sku;
             this.productname = productname;
