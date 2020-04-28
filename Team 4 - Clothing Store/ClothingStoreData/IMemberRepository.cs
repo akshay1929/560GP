@@ -3,7 +3,7 @@ using ClothingStoreData.Models;
 
 namespace PersonData
 {
-    public interface IPersonRepository
+    public interface IMemberRepository
     {
         IReadOnlyList<Member> RetrieveMember();
 

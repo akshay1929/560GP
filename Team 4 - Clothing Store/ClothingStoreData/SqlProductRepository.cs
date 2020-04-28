@@ -16,6 +16,12 @@ namespace ClothingStoreData
             return executor.ExecuteReader(d);
         }
 
+        public Product FetchProductQuantity(int quantity)
+        {
+            var d = new FetchProductQuantityDataDelegate(quantity);
+            return executor.ExecuteReader(d);
+        }
+
 
         public Product CreateProduct(string sku, string productname,
            ProductType producttypeId, int quantity, string description, float price, float rating)

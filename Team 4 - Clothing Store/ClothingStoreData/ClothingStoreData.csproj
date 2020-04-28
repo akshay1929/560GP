@@ -111,6 +111,7 @@
     <Content Include="Sql\Data\Sales.Employees.sql" />
     <Content Include="Sql\Data\Sales.OrderLines.sql" />
     <Content Include="Sql\Data\Sales.Orders.sql" />
+    <Content Include="Sql\Procedures\Product.CreateProduct.sql" />
     <Content Include="Sql\Procedures\Users.GetMemberId.sql" />
     <Content Include="Sql\Procedures\Product.RetrieveHighestRatings.sql" />
     <Content Include="Sql\Procedures\Sales.FetchEmployeeSalary.sql" />

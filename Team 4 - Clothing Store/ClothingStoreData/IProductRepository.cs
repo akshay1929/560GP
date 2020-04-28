@@ -11,6 +11,9 @@ namespace ClothingStoreData
     {
 
         Product GetProduct(ProductType id);
+
+        Product FetchProductQuantity(int quantity);
+
         Product CreateProduct(string sku, string productname,
            ProductType producttypeId, int quantity, string description, float price, float rating);
     }
