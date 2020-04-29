@@ -14,8 +14,10 @@ using DataAccess;
 
 namespace Team_4___Clothing_Store
 {
-    public partial class EmployeesData : Form// , IEmployeesRepository
+    public partial class EmployeesData : Form
     {
+        const string connectionString = "Data Source=mssql.cs.ksu.edu;Initial Catalog = arahman; User ID = arahman; Password=***********";
+
         public EmployeesData()
         {
             InitializeComponent();
@@ -23,7 +25,7 @@ namespace Team_4___Clothing_Store
 
         private void RetrieveEmployeesButton_Click(object sender, EventArgs e)
         {
-            SqlEmployeesRepository employees = SqlEmployeesRepository();
+            SqlEmployeesRepository employees = new SqlEmployeesRepository(connectionString);
             IReadOnlyList<Employees> employeeList = employees.RetrieveEmployees();
 
             foreach(Employees emp in employeeList)

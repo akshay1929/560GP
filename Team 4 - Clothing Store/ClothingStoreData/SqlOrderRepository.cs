@@ -10,93 +10,24 @@ namespace ClothingStoreData
 {
     public class SqlOrderRepository : IOrderRepository
     {
-        private readonly string connectionString;
+        private readonly SqlCommandExecutor executor;
 
         public SqlOrderRepository(string connectionString)
         {
-            this.connectionString = connectionString;
+            executor = new SqlCommandExecutor(connectionString);
         }
 
         public Orders GetOrder(int id)
         {
-            using (var connection = new SqlConnection(connectionString))
-            {
-                using (var command = new SqlCommand("Orders.GetOrder", connection))
-                {
-                    command.CommandType = CommandType.StoredProcedure;
-
-                    command.Parameters.AddWithValue("OrderID", id);
-
-                    connection.Open();
-
-                    using (var reader = command.ExecuteReader())
-                        return TranslateOrder(reader);
-                }
-            }
+            var d = new GetOrderDataDelegate(id);
+            return executor.ExecuteReader(d);
         }
 
         public Orders GetOrderId(string shipmentAddress)
         {
-            using (var connection = new SqlConnection(connectionString))
-            {
-                using (var command = new SqlCommand("Orders.GetOrder", connection))
-                {
-                    command.CommandType = CommandType.StoredProcedure;
-
-                    command.Parameters.AddWithValue("Shipment Address", shipmentAddress);
-
-                    connection.Open();
-
-                    using (var reader = command.ExecuteReader())
-                        return TranslateOrder(reader);
-                }
-            }
+            var d = new GetOrderIdDataDelegate(shipmentAddress);
+            return executor.ExecuteReader(d);
         }
 
-        private Orders TranslateOrder(SqlDataReader reader)
-        {
-            var orderIdOrdinal = reader.GetOrdinal("OrderID");
-            var memberIdOrdinal = reader.GetOrdinal("MemberID");
-            var employeeIdOrdinal = reader.GetOrdinal("EmployeeID");
-            var shipmentIdOrdinal = reader.GetOrdinal("ShipmentID");
-            var orderDateOrdinal = reader.GetOrdinal("OrderDate");
-            var shipmentAddressIdOrdinal = reader.GetOrdinal("Shipment Address");
-
-            if (!reader.Read())
-                return null;
-
-            return new Orders(
-               reader.GetInt32(orderIdOrdinal),
-                   reader.GetInt32(memberIdOrdinal),
-                   reader.GetInt32(employeeIdOrdinal),
-                   reader.GetInt32(shipmentIdOrdinal),
-                    reader.GetDateTimeOffset(orderDateOrdinal),
-                     reader.GetString(shipmentAddressIdOrdinal));
-        }
-
-        private IReadOnlyList<Orders> TranslateOrders(SqlDataReader reader)
-        {
-            var orders = new List<Orders>();
-
-            var orderIdOrdinal = reader.GetOrdinal("OrderID");
-            var memberIdOrdinal = reader.GetOrdinal("MemberID");
-            var employeeIdOrdinal = reader.GetOrdinal("EmployeeID");
-            var shipmentIdOrdinal = reader.GetOrdinal("ShipmentID");
-            var orderDateOrdinal = reader.GetOrdinal("OrderDate");
-            var shipmentAddressIdOrdinal = reader.GetOrdinal("Shipment Address");
-
-            while (reader.Read())
-            {
-                orders.Add(new Orders(
-                   reader.GetInt32(orderIdOrdinal),
-                   reader.GetInt32(memberIdOrdinal),
-                   reader.GetInt32(employeeIdOrdinal),
-                   reader.GetInt32(shipmentIdOrdinal),
-                    reader.GetDateTimeOffset(orderDateOrdinal),
-                     reader.GetString(shipmentAddressIdOrdinal)));
-            }
-
-            return orders;
-        }
     }
 }
