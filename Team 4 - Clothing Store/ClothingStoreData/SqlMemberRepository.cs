@@ -6,9 +6,14 @@ using System.Collections.Generic;
 
 namespace ClothingStoreData
 {
-    public class SqlMemberRepository
+    public class SqlMemberRepository : IMemberRepository
     {
         private readonly SqlCommandExecutor executor;
+
+        public SqlMemberRepository(string connectionString)
+        {
+            executor = new SqlCommandExecutor(connectionString);
+        }
 
         public Member FetchMemberStatus(int memberid)
         {

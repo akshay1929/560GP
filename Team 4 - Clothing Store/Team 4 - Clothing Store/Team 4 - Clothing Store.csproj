@@ -46,16 +46,58 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="EmployeesData.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="EmployeesData.Designer.cs">
+      <DependentUpon>EmployeesData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainDataSelection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainDataSelection.Designer.cs">
+      <DependentUpon>MainDataSelection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MembersData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MembersData.Designer.cs">
+      <DependentUpon>MembersData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrdersData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrdersData.Designer.cs">
+      <DependentUpon>OrdersData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductsData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductsData.Designer.cs">
+      <DependentUpon>ProductsData.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="ShipmentsData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShipmentsData.Designer.cs">
+      <DependentUpon>ShipmentsData.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="EmployeesData.resx">
+      <DependentUpon>EmployeesData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainDataSelection.resx">
+      <DependentUpon>MainDataSelection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MembersData.resx">
+      <DependentUpon>MembersData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrdersData.resx">
+      <DependentUpon>OrdersData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductsData.resx">
+      <DependentUpon>ProductsData.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -66,6 +108,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ShipmentsData.resx">
+      <DependentUpon>ShipmentsData.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -78,6 +123,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClothingStoreData\ClothingStoreData.csproj">
+      <Project>{c7ae9f52-fb7c-4b8b-a58b-17023687f0f5}</Project>
+      <Name>ClothingStoreData</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj">
+      <Project>{02c8a051-13f6-4522-806d-f31299cc6368}</Project>
+      <Name>DataAccess</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

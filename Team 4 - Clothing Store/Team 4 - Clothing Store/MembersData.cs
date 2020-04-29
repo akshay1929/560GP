@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Team_4___Clothing_Store
 {
-    public partial class Form1 : Form
+    public partial class MembersData : Form
     {
-        public Form1()
+        public MembersData()
         {
             InitializeComponent();
+        }
+
+        private void GetMemberIdButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -1,18 +1,18 @@
 ﻿using System.Collections.Generic;
 using ClothingStoreData.Models;
 
-namespace PersonData
+namespace ClothingStoreData
 {
     public interface IEmployeesRepository
     {
-        IReadOnlyList<Member> RetrieveMember();
+        IReadOnlyList<Employees> RetrieveEmployees();
 
         Employees FetchEmployeeSalary(int employeeid);
 
-        Member GetMember(string Email);
+        // Member GetMember(string Email);
 
-        Member GetMemberPhone(string Phone);
+        // Member GetMemberPhone(string Phone);
 
-        Member CreateMember(string Email, string Phone, string firstName, string lastName, string BillingAddress, int Points, string Status);
+        // Member CreateMember(string Email, string Phone, string firstName, string lastName, string BillingAddress, int Points, string Status);
     }
 }

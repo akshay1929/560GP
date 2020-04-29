@@ -10,6 +10,12 @@ namespace ClothingStoreData
     public class SqlProductRepository : IProductRepository
     {
         private readonly SqlCommandExecutor executor;
+
+        public SqlProductRepository(string connectionString)
+        {
+            executor = new SqlCommandExecutor(connectionString);
+        }
+
         public Product GetProduct(ProductType p)
         {
             var d = new GetProductIdNameDataDelegate(p);

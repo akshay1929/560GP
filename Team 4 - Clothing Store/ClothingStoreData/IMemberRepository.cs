@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using ClothingStoreData.Models;
 
-namespace PersonData
+namespace ClothingStoreData
 {
     public interface IMemberRepository
     {

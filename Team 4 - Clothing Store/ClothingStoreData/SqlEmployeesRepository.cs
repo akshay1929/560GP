@@ -6,13 +6,23 @@ using System.Collections.Generic;
 
 namespace ClothingStoreData
 {
-    public class SqlEmployeesRepository
+    public class SqlEmployeesRepository : IEmployeesRepository
     {
-        private readonly SqlCommandExecutor executor;
+        private readonly string connectionString;
 
-        public Orders FetchEmployeeSalary(int employeeid)
+        public SqlEmployeesRepository(string connectionString)
         {
-            var d = new GetOrderDataDelegate(employeeid);
+            this.connectionString = connectionString;
+        }
+
+        public IReadOnlyList<Employees> RetrieveEmployees()
+        {
+            return executor.ExecuteReader(new RetrieveEmployeesDataDelegate());
+        }
+
+        public Employees FetchEmployeeSalary(int employeeid)
+        {
+            var d = new FetchEmployeeSalaryDataDelegate(employeeid);
             return executor.ExecuteReader(d);
         }
     }

@@ -6,9 +6,14 @@ using System.Collections.Generic;
 
 namespace ClothingStoreData
 {
-    public class SqlOrderRepository
+    public class SqlOrderRepository : IOrderRepository
     {
         private readonly SqlCommandExecutor executor;
+
+        public SqlOrderRepository(string connectionString)
+        {
+            executor = new SqlCommandExecutor(connectionString);
+        }
 
         public Orders GetOrder(int id)
         {
