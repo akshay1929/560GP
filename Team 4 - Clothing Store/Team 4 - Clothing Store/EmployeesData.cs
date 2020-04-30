@@ -69,7 +69,14 @@ namespace Team_4___Clothing_Store
             SqlEmployeesRepository employees = new SqlEmployeesRepository(connectionString);
             
             Employees ee = employees.FetchEmployeeSalary(Convert.ToInt32(EmployeeIdTextBox.Text));
-            EmployeesList.Items.Add(ee.EmployeeID + " " + ee.Name);
+            EmployeesList.Items.Add(ee.EmployeeID + " " + ee.Name + " " + ee.Salary);
+
+
+            List<Employees> list = new List<Employees>();
+            list.Add(ee);
+
+            dataGridView1.DataSource = list;
+            
         }
 
         private void EmployeeIdTextBox_TextChanged(object sender, EventArgs e)
