@@ -46,6 +46,9 @@
             this.RatingLabel = new System.Windows.Forms.Label();
             this.FetchProductQuantity = new System.Windows.Forms.Button();
             this.GetProductNameButton = new System.Windows.Forms.Button();
+            this.retrieveProducts = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // ProductsList
@@ -53,7 +56,7 @@
             this.ProductsList.FormattingEnabled = true;
             this.ProductsList.Location = new System.Drawing.Point(12, 15);
             this.ProductsList.Name = "ProductsList";
-            this.ProductsList.Size = new System.Drawing.Size(390, 420);
+            this.ProductsList.Size = new System.Drawing.Size(76, 420);
             this.ProductsList.TabIndex = 0;
             // 
             // CreateProductButton
@@ -182,7 +185,7 @@
             // 
             // FetchProductQuantity
             // 
-            this.FetchProductQuantity.Location = new System.Drawing.Point(449, 308);
+            this.FetchProductQuantity.Location = new System.Drawing.Point(449, 270);
             this.FetchProductQuantity.Name = "FetchProductQuantity";
             this.FetchProductQuantity.Size = new System.Drawing.Size(212, 42);
             this.FetchProductQuantity.TabIndex = 16;
@@ -191,18 +194,38 @@
             // 
             // GetProductNameButton
             // 
-            this.GetProductNameButton.Location = new System.Drawing.Point(449, 393);
+            this.GetProductNameButton.Location = new System.Drawing.Point(449, 318);
             this.GetProductNameButton.Name = "GetProductNameButton";
             this.GetProductNameButton.Size = new System.Drawing.Size(212, 42);
             this.GetProductNameButton.TabIndex = 17;
             this.GetProductNameButton.Text = "Get Product Name";
             this.GetProductNameButton.UseVisualStyleBackColor = true;
             // 
+            // retrieveProducts
+            // 
+            this.retrieveProducts.Location = new System.Drawing.Point(449, 367);
+            this.retrieveProducts.Name = "retrieveProducts";
+            this.retrieveProducts.Size = new System.Drawing.Size(212, 43);
+            this.retrieveProducts.TabIndex = 18;
+            this.retrieveProducts.Text = "Retrieve Products";
+            this.retrieveProducts.UseVisualStyleBackColor = true;
+            this.retrieveProducts.Click += new System.EventHandler(this.retrieveProducts_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(94, 18);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(334, 417);
+            this.dataGridView1.TabIndex = 19;
+            // 
             // ProductsData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(703, 450);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.retrieveProducts);
             this.Controls.Add(this.GetProductNameButton);
             this.Controls.Add(this.FetchProductQuantity);
             this.Controls.Add(this.RatingLabel);
@@ -223,6 +246,7 @@
             this.Controls.Add(this.ProductsList);
             this.Name = "ProductsData";
             this.Text = "ProductsData";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -248,5 +272,7 @@
         private System.Windows.Forms.Label RatingLabel;
         private System.Windows.Forms.Button FetchProductQuantity;
         private System.Windows.Forms.Button GetProductNameButton;
+        private System.Windows.Forms.Button retrieveProducts;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

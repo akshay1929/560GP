@@ -33,6 +33,9 @@
             this.button1 = new System.Windows.Forms.Button();
             this.ShipmentAddressLabel = new System.Windows.Forms.Label();
             this.ShipmentAddressTextbox = new System.Windows.Forms.TextBox();
+            this.retrieveOrders = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // OrdersList
@@ -40,7 +43,7 @@
             this.OrdersList.FormattingEnabled = true;
             this.OrdersList.Location = new System.Drawing.Point(12, 15);
             this.OrdersList.Name = "OrdersList";
-            this.OrdersList.Size = new System.Drawing.Size(390, 420);
+            this.OrdersList.Size = new System.Drawing.Size(63, 420);
             this.OrdersList.TabIndex = 0;
             // 
             // GetOrderButton
@@ -77,11 +80,31 @@
             this.ShipmentAddressTextbox.Size = new System.Drawing.Size(100, 20);
             this.ShipmentAddressTextbox.TabIndex = 4;
             // 
+            // retrieveOrders
+            // 
+            this.retrieveOrders.Location = new System.Drawing.Point(449, 204);
+            this.retrieveOrders.Name = "retrieveOrders";
+            this.retrieveOrders.Size = new System.Drawing.Size(212, 48);
+            this.retrieveOrders.TabIndex = 5;
+            this.retrieveOrders.Text = "Retrieve Orders";
+            this.retrieveOrders.UseVisualStyleBackColor = true;
+            this.retrieveOrders.Click += new System.EventHandler(this.retrieveOrders_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(93, 15);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(347, 420);
+            this.dataGridView1.TabIndex = 6;
+            // 
             // OrdersData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(703, 450);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.retrieveOrders);
             this.Controls.Add(this.ShipmentAddressTextbox);
             this.Controls.Add(this.ShipmentAddressLabel);
             this.Controls.Add(this.button1);
@@ -89,6 +112,7 @@
             this.Controls.Add(this.OrdersList);
             this.Name = "OrdersData";
             this.Text = "OrdersData";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -101,5 +125,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label ShipmentAddressLabel;
         private System.Windows.Forms.TextBox ShipmentAddressTextbox;
+        private System.Windows.Forms.Button retrieveOrders;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
