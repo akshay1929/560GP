@@ -8,3 +8,4 @@ FROM Sales.Orders O
 WHERE S.ShipmentAddress = @GivenAddress
 GROUP BY S.ShipmentID, S.ShipmentAddress, O.OrderID
 ORDER BY S.ShipmentID ASC
+GO
