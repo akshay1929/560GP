@@ -33,7 +33,7 @@ IF NOT EXISTS
          AND kc.[name] = N'UK_Product_SKU'
    )
 BEGIN
-   ALTER TABLE Person.PersonAddress
+   ALTER TABLE Product
    ADD CONSTRAINT [UK_Product_SKU] UNIQUE NONCLUSTERED
    (
       SKU

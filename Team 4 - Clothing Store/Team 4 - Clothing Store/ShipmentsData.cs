@@ -28,7 +28,7 @@ namespace Team_4___Clothing_Store
             using (SqlConnection sqlCon = new SqlConnection(connectionString))
             {
                 SqlShipmentRepository shipment = new SqlShipmentRepository(connectionString);
-                IReadOnlyList<Shipment> shipmentList = shipment.RetrieveProducts();
+                IReadOnlyList<Shipment> shipmentList = shipment.RetrieveShipments();
                 dataGridView1.DataSource = shipmentList;
             }
         }

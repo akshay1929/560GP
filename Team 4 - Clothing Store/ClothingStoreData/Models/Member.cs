@@ -14,11 +14,11 @@ namespace ClothingStoreData.Models
         public string LastName { get; }
         public string Phone { get; }
         public string BillingAddress { get; }
-        public float Points { get; }
+        public int Points { get; }
         public string Status { get; }
 
         internal Member(int id, string email, string firstName,
-           string lastName, string phone, string billingAddress, float points, string status)
+           string lastName, string phone, string billingAddress, int points, string status)
         {
             MemberID = id;
             Email = email;

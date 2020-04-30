@@ -17,11 +17,35 @@ BEGIN
 		(
 			MemberID ASC
 		)
-
-		CONSTRAINT [UK_Users_Member_Phone] PRIMARY KEY CLUSTERED
-		(
-			Email,
-		    Phone  
-		)
 	);
 END
+
+IF NOT EXISTS
+   (
+      SELECT *
+      FROM sys.key_constraints kc
+      WHERE kc.parent_object_id = OBJECT_ID(N'Member')
+         AND kc.[name] = N'UK_Member_Email'
+   )
+BEGIN
+   ALTER TABLE Users.Member
+   ADD CONSTRAINT [UK_Member_Email] UNIQUE NONCLUSTERED
+   (
+      Email
+   )
+END;
+
+IF NOT EXISTS
+   (
+      SELECT *
+      FROM sys.key_constraints kc
+      WHERE kc.parent_object_id = OBJECT_ID(N'Member')
+         AND kc.[name] = N'UK_Member_Phone'
+   )
+BEGIN
+   ALTER TABLE Users.Member
+   ADD CONSTRAINT [UK_Member_Phone] UNIQUE NONCLUSTERED
+   (
+      Phone
+   )
+END;

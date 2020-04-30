@@ -32,7 +32,7 @@ namespace Team_4___Clothing_Store
         private void retrieveMembers_Click(object sender, EventArgs e)
         {
             SqlMemberRepository members = new SqlMemberRepository(connectionString);
-            IReadOnlyList<Member> memberList = members.RetrieveMembers();
+            IReadOnlyList<Member> memberList = members.RetrieveMember();
             dataGridView1.DataSource = memberList;
         }
     }

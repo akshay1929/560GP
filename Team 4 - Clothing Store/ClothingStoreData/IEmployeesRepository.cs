@@ -9,6 +9,8 @@ namespace ClothingStoreData
 
         Employees FetchEmployeeSalary(int employeeid);
 
+        Employees CreateEmployee(string email, string name, string role, int salary);
+
         // Member GetMember(string Email);
 
         // Member GetMemberPhone(string Phone);

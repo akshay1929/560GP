@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Delegate\CreateEmployeeDataDelegate.cs" />
     <Compile Include="Delegate\CreateProductDataDelegate.cs" />
     <Compile Include="Delegate\FetchMemberStatusDataDelegate.cs" />
     <Compile Include="Delegate\RetrieveEmployeeCountDataDelegate.cs" />
@@ -119,6 +120,7 @@
     <Content Include="Sql\Data\Sales.Employees.sql" />
     <Content Include="Sql\Data\Sales.OrderLines.sql" />
     <Content Include="Sql\Data\Sales.Orders.sql" />
+    <Content Include="Sql\Procedures\Sales.CreateEmployee.sql" />
     <Content Include="Sql\Procedures\Product.RetrieveProducts.sql" />
     <Content Include="Sql\Procedures\Warehouse.RetrieveShipments.sql" />
     <Content Include="Sql\Procedures\Users.RetrieveMembers.sql" />

@@ -26,13 +26,9 @@ namespace ClothingStoreData
             var d = new GetMemberIdDataDelegate(email);
             return executor.ExecuteReader(d);
         }
-        public IReadOnlyList<Member> RetrieveMembers()
+        public IReadOnlyList<Member> RetrieveMember()
         {
             return executor.ExecuteReader(new RetrieveMembersDataDelegate());
-        }
-        static void Main()
-        {
-
         }
     }
 }

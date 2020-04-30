@@ -28,12 +28,13 @@ namespace ClothingStoreData.Delegate
                 return null;
 
             return new Member(
+               MemberID,
                reader.GetString("Email"),
                reader.GetString("FirstName"),
                reader.GetString("LastName"),
                reader.GetString("Phone"),
                reader.GetString("BillingAddress"),
-               reader.GetFloat("Points"),
+               reader.GetInt32("Points"),
                reader.GetString("Status")
                );
         }

@@ -61,8 +61,9 @@
             this.CreateEmployeeButton.Name = "CreateEmployeeButton";
             this.CreateEmployeeButton.Size = new System.Drawing.Size(212, 42);
             this.CreateEmployeeButton.TabIndex = 2;
-            this.CreateEmployeeButton.Text = "Create Employee";
+            this.CreateEmployeeButton.Text = "Add New Employee";
             this.CreateEmployeeButton.UseVisualStyleBackColor = true;
+            this.CreateEmployeeButton.Click += new System.EventHandler(this.CreateEmployeeButton_Click);
             // 
             // FetchEmployeeSalaryButton
             // 

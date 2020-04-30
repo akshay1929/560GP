@@ -32,10 +32,5 @@ namespace ClothingStoreData
         {
             return executor.ExecuteReader(new RetrieveOrdersDataDelegate());
         }
-        static void Main()
-        {
-
-        }
-
     }
 }

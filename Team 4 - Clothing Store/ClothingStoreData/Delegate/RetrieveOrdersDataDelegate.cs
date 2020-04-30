@@ -21,12 +21,12 @@ namespace ClothingStoreData.Delegate
             while (reader.Read())
             {
                 orders.Add(new Orders(
-                 reader.GetInt32("OrderID"),
+                    reader.GetInt32("OrderID"),
                     reader.GetInt32("MemberID"),
-                reader.GetInt32("EmployeeID"),
-                reader.GetInt32("ShipmentID"),
-               reader.GetDateTimeOffset("OrderDate"),
-               reader.GetString("ShipmentAddress")));
+                    reader.GetInt32("EmployeeID"),
+                    reader.GetInt32("ShipmentID"),
+                    reader.GetDateTimeOffset("OrderDate"),
+                    reader.GetString("ShipmentAddress")));
             }
 
             return orders;

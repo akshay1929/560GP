@@ -10,7 +10,7 @@ namespace ClothingStoreData
     interface IOrderRepository
     {
         Orders GetOrder(int id);
-        IReadOnlyList<Employees> RetrieveOrders();
+        IReadOnlyList<Orders> RetrieveOrders();
         Orders GetOrderId(string shipmentAddress);
     }
 }

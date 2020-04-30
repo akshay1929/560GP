@@ -17,7 +17,7 @@ namespace ClothingStoreData
             executor = new SqlCommandExecutor(connectionString);
         }
 
-        public IReadOnlyList<Shipment> RetrieveProducts()
+        public IReadOnlyList<Shipment> RetrieveShipments()
         {
             return executor.ExecuteReader(new RetrieveShipmentsDataDelegate());
         }

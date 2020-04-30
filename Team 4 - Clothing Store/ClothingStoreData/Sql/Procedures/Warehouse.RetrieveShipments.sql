@@ -1,6 +1,6 @@
-CREATE OR ALTER PROCEDURE Sales.RetrieveEmployees
+CREATE OR ALTER PROCEDURE Warehouse.RetrieveShipments
 AS
 
 SELECT *
-FROM Sales.Employees E;
+FROM Warehouse.Shipments S;
 GO
