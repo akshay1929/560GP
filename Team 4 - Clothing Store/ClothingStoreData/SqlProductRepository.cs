@@ -53,10 +53,10 @@ namespace ClothingStoreData
                 throw new ArgumentException("The parameter cannot be null or empty.", nameof(description));
 
             if (string.IsNullOrWhiteSpace(rating))
-                throw new ArgumentException("The parameter cannot be null or empty.", nameof(description));
+                throw new ArgumentException("The parameter cannot be null or empty.", nameof(rating));
 
             if (quantity < 0)
-                throw new ArgumentException("The parameter cannot be negative or empty.", nameof(rating));
+                throw new ArgumentException("The parameter cannot be negative or empty.", nameof(quantity));
 
             if (price < 0)
                 throw new ArgumentException("The parameter cannot be negative or empty.", nameof(price));
