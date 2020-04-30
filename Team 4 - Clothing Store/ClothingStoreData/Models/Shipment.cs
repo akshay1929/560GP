@@ -8,10 +8,14 @@ namespace ClothingStoreData.Models
 {
     public class Shipment
     {
+        public int OrderID { get; }
+        public DateTimeOffset ShipmentDate { get; }
         public string ShipmentAddress { get; }
 
-        internal Shipment(string shipmentAddress)
+        internal Shipment(int id, DateTimeOffset date, string shipmentAddress)
         {
+            OrderID = id;
+            ShipmentDate = date;
             ShipmentAddress = ShipmentAddress;
         }
 

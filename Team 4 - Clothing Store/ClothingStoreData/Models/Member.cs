@@ -8,6 +8,7 @@ namespace ClothingStoreData.Models
 {
     public class Member
     {
+        public int MemberID { get; }
         public string Email { get; }
         public string FirstName { get; }
         public string LastName { get; }
@@ -16,9 +17,10 @@ namespace ClothingStoreData.Models
         public float Points { get; }
         public string Status { get; }
 
-        internal Member(string email, string firstName,
+        internal Member(int id, string email, string firstName,
            string lastName, string phone, string billingAddress, float points, string status)
         {
+            MemberID = id;
             Email = email;
             FirstName = firstName;
             LastName = lastName;
