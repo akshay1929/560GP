@@ -1,4 +1,7 @@
 /*
+USE arahman;
+GO
+
 CREATE SCHEMA Sales;
 GO
 
@@ -47,7 +50,7 @@ CREATE TABLE Sales.Employees
     Email NVARCHAR(128) NOT NULL,
     [Name] NVARCHAR(32) NOT NULL,
     EmployeeRole NVARCHAR(32) NOT NULL,
-    Salary FLOAT NOT NULL 
+    Salary INT NOT NULL 
 
     UNIQUE
     (
