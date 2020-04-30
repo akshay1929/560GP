@@ -19,7 +19,7 @@ namespace ClothingStoreData.Delegate
         {
             base.PrepareCommand(command);
 
-            command.Parameters.AddWithValue("EmployeeId", employeeid);
+            command.Parameters.AddWithValue("GivenEmployeeID", employeeid);
         }
 
         public override Employees Translate(SqlCommand command, IDataRowReader reader)
@@ -32,7 +32,7 @@ namespace ClothingStoreData.Delegate
                reader.GetString("Email"),
                reader.GetString("Name"),
                reader.GetString("EmployeeRole"),
-               reader.GetFloat("Salary"));
+               reader.GetInt32("Salary"));
         }
     }
 }

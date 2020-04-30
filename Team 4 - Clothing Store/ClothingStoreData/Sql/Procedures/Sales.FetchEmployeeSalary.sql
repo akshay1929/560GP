@@ -3,7 +3,9 @@ CREATE OR ALTER PROCEDURE Sales.FetchEmployeeSalary
 AS
 
 SELECT 
+	E.Email,
 	E.[Name],
+	E.EmployeeRole,
 	E.Salary
 FROM 
 	Sales.Employees E
