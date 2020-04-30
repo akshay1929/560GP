@@ -1,4 +1,4 @@
-CREATE OR ALTER PROCEDURE Member.GetMemberId
+CREATE OR ALTER PROCEDURE Users.GetMemberId
    @GivenEmail NVARCHAR(128)
 AS
 
