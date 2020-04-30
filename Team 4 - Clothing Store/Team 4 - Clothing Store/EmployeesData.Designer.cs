@@ -82,6 +82,7 @@
             this.FetchEmployeeSalaryButton.TabIndex = 3;
             this.FetchEmployeeSalaryButton.Text = "Fetch Employee Salary";
             this.FetchEmployeeSalaryButton.UseVisualStyleBackColor = true;
+            this.FetchEmployeeSalaryButton.Click += new System.EventHandler(this.FetchEmployeeSalaryButton_Click);
             // 
             // EmailTextbox
             // 
@@ -162,6 +163,7 @@
             this.EmployeeIdTextBox.Name = "EmployeeIdTextBox";
             this.EmployeeIdTextBox.Size = new System.Drawing.Size(118, 20);
             this.EmployeeIdTextBox.TabIndex = 12;
+            this.EmployeeIdTextBox.TextChanged += new System.EventHandler(this.EmployeeIdTextBox_TextChanged);
             // 
             // dataGridView1
             // 
@@ -176,7 +178,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(703, 450);
+            this.ClientSize = new System.Drawing.Size(679, 449);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.EmployeeIdTextBox);

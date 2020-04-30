@@ -62,5 +62,30 @@ namespace Team_4___Clothing_Store
         {
 
         }
+
+        private void FetchEmployeeSalaryButton_Click(object sender, EventArgs e)
+        {
+
+            SqlEmployeesRepository employees = new SqlEmployeesRepository(connectionString);
+            Employees ee = employees.FetchEmployeeSalary(Convert.ToInt32(EmployeeIdTextBox.Text));
+            EmployeesList.Items.Add(ee);
+
+            /*int val = Convert.ToInt32(EmployeeIdTextBox.Text);
+            using (SqlConnection sqlCon = new SqlConnection(connectionString))
+            {
+                sqlCon.Open();
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT E.[Name], E.Salary FROM Sales.Employees E WHERE E.EmployeeID = val", sqlCon);
+                DataTable dtbl = new DataTable();
+                sqlDa.Fill(dtbl);
+
+                dataGridView1.DataSource = dtbl;
+            }*/
+
+        }
+
+        private void EmployeeIdTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
