@@ -28,5 +28,9 @@ namespace ClothingStoreData
             return executor.ExecuteReader(d);
         }
 
+        static void Main()
+        {
+
+        }
     }
 }

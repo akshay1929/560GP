@@ -20,5 +20,10 @@ namespace DataAccess
         {
             command.CommandType = CommandType.StoredProcedure;
         }
+
+        static void Main()
+        {
+
+        }
     }
 }
