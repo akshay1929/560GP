@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.MembersList = new System.Windows.Forms.ListBox();
             this.FetchMemberStatusButton = new System.Windows.Forms.Button();
             this.GetMemberIdButton = new System.Windows.Forms.Button();
             this.MemberIdLabel = new System.Windows.Forms.Label();
@@ -39,14 +38,6 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // MembersList
-            // 
-            this.MembersList.FormattingEnabled = true;
-            this.MembersList.Location = new System.Drawing.Point(12, 15);
-            this.MembersList.Name = "MembersList";
-            this.MembersList.Size = new System.Drawing.Size(71, 420);
-            this.MembersList.TabIndex = 0;
             // 
             // FetchMemberStatusButton
             // 
@@ -112,9 +103,9 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(90, 18);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 15);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(337, 417);
+            this.dataGridView1.Size = new System.Drawing.Size(415, 420);
             this.dataGridView1.TabIndex = 8;
             // 
             // MembersData
@@ -130,7 +121,6 @@
             this.Controls.Add(this.MemberIdLabel);
             this.Controls.Add(this.GetMemberIdButton);
             this.Controls.Add(this.FetchMemberStatusButton);
-            this.Controls.Add(this.MembersList);
             this.Name = "MembersData";
             this.Text = "MembersData";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -140,8 +130,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.ListBox MembersList;
         private System.Windows.Forms.Button FetchMemberStatusButton;
         private System.Windows.Forms.Button GetMemberIdButton;
         private System.Windows.Forms.Label MemberIdLabel;

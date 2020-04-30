@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.EmployeesList = new System.Windows.Forms.ListBox();
             this.RetrieveEmployeesButton = new System.Windows.Forms.Button();
             this.CreateEmployeeButton = new System.Windows.Forms.Button();
             this.FetchEmployeeSalaryButton = new System.Windows.Forms.Button();
@@ -45,15 +44,6 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // EmployeesList
-            // 
-            this.EmployeesList.FormattingEnabled = true;
-            this.EmployeesList.Location = new System.Drawing.Point(12, 15);
-            this.EmployeesList.Name = "EmployeesList";
-            this.EmployeesList.Size = new System.Drawing.Size(84, 420);
-            this.EmployeesList.TabIndex = 0;
-            this.EmployeesList.SelectedIndexChanged += new System.EventHandler(this.EmployeesList_SelectedIndexChanged);
             // 
             // RetrieveEmployeesButton
             // 
@@ -168,9 +158,9 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(117, 15);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(310, 420);
+            this.dataGridView1.Size = new System.Drawing.Size(415, 423);
             this.dataGridView1.TabIndex = 14;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -193,7 +183,6 @@
             this.Controls.Add(this.FetchEmployeeSalaryButton);
             this.Controls.Add(this.CreateEmployeeButton);
             this.Controls.Add(this.RetrieveEmployeesButton);
-            this.Controls.Add(this.EmployeesList);
             this.Name = "EmployeesData";
             this.Text = "EmployeesData";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -203,8 +192,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.ListBox EmployeesList;
         private System.Windows.Forms.Button RetrieveEmployeesButton;
         private System.Windows.Forms.Button CreateEmployeeButton;
         private System.Windows.Forms.Button FetchEmployeeSalaryButton;

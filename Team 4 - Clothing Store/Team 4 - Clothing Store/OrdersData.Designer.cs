@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.OrdersList = new System.Windows.Forms.ListBox();
             this.GetOrderButton = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.ShipmentAddressLabel = new System.Windows.Forms.Label();
@@ -37,14 +36,6 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // OrdersList
-            // 
-            this.OrdersList.FormattingEnabled = true;
-            this.OrdersList.Location = new System.Drawing.Point(12, 15);
-            this.OrdersList.Name = "OrdersList";
-            this.OrdersList.Size = new System.Drawing.Size(63, 420);
-            this.OrdersList.TabIndex = 0;
             // 
             // GetOrderButton
             // 
@@ -93,9 +84,9 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(93, 15);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 15);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(347, 420);
+            this.dataGridView1.Size = new System.Drawing.Size(428, 420);
             this.dataGridView1.TabIndex = 6;
             // 
             // OrdersData
@@ -109,7 +100,6 @@
             this.Controls.Add(this.ShipmentAddressLabel);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.GetOrderButton);
-            this.Controls.Add(this.OrdersList);
             this.Name = "OrdersData";
             this.Text = "OrdersData";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -119,8 +109,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.ListBox OrdersList;
         private System.Windows.Forms.Button GetOrderButton;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label ShipmentAddressLabel;

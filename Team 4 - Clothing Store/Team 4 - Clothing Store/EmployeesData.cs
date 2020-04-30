@@ -27,25 +27,9 @@ namespace Team_4___Clothing_Store
 
         private void RetrieveEmployeesButton_Click(object sender, EventArgs e)
         {
-            /*SqlEmployeesRepository employees = new SqlEmployeesRepository(connectionString);
+            SqlEmployeesRepository employees = new SqlEmployeesRepository(connectionString);
             IReadOnlyList<Employees> employeeList = employees.RetrieveEmployees();
-
-            foreach(Employees emp in employeeList)
-            {
-                EmployeesList.Items.Add(emp.Name + " " + emp.Salary);
-            }
-            */
-
-            using (SqlConnection sqlCon = new SqlConnection(connectionString))
-            {
-                sqlCon.Open();
-                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM Sales.Employees", sqlCon);
-                DataTable dtbl = new DataTable();
-                sqlDa.Fill(dtbl);
-
-                dataGridView1.DataSource = dtbl;
-            }
-
+            dataGridView1.DataSource = employeeList;
         }
 
         private void EmployeesList_SelectedIndexChanged(object sender, EventArgs e)
@@ -69,12 +53,8 @@ namespace Team_4___Clothing_Store
             SqlEmployeesRepository employees = new SqlEmployeesRepository(connectionString);
             
             Employees ee = employees.FetchEmployeeSalary(Convert.ToInt32(EmployeeIdTextBox.Text));
-            EmployeesList.Items.Add(ee.EmployeeID + " " + ee.Name + " " + ee.Salary);
-
-
             List<Employees> list = new List<Employees>();
             list.Add(ee);
-
             dataGridView1.DataSource = list;
             
         }
