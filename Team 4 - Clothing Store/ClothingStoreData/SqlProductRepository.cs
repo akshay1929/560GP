@@ -41,7 +41,7 @@ namespace ClothingStoreData
 
 
         public Product CreateProduct(string sku, string productname,
-           ProductType producttypeId, int quantity, string description, float price, float rating)
+           ProductType producttypeId, int quantity, string description, float price, string rating)
         {
             if (string.IsNullOrWhiteSpace(sku))
                 throw new ArgumentException("The parameter cannot be null or empty.", nameof(sku));
@@ -52,14 +52,14 @@ namespace ClothingStoreData
             if (string.IsNullOrWhiteSpace(description))
                 throw new ArgumentException("The parameter cannot be null or empty.", nameof(description));
 
+            if (string.IsNullOrWhiteSpace(rating))
+                throw new ArgumentException("The parameter cannot be null or empty.", nameof(description));
+
             if (quantity < 0)
-                throw new ArgumentException("The parameter cannot be negative or empty.", nameof(quantity));
+                throw new ArgumentException("The parameter cannot be negative or empty.", nameof(rating));
 
             if (price < 0)
                 throw new ArgumentException("The parameter cannot be negative or empty.", nameof(price));
-
-            if (rating < 0)
-                throw new ArgumentException("The parameter cannot be negative or empty.", nameof(rating));
 
             var d = new CreateProductDataDelegate(sku, productname, producttypeId, quantity, description, price, rating);
             return executor.ExecuteNonQuery(d);

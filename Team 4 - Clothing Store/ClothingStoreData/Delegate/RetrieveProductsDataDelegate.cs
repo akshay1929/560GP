@@ -23,11 +23,11 @@ namespace ClothingStoreData.Delegate
                 products.Add(new Product(
                     reader.GetString("SKU"),
                     reader.GetString("ProductName"),
-                    (ProductType)reader.GetByte("ProductType"),
+                    (ProductType)reader.GetInt32("ProductTypeID"),
                     reader.GetInt32("Quantity"),
                     reader.GetString("Description"),
-                    reader.GetFloat("Price"),
-                    reader.GetFloat("Rating")));
+                    reader.GetInt32("Price"),
+                    reader.GetString("Rating")));
             }
 
             return products;

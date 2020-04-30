@@ -34,7 +34,7 @@ namespace ClothingStoreData.Delegate
                quantity,
                reader.GetString("Description"),
                reader.GetFloat("Price"),
-               reader.GetFloat("Rating"));
+               reader.GetString("Rating"));
         }
     }
 }

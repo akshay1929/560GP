@@ -40,7 +40,7 @@ namespace ClothingStoreData.Delegate
                     reader.GetInt32("Quantity"),
                     reader.GetString("Description"),
                     reader.GetFloat("Price"),
-                    reader.GetFloat("Rating")));
+                    reader.GetString("Rating")));
             }
 
             return product;

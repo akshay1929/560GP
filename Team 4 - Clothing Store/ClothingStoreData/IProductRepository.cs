@@ -20,6 +20,6 @@ namespace ClothingStoreData
         Product GetProductIdName(ProductType producttype);
 
         Product CreateProduct(string sku, string productname,
-           ProductType producttypeId, int quantity, string description, float price, float rating);
+           ProductType producttypeId, int quantity, string description, float price, string rating);
     }
 }

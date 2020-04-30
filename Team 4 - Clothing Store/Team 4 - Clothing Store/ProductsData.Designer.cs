@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ProductsList = new System.Windows.Forms.ListBox();
             this.CreateProductButton = new System.Windows.Forms.Button();
             this.SKUTextbox = new System.Windows.Forms.TextBox();
             this.NameTextbox = new System.Windows.Forms.TextBox();
@@ -50,14 +49,6 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // ProductsList
-            // 
-            this.ProductsList.FormattingEnabled = true;
-            this.ProductsList.Location = new System.Drawing.Point(12, 15);
-            this.ProductsList.Name = "ProductsList";
-            this.ProductsList.Size = new System.Drawing.Size(76, 420);
-            this.ProductsList.TabIndex = 0;
             // 
             // CreateProductButton
             // 
@@ -214,9 +205,9 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(94, 18);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 18);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(334, 417);
+            this.dataGridView1.Size = new System.Drawing.Size(416, 417);
             this.dataGridView1.TabIndex = 19;
             // 
             // ProductsData
@@ -243,7 +234,6 @@
             this.Controls.Add(this.NameTextbox);
             this.Controls.Add(this.SKUTextbox);
             this.Controls.Add(this.CreateProductButton);
-            this.Controls.Add(this.ProductsList);
             this.Name = "ProductsData";
             this.Text = "ProductsData";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -253,8 +243,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.ListBox ProductsList;
         private System.Windows.Forms.Button CreateProductButton;
         private System.Windows.Forms.TextBox SKUTextbox;
         private System.Windows.Forms.TextBox NameTextbox;

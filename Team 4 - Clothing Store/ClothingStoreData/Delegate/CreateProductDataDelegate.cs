@@ -19,10 +19,10 @@ namespace ClothingStoreData.Delegate
         public readonly int quantity;
         public readonly string description;
         public readonly float price;
-        public readonly float rating;
+        public readonly string rating;
 
         public CreateProductDataDelegate(string sku, string productname,
-           ProductType producttypeId, int quantity, string description, float price, float rating)
+           ProductType producttypeId, int quantity, string description, float price, string rating)
            : base("Product.CreateProduct")
         {
             this.sku = sku;
@@ -53,7 +53,7 @@ namespace ClothingStoreData.Delegate
             p = command.Parameters.Add("Quantity", SqlDbType.Float);
             p.Value = price;
 
-            p = command.Parameters.Add("Quantity", SqlDbType.Float);
+            p = command.Parameters.Add("Quantity", SqlDbType.NVarChar);
             p.Value = rating;
         }
 
