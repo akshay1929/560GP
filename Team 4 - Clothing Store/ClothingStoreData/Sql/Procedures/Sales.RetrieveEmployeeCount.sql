@@ -1,4 +1,4 @@
-CREATE OR ALTER PROCEDURE Sales.GetEmployeeCount
+CREATE OR ALTER PROCEDURE Sales.RetrieveEmployeeCount
    @GivenRole NVARCHAR(32)
 AS
 

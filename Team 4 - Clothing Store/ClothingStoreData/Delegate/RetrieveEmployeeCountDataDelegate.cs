@@ -15,7 +15,7 @@ namespace ClothingStoreData.Delegate
         private readonly string Role;
 
         public RetrieveEmployeeCountDataDelegate(string s)
-         : base("Sales.GetEmployeeCount")
+         : base("Sales.RetrieveEmployeeCount")
         {
             this.Role = s;
         }

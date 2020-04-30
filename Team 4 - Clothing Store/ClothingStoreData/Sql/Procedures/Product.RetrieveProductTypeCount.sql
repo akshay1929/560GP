@@ -1,5 +1,4 @@
 CREATE OR ALTER PROCEDURE Product.RetrieveProductTypeCount
-  
 AS
 
 SELECT PT.[Name], COUNT(O.OrderID) AS OrderCount, P.SKU
