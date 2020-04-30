@@ -42,6 +42,8 @@
             this.SalaryLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.EmployeeIdTextBox = new System.Windows.Forms.TextBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // EmployeesList
@@ -49,7 +51,7 @@
             this.EmployeesList.FormattingEnabled = true;
             this.EmployeesList.Location = new System.Drawing.Point(12, 15);
             this.EmployeesList.Name = "EmployeesList";
-            this.EmployeesList.Size = new System.Drawing.Size(390, 420);
+            this.EmployeesList.Size = new System.Drawing.Size(84, 420);
             this.EmployeesList.TabIndex = 0;
             this.EmployeesList.SelectedIndexChanged += new System.EventHandler(this.EmployeesList_SelectedIndexChanged);
             // 
@@ -161,11 +163,21 @@
             this.EmployeeIdTextBox.Size = new System.Drawing.Size(118, 20);
             this.EmployeeIdTextBox.TabIndex = 12;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(117, 15);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(310, 420);
+            this.dataGridView1.TabIndex = 14;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
             // EmployeesData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(703, 450);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.EmployeeIdTextBox);
             this.Controls.Add(this.SalaryLabel);
@@ -182,6 +194,7 @@
             this.Controls.Add(this.EmployeesList);
             this.Name = "EmployeesData";
             this.Text = "EmployeesData";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -203,5 +216,6 @@
         private System.Windows.Forms.Label SalaryLabel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox EmployeeIdTextBox;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
