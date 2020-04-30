@@ -28,6 +28,14 @@ namespace ClothingStoreData
             var d = new GetOrderIdDataDelegate(shipmentAddress);
             return executor.ExecuteReader(d);
         }
+        public IReadOnlyList<Orders> RetrieveOrders()
+        {
+            return executor.ExecuteReader(new RetrieveOrdersDataDelegate());
+        }
+        static void Main()
+        {
+
+        }
 
     }
 }

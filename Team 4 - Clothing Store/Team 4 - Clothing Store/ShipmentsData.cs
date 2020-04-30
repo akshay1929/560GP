@@ -7,6 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ClothingStoreData;
+using ClothingStoreData.Delegate;
+using ClothingStoreData.Models;
+using DataAccess;
 using System.Data.SqlClient;
 
 namespace Team_4___Clothing_Store
@@ -23,12 +27,9 @@ namespace Team_4___Clothing_Store
         {
             using (SqlConnection sqlCon = new SqlConnection(connectionString))
             {
-                sqlCon.Open();
-                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM Warehouse.Shipment", sqlCon);
-                DataTable dtbl = new DataTable();
-                sqlDa.Fill(dtbl);
-
-                dataGridView1.DataSource = dtbl;
+                SqlShipmentRepository shipment = new SqlShipmentRepository(connectionString);
+                IReadOnlyList<Shipment> shipmentList = shipment.RetrieveProducts();
+                dataGridView1.DataSource = shipmentList;
             }
         }
     }

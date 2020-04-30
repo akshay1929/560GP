@@ -28,7 +28,8 @@ namespace ClothingStoreData.Delegate
                 return null;
 
             return new Member(
-               email,
+               reader.GetInt32("MemberID"),
+                email,
                reader.GetString("FirstName"),
                reader.GetString("LastName"),
                reader.GetString("Phone"),

@@ -7,6 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ClothingStoreData;
+using ClothingStoreData.Delegate;
+using ClothingStoreData.Models;
+using DataAccess;
 
 using System.Data.SqlClient;
 
@@ -27,15 +31,9 @@ namespace Team_4___Clothing_Store
 
         private void retrieveMembers_Click(object sender, EventArgs e)
         {
-            using (SqlConnection sqlCon = new SqlConnection(connectionString))
-            {
-                sqlCon.Open();
-                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM Users.Member", sqlCon);
-                DataTable dtbl = new DataTable();
-                sqlDa.Fill(dtbl);
-
-                dataGridView1.DataSource = dtbl;
-            }
+            SqlMemberRepository members = new SqlMemberRepository(connectionString);
+            IReadOnlyList<Member> memberList = members.RetrieveMembers();
+            dataGridView1.DataSource = memberList;
         }
     }
 }

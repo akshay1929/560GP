@@ -64,5 +64,15 @@ namespace ClothingStoreData
             var d = new CreateProductDataDelegate(sku, productname, producttypeId, quantity, description, price, rating);
             return executor.ExecuteNonQuery(d);
         }
+
+        public IReadOnlyList<Product> RetrieveProducts()
+        {
+            return executor.ExecuteReader(new RetrieveProductsDataDelegate());
+        }
+
+        static void Main()
+        {
+
+        }
     }
 }

@@ -7,8 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
+using ClothingStoreData;
+using ClothingStoreData.Delegate;
+using ClothingStoreData.Models;
+using DataAccess;
 
+using System.Data.SqlClient;
 namespace Team_4___Clothing_Store
 {
     
@@ -22,15 +26,9 @@ namespace Team_4___Clothing_Store
 
         private void retrieveOrders_Click(object sender, EventArgs e)
         {
-            using (SqlConnection sqlCon = new SqlConnection(connectionString))
-            {
-                sqlCon.Open();
-                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM Sales.Orders", sqlCon);
-                DataTable dtbl = new DataTable();
-                sqlDa.Fill(dtbl);
-
-                dataGridView1.DataSource = dtbl;
-            }
+            SqlOrderRepository orders = new SqlOrderRepository(connectionString);
+            IReadOnlyList<Orders> orderList = orders.RetrieveOrders();
+            dataGridView1.DataSource = orderList;
         }
     }
 }

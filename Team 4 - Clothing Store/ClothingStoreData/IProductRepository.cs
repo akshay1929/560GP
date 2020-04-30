@@ -15,6 +15,7 @@ namespace ClothingStoreData
         Product FetchProductQuantity(int quantity);
 
         IReadOnlyList<Product> RetrieveHighestRatings();
+        IReadOnlyList<Employees> RetrieveProducts();
 
         Product GetProductIdName(ProductType producttype);
 

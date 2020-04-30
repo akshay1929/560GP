@@ -1,0 +1,36 @@
+﻿using ClothingStoreData.Models;
+using DataAccess;
+using System.Data;
+using System.Data.SqlClient;
+using System.Collections.Generic;
+
+namespace ClothingStoreData.Delegate
+{
+    class RetrieveProductsDataDelegate : DataReaderDelegate<IReadOnlyList<Product>>
+    {
+
+        public RetrieveProductsDataDelegate()
+           : base("Product.RetrieveProducts")
+        {
+        }
+
+        public override IReadOnlyList<Product> Translate(SqlCommand command, IDataRowReader reader)
+        {
+            var products = new List<Product>();
+
+            while (reader.Read())
+            {
+                products.Add(new Product(
+                    reader.GetString("SKU"),
+                    reader.GetString("ProductName"),
+                    (ProductType)reader.GetByte("ProductType"),
+                    reader.GetInt32("Quantity"),
+                    reader.GetString("Description"),
+                    reader.GetFloat("Price"),
+                    reader.GetFloat("Rating")));
+            }
+
+            return products;
+        }
+    }
+}

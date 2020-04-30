@@ -28,19 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ShipmentsList = new System.Windows.Forms.ListBox();
             this.retrieveShipment = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // ShipmentsList
-            // 
-            this.ShipmentsList.FormattingEnabled = true;
-            this.ShipmentsList.Location = new System.Drawing.Point(12, 15);
-            this.ShipmentsList.Name = "ShipmentsList";
-            this.ShipmentsList.Size = new System.Drawing.Size(82, 420);
-            this.ShipmentsList.TabIndex = 0;
             // 
             // retrieveShipment
             // 
@@ -55,9 +46,9 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(112, 15);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 15);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(408, 420);
+            this.dataGridView1.Size = new System.Drawing.Size(508, 420);
             this.dataGridView1.TabIndex = 2;
             // 
             // ShipmentsData
@@ -67,7 +58,6 @@
             this.ClientSize = new System.Drawing.Size(703, 450);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.retrieveShipment);
-            this.Controls.Add(this.ShipmentsList);
             this.Name = "ShipmentsData";
             this.Text = "ShipmentsData";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -76,8 +66,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.ListBox ShipmentsList;
         private System.Windows.Forms.Button retrieveShipment;
         private System.Windows.Forms.DataGridView dataGridView1;
     }

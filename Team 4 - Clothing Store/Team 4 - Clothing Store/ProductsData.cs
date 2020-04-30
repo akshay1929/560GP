@@ -40,15 +40,9 @@ namespace Team_4___Clothing_Store
 
         private void retrieveProducts_Click(object sender, EventArgs e)
         {
-            using (SqlConnection sqlCon = new SqlConnection(connectionString))
-            {
-                sqlCon.Open();
-                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM Product", sqlCon);
-                DataTable dtbl = new DataTable();
-                sqlDa.Fill(dtbl);
-
-                dataGridView1.DataSource = dtbl;
-            }
+            SqlProductRepository products = new SqlProductRepository(connectionString);
+            IReadOnlyList<Product> productList = products.RetrieveProducts();
+            dataGridView1.DataSource = productList;
         }
     }
 }

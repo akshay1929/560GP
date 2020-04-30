@@ -5,7 +5,7 @@ namespace ClothingStoreData
 {
     public interface IMemberRepository
     {
-        // IReadOnlyList<Member> RetrieveMember();
+        IReadOnlyList<Member> RetrieveMember();
 
         Member FetchMemberStatus(int MemberID);
 

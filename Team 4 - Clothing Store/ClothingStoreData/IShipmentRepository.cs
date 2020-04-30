@@ -7,10 +7,8 @@ using ClothingStoreData.Models;
 
 namespace ClothingStoreData
 {
-    interface IOrderRepository
+    interface IShipmentRepository
     {
-        Orders GetOrder(int id);
-        IReadOnlyList<Employees> RetrieveOrders();
-        Orders GetOrderId(string shipmentAddress);
+        IReadOnlyList<Shipment> RetrieveShipments();
     }
 }
