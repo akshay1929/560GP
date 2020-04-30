@@ -25,7 +25,7 @@ namespace ClothingStoreData.Delegate
                     reader.GetString("Email"),
                     reader.GetString("Name"),
                     reader.GetString("EmployeeRole"),
-                    reader.GetFloat("Salary")));
+                    reader.GetInt32("Salary")));
             }
 
             return employees;

@@ -6,7 +6,7 @@ BEGIN
 	    Email NVARCHAR(128) NOT NULL,
 	    [Name] NVARCHAR(32) NOT NULL,
 	    EmployeeRole NVARCHAR(32) NOT NULL,
-	    Salary FLOAT NOT NULL 
+	    Salary INT NOT NULL 
 	
 	     CONSTRAINT [PK_Sales_Employees_EmployeeId] PRIMARY KEY CLUSTERED
       (

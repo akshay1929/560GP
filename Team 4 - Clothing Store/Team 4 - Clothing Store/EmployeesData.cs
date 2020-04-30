@@ -30,7 +30,7 @@ namespace Team_4___Clothing_Store
 
             foreach(Employees emp in employeeList)
             {
-                EmployeesList.Text += emp.ToString();
+                EmployeesList.Items.Add(emp.Name + " " + emp.Salary);
             }
         }
 
