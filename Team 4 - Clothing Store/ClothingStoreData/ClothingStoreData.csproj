@@ -53,6 +53,7 @@
     <Compile Include="Delegate\RetrieveEmployeeCountDataDelegate.cs" />
     <Compile Include="Delegate\RetrieveMemberPointsDataDelegate.cs" />
     <Compile Include="Delegate\RetrieveMembersDataDelegate.cs" />
+    <Compile Include="Delegate\RetrieveOrderCountDateDataDelegate.cs" />
     <Compile Include="Delegate\RetrieveShipmentsDataDelegate.cs" />
     <Compile Include="Delegate\RetrieveProductsDataDelegate.cs" />
     <Compile Include="Delegate\RetrieveOrdersDataDelegate.cs" />
@@ -122,6 +123,7 @@
     <Content Include="Sql\Data\Sales.Employees.sql" />
     <Content Include="Sql\Data\Sales.OrderLines.sql" />
     <Content Include="Sql\Data\Sales.Orders.sql" />
+    <Content Include="Sql\Procedures\Sales.RetrieveOrderCountDate.sql" />
     <Content Include="Sql\Procedures\Users.CreateMember.sql" />
     <Content Include="Sql\Procedures\Sales.CreateEmployee.sql" />
     <Content Include="Sql\Procedures\Product.RetrieveProducts.sql" />

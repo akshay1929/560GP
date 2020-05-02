@@ -273,7 +273,7 @@
         private System.Windows.Forms.Button FetchProductQuantity;
         private System.Windows.Forms.Button GetProductNameButton;
         private System.Windows.Forms.Button retrieveProducts;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button retrieveProductTypeCount;
+        public System.Windows.Forms.DataGridView dataGridView1;
     }
 }

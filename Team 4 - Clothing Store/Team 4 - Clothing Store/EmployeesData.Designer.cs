@@ -206,6 +206,6 @@
         private System.Windows.Forms.Label SalaryLabel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox EmployeeIdTextBox;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        public System.Windows.Forms.DataGridView dataGridView1;
     }
 }
