@@ -42,5 +42,11 @@ namespace Team_4___Clothing_Store
             IReadOnlyList<Member> memberList = members.RetrieveMemberPoints();
             dataGridView1.DataSource = memberList;
         }
+
+        private void CreateMemberButton_Click(object sender, EventArgs e)
+        {
+            CreateMemberForm createMember = new CreateMemberForm();
+            createMember.ShowDialog();
+        }
     }
 }

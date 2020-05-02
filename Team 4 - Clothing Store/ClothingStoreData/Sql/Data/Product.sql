@@ -8,7 +8,7 @@ DECLARE @ProductStaging TABLE
 	Quantity INT NOT NULL,
     [Description] NVARCHAR(MAX) NOT NULL,
     Price FLOAT NOT NULL,
-	Rating FLOAT NOT NULL 
+	Rating NVARCHAR(32) NOT NULL 
 );
 
 /***************************** Modify values here *****************************/

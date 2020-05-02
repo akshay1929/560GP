@@ -114,6 +114,6 @@
         private System.Windows.Forms.Label ShipmentAddressLabel;
         private System.Windows.Forms.TextBox ShipmentAddressTextbox;
         private System.Windows.Forms.Button retrieveOrders;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        public System.Windows.Forms.DataGridView dataGridView1;
     }
 }

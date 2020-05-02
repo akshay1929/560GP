@@ -37,6 +37,7 @@
             this.retrieveMembers = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.memberPoints = new System.Windows.Forms.Button();
+            this.CreateMemberButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -111,7 +112,7 @@
             // 
             // memberPoints
             // 
-            this.memberPoints.Location = new System.Drawing.Point(449, 328);
+            this.memberPoints.Location = new System.Drawing.Point(449, 321);
             this.memberPoints.Name = "memberPoints";
             this.memberPoints.Size = new System.Drawing.Size(212, 47);
             this.memberPoints.TabIndex = 9;
@@ -119,11 +120,22 @@
             this.memberPoints.UseVisualStyleBackColor = true;
             this.memberPoints.Click += new System.EventHandler(this.memberPoints_Click);
             // 
+            // CreateMemberButton
+            // 
+            this.CreateMemberButton.Location = new System.Drawing.Point(449, 388);
+            this.CreateMemberButton.Name = "CreateMemberButton";
+            this.CreateMemberButton.Size = new System.Drawing.Size(212, 47);
+            this.CreateMemberButton.TabIndex = 10;
+            this.CreateMemberButton.Text = "Create Member";
+            this.CreateMemberButton.UseVisualStyleBackColor = true;
+            this.CreateMemberButton.Click += new System.EventHandler(this.CreateMemberButton_Click);
+            // 
             // MembersData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(703, 450);
+            this.Controls.Add(this.CreateMemberButton);
             this.Controls.Add(this.memberPoints);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.retrieveMembers);
@@ -149,7 +161,8 @@
         private System.Windows.Forms.TextBox EmailTextbox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button retrieveMembers;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button memberPoints;
+        private System.Windows.Forms.Button CreateMemberButton;
+        public System.Windows.Forms.DataGridView dataGridView1;
     }
 }

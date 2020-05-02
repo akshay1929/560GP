@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using ClothingStoreData.Models;
+using System;
 
 namespace ClothingStoreData
 {
@@ -11,6 +12,6 @@ namespace ClothingStoreData
 
         Member GetMemberId(string Email);
 
-        // Member CreateMember(string Email, string Phone, string firstName, string lastName, string BillingAddress, int Points, string Status);
+        Member CreateMember(string email, string firstName, string lastName, string phone, string billingAddress, int points, DateTimeOffset joinedOn, DateTimeOffset birthDate, string status);
     }
 }

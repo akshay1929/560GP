@@ -16,41 +16,5 @@ BEGIN
       (
          OrderID ASC
       )
-	
-	UNIQUE 
-    (
-        MemberID,
-        EmployeeID
-    )
 );
-END;
-
-IF NOT EXISTS
-   (
-      SELECT *
-      FROM sys.key_constraints kc
-      WHERE kc.parent_object_id = OBJECT_ID(N'Sales.Orders')
-         AND kc.[name] = N'UK_Sales_Orders_MemberID'
-   )
-BEGIN
-   ALTER TABLE Sales.Orders
-   ADD CONSTRAINT [UK_Sales_Orders_MemberID] UNIQUE NONCLUSTERED
-   (
-      MemberID ASC
-   )
-END;
-
-IF NOT EXISTS
-   (
-      SELECT *
-      FROM sys.key_constraints kc
-      WHERE kc.parent_object_id = OBJECT_ID(N'Sales.Orders')
-         AND kc.[name] = N'UK_Sales_Orders_EmployeeID'
-   )
-BEGIN
-   ALTER TABLE Sales.Orders
-   ADD CONSTRAINT [UK_Sales_Orders_EmployeeID] UNIQUE NONCLUSTERED
-   (
-      EmployeeID ASC
-   )
 END;

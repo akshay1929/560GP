@@ -9,12 +9,6 @@ DECLARE @OrdersStaging TABLE
         REFERENCES Warehouse.Shipment(ShipmentID),
     OrderDate DATETIMEOFFSET NOT NULL DEFAULT SYSDATETIMEOFFSET(),
     ShipmentAddress NVARCHAR(128) NOT NULL DEFAULT(SYSDATETIMEOFFSET())
-
-    UNIQUE 
-    (
-        MemberID,
-        EmployeeID
-    )
 );
 
 

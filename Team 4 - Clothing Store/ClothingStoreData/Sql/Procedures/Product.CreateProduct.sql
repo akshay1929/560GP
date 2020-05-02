@@ -4,8 +4,8 @@ CREATE OR ALTER PROCEDURE Product.CreateProduct
    @ProductTypeId INT,
    @Quantity INT,
    @Description NVARCHAR(MAX),
-   @Price Float,
-   @Rating Float,
+   @Price NVARCHAR(32),
+   @Rating NVARCHAR(32),
    @ProductId INT OUTPUT
 AS
 

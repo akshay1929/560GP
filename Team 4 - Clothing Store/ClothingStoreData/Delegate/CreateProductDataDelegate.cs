@@ -15,14 +15,14 @@ namespace ClothingStoreData.Delegate
     {
         public readonly string sku;
         public readonly string productname;
-        public readonly ProductType producttypeId;
+        public readonly int producttypeId;
         public readonly int quantity;
         public readonly string description;
-        public readonly float price;
+        public readonly string price;
         public readonly string rating;
 
         public CreateProductDataDelegate(string sku, string productname,
-           ProductType producttypeId, int quantity, string description, float price, string rating)
+           int producttypeId, int quantity, string description, string price, string rating)
            : base("Product.CreateProduct")
         {
             this.sku = sku;
@@ -41,25 +41,31 @@ namespace ClothingStoreData.Delegate
             var p = command.Parameters.Add("SKU", SqlDbType.NVarChar);
             p.Value = sku;
 
-            p = command.Parameters.Add("Product Name", SqlDbType.NVarChar);
+            p = command.Parameters.Add("ProductName", SqlDbType.NVarChar);
             p.Value = productname;
+
+            p = command.Parameters.Add("ProductTypeId", SqlDbType.Int);
+            p.Value = producttypeId;
 
             p = command.Parameters.Add("Quantity", SqlDbType.Int);
             p.Value = quantity;
 
-            p = command.Parameters.Add("Quantity", SqlDbType.NVarChar);
+            p = command.Parameters.Add("Description", SqlDbType.NVarChar);
             p.Value = description;
 
-            p = command.Parameters.Add("Quantity", SqlDbType.Float);
+            p = command.Parameters.Add("Price", SqlDbType.NVarChar);
             p.Value = price;
 
-            p = command.Parameters.Add("Quantity", SqlDbType.NVarChar);
+            p = command.Parameters.Add("Rating", SqlDbType.NVarChar);
             p.Value = rating;
+
+            p = command.Parameters.Add("ProductID", SqlDbType.Int);
+            p.Direction = ParameterDirection.Output;
         }
 
         public override Product Translate(SqlCommand command)
         {
-            return new Product(sku, productname, producttypeId, quantity, description, price, rating);
+            return new Product((int)command.Parameters["ProductID"].Value, sku, productname, producttypeId, quantity, description, price, rating);
         }
     }
 }

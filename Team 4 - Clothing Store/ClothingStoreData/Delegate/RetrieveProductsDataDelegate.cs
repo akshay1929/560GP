@@ -21,12 +21,13 @@ namespace ClothingStoreData.Delegate
             while (reader.Read())
             {
                 products.Add(new Product(
+                    reader.GetInt32("ProductID"),
                     reader.GetString("SKU"),
                     reader.GetString("ProductName"),
-                    (ProductType)reader.GetInt32("ProductTypeID"),
+                    reader.GetInt32("ProductTypeID"),
                     reader.GetInt32("Quantity"),
                     reader.GetString("Description"),
-                    reader.GetInt32("Price"),
+                    reader.GetString("Price"),
                     reader.GetString("Rating")));
             }
 

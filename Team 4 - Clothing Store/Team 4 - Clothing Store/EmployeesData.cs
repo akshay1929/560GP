@@ -79,7 +79,6 @@ namespace Team_4___Clothing_Store
             {
                 MessageBox.Show("There cannot be any empty parameters.");
             }
-
         }
     }
 }

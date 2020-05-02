@@ -28,12 +28,13 @@ namespace ClothingStoreData.Delegate
                 return null;
 
             return new Product(
+               reader.GetInt32("ProductID"),
                reader.GetString("SKU"),
                reader.GetString("ProductName"),
-               (ProductType)reader.GetByte("ProductType"),
+               reader.GetInt32("ProductType"),
                quantity,
                reader.GetString("Description"),
-               reader.GetFloat("Price"),
+               reader.GetString("Price"),
                reader.GetString("Rating"));
         }
     }

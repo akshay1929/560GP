@@ -8,17 +8,19 @@ namespace ClothingStoreData.Models
 {
     public class Product
     {
+        public int ProductID { get; }
         public string SKU { get; }
         public string ProductName { get; }
-        public ProductType ProductType { get; }
+        public int ProductType { get; }
         public int Quantity { get; }
         public string Description { get; }
-        public float Price { get; }
+        public string Price { get; }
         public string Rating { get; }
 
-        internal Product(string sku, string productname,
-           ProductType producttype, int quantity, string description, float price, string rating)
+        internal Product(int id, string sku, string productname,
+           int producttype, int quantity, string description, string price, string rating)
         {
+            ProductID = id;
             SKU = sku;
             ProductName = productname;
             ProductType = producttype;

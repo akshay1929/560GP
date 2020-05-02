@@ -15,10 +15,12 @@ namespace ClothingStoreData.Models
         public string Phone { get; }
         public string BillingAddress { get; }
         public int Points { get; }
+        public DateTimeOffset JoinedOn { get; }
+        public DateTimeOffset BirthDate { get; }
         public string Status { get; }
 
         internal Member(int id, string email, string firstName,
-           string lastName, string phone, string billingAddress, int points, string status)
+           string lastName, string phone, string billingAddress, int points, DateTimeOffset joinedon, DateTimeOffset birthdate, string status)
         {
             MemberID = id;
             Email = email;
@@ -27,8 +29,11 @@ namespace ClothingStoreData.Models
             Phone = phone;
             BillingAddress = billingAddress;
             Points = points;
+            JoinedOn = joinedon;
+            BirthDate = birthdate;
             Status = status;
         }
+
         internal Member(string firstName,
            string lastName, int points, string status)
         {

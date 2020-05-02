@@ -35,7 +35,8 @@ namespace Team_4___Clothing_Store
 
         private void CreateProductButton_Click(object sender, EventArgs e)
         {
-
+            CreateProductForm createProduct = new CreateProductForm();
+            createProduct.ShowDialog();
         }
 
         private void retrieveProducts_Click(object sender, EventArgs e)

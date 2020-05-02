@@ -12,8 +12,8 @@ namespace ClothingStoreData.Delegate
 {
     class GetProductIdNameDataDelegate : DataReaderDelegate<Product>
     {
-        private readonly ProductType productTypeID;
-        public GetProductIdNameDataDelegate(ProductType p)
+        private readonly int productTypeID;
+        public GetProductIdNameDataDelegate(int p)
            : base("Product.GetProductIdName")
         {
             this.productTypeID = p;
@@ -32,13 +32,14 @@ namespace ClothingStoreData.Delegate
                 return null;
 
             return new Product(
+               reader.GetInt32("ProductID"),
                reader.GetString("SKU"),
-                reader.GetString("ProductName"),
+               reader.GetString("ProductName"),
                productTypeID,
                reader.GetInt32("Quantity"),
-                reader.GetString("Description"),
-                reader.GetFloat("Price"),
-                reader.GetString("Rating")
+               reader.GetString("Description"),
+               reader.GetString("Price"),
+               reader.GetString("Rating")
                );
 
         }

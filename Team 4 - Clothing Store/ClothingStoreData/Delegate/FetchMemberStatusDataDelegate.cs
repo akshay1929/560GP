@@ -35,6 +35,8 @@ namespace ClothingStoreData.Delegate
                reader.GetString("Phone"),
                reader.GetString("BillingAddress"),
                reader.GetInt32("Points"),
+               reader.GetDateTimeOffset("JoinedOn"),
+               reader.GetDateTimeOffset("BirthDate"),
                reader.GetString("Status")
                );
         }

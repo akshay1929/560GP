@@ -10,16 +10,16 @@ namespace ClothingStoreData
     public interface IProductRepository
     {
 
-        Product GetProduct(ProductType id);
+        Product GetProduct(int id);
 
         Product FetchProductQuantity(int quantity);
 
         IReadOnlyList<Product> RetrieveHighestRatings();
         IReadOnlyList<Product> RetrieveProducts();
 
-        Product GetProductIdName(ProductType producttype);
+        Product GetProductIdName(int producttype);
 
         Product CreateProduct(string sku, string productname,
-           ProductType producttypeId, int quantity, string description, float price, string rating);
+           int producttypeId, int quantity, string description, string price, string rating);
     }
 }
