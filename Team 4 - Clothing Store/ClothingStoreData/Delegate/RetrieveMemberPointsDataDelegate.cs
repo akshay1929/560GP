@@ -21,7 +21,7 @@ namespace ClothingStoreData.Delegate
             while (reader.Read())
             {
                 members.Add(new Member(
-                   
+                   reader.GetInt32("MemberID"),
                     reader.GetString("FirstName"),
                     reader.GetString("LastName"),
                     reader.GetInt32("Points"),

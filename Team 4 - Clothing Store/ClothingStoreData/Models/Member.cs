@@ -34,10 +34,10 @@ namespace ClothingStoreData.Models
             Status = status;
         }
 
-        internal Member(string firstName,
+        internal Member(int id, string firstName,
            string lastName, int points, string status)
         {
-            
+            MemberID = id;
             FirstName = firstName;
             LastName = lastName;
          

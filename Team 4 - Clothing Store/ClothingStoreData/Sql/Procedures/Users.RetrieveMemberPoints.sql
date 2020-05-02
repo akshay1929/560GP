@@ -2,6 +2,7 @@ CREATE OR ALTER PROCEDURE Users.RetrieveMemberPoints
 AS
 
 SELECT 
+	M.MemberID,
 	M.FirstName, 
 	M.LastName, 
 	M.Points, 
