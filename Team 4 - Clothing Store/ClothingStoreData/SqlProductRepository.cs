@@ -69,5 +69,10 @@ namespace ClothingStoreData
         {
             return executor.ExecuteReader(new RetrieveProductsDataDelegate());
         }
+
+        public IReadOnlyList<Product> RetrieveProductCount()
+        {
+            return executor.ExecuteReader(new RetrieveProductTypeCountDataDelegate());
+        }
     }
 }

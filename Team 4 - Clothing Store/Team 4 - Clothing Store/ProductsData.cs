@@ -44,5 +44,12 @@ namespace Team_4___Clothing_Store
             IReadOnlyList<Product> productList = products.RetrieveProducts();
             dataGridView1.DataSource = productList;
         }
+
+        private void retrieveProductTypeCount_Click(object sender, EventArgs e)
+        {
+            SqlProductRepository products = new SqlProductRepository(connectionString);
+            IReadOnlyList<Product> productList = products.RetrieveProductCount();
+            dataGridView1.DataSource = productList;
+        }
     }
 }

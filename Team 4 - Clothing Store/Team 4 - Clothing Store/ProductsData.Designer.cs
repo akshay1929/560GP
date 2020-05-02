@@ -47,6 +47,7 @@
             this.GetProductNameButton = new System.Windows.Forms.Button();
             this.retrieveProducts = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.retrieveProductTypeCount = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -207,14 +208,25 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 18);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(416, 417);
+            this.dataGridView1.Size = new System.Drawing.Size(416, 438);
             this.dataGridView1.TabIndex = 19;
+            // 
+            // retrieveProductTypeCount
+            // 
+            this.retrieveProductTypeCount.Location = new System.Drawing.Point(449, 416);
+            this.retrieveProductTypeCount.Name = "retrieveProductTypeCount";
+            this.retrieveProductTypeCount.Size = new System.Drawing.Size(212, 43);
+            this.retrieveProductTypeCount.TabIndex = 20;
+            this.retrieveProductTypeCount.Text = "Retrieve Product Count";
+            this.retrieveProductTypeCount.UseVisualStyleBackColor = true;
+            this.retrieveProductTypeCount.Click += new System.EventHandler(this.retrieveProductTypeCount_Click);
             // 
             // ProductsData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(703, 450);
+            this.ClientSize = new System.Drawing.Size(692, 468);
+            this.Controls.Add(this.retrieveProductTypeCount);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.retrieveProducts);
             this.Controls.Add(this.GetProductNameButton);
@@ -262,5 +274,6 @@
         private System.Windows.Forms.Button GetProductNameButton;
         private System.Windows.Forms.Button retrieveProducts;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button retrieveProductTypeCount;
     }
 }

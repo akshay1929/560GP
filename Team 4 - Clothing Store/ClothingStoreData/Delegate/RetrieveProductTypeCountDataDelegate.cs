@@ -14,10 +14,9 @@ namespace ClothingStoreData.Delegate
     {
         private readonly int productID;
 
-        public RetrieveProductTypeCountDataDelegate(int s)
+        public RetrieveProductTypeCountDataDelegate()
          : base("Product.RetrieveProductTypeCount")
         {
-            this.productID = s;
         }
 
         public override void PrepareCommand(SqlCommand command)
@@ -29,11 +28,11 @@ namespace ClothingStoreData.Delegate
 
         public override IReadOnlyList<Product> Translate(SqlCommand command, IDataRowReader reader)
         {
-            var product = new List<Product>();
+            var count = new List<Product>();
 
             while (reader.Read())
             {
-                product.Add(new Product(
+                count.Add(new Product(
                     reader.GetString("SKU"),
                     reader.GetString("ProductName"),
                     (ProductType)reader.GetByte("ProductType"),
@@ -43,7 +42,7 @@ namespace ClothingStoreData.Delegate
                     reader.GetString("Rating")));
             }
 
-            return product;
+            return count;
         }
     }
 }
