@@ -36,7 +36,7 @@ namespace ClothingStoreData.Delegate
                 return null;
 
             return new Orders(
-               reader.GetInt32("OrderID"),
+               reader.GetInt32("TotalOrders"),
                reader.GetDateTimeOffset("StartDate"),
                reader.GetDateTimeOffset("EndDate"));
         }
