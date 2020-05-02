@@ -13,6 +13,8 @@ namespace ClothingStoreData.Models
         public int EmployeeID { get; }
         public int ShipmentID { get; }
         public DateTimeOffset OrderDate { get; }
+        public DateTimeOffset StartDate { get; }
+        public DateTimeOffset EndDate { get; } 
         public string ShipmentAddress { get; }
 
         internal Orders (int oID, int mID, int eID, int sID, DateTimeOffset date, string address)
@@ -23,6 +25,13 @@ namespace ClothingStoreData.Models
             ShipmentID = sID;
             OrderDate = date;
             ShipmentAddress = address;
+        }
+        internal Orders(int oID, DateTimeOffset s, DateTimeOffset e)
+        {
+            OrderID = oID;
+            StartDate = s;
+            EndDate = e;
+           
         }
 
     }

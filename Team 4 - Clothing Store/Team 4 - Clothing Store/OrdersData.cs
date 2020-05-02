@@ -30,5 +30,20 @@ namespace Team_4___Clothing_Store
             IReadOnlyList<Orders> orderList = orders.RetrieveOrders();
             dataGridView1.DataSource = orderList;
         }
+
+        private void orderCount_Click(object sender, EventArgs e)
+        {
+            SqlOrderRepository orders = new SqlOrderRepository(connectionString);
+
+            Orders oo = orders.RetrieveOrderCountDateDataDelegate(startDatePicker.Value, endDatePicker.Value);
+            List<Orders> list = new List<Orders>();
+            list.Add(oo);
+            dataGridView1.DataSource = list;
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
