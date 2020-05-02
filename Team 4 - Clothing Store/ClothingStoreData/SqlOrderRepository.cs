@@ -28,6 +28,11 @@ namespace ClothingStoreData
             var d = new GetOrderIdDataDelegate(shipmentAddress);
             return executor.ExecuteReader(d);
         }
+        public Orders RetrieveOrderCountDateDataDelegate(DateTimeOffset start, DateTimeOffset end)
+        {
+            var d = new RetrieveOrderCountDateDataDelegate(start, end);
+            return executor.ExecuteReader(d);
+        }
         public IReadOnlyList<Orders> RetrieveOrders()
         {
             return executor.ExecuteReader(new RetrieveOrdersDataDelegate());

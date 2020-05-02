@@ -12,5 +12,7 @@ namespace ClothingStoreData
         Orders GetOrder(int id);
         IReadOnlyList<Orders> RetrieveOrders();
         Orders GetOrderId(string shipmentAddress);
+
+        Orders RetrieveOrderCountDateDataDelegate(DateTimeOffset start, DateTimeOffset end);
     }
 }
