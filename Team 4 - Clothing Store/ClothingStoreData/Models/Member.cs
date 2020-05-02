@@ -29,6 +29,16 @@ namespace ClothingStoreData.Models
             Points = points;
             Status = status;
         }
+        internal Member(string firstName,
+           string lastName, int points, string status)
+        {
+            
+            FirstName = firstName;
+            LastName = lastName;
+         
+            Points = points;
+            Status = status;
+        }
 
     }
 }

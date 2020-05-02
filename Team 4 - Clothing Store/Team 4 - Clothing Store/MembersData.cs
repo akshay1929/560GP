@@ -35,5 +35,12 @@ namespace Team_4___Clothing_Store
             IReadOnlyList<Member> memberList = members.RetrieveMember();
             dataGridView1.DataSource = memberList;
         }
+
+        private void memberPoints_Click(object sender, EventArgs e)
+        {
+            SqlMemberRepository members = new SqlMemberRepository(connectionString);
+            IReadOnlyList<Member> memberList = members.RetrieveMemberPoints();
+            dataGridView1.DataSource = memberList;
+        }
     }
 }
