@@ -26,11 +26,10 @@ namespace ClothingStoreData.Models
             OrderDate = date;
             ShipmentAddress = address;
         }
-        internal Orders(int oID, DateTimeOffset s, DateTimeOffset e)
+        internal Orders(int oID)
         {
             OrderID = oID;
-            StartDate = s;
-            EndDate = e;
+           
            
         }
 
