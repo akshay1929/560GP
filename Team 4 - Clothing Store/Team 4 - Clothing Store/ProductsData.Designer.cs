@@ -34,6 +34,7 @@
             this.retrieveProducts = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.retrieveProductTypeCount = new System.Windows.Forms.Button();
+            this.ProductsRatingButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -93,11 +94,22 @@
             this.retrieveProductTypeCount.UseVisualStyleBackColor = true;
             this.retrieveProductTypeCount.Click += new System.EventHandler(this.retrieveProductTypeCount_Click);
             // 
+            // ProductsRatingButton
+            // 
+            this.ProductsRatingButton.Location = new System.Drawing.Point(707, 313);
+            this.ProductsRatingButton.Name = "ProductsRatingButton";
+            this.ProductsRatingButton.Size = new System.Drawing.Size(212, 42);
+            this.ProductsRatingButton.TabIndex = 21;
+            this.ProductsRatingButton.Text = "Highest-Rated Products";
+            this.ProductsRatingButton.UseVisualStyleBackColor = true;
+            this.ProductsRatingButton.Click += new System.EventHandler(this.ProductsRatingButton_Click);
+            // 
             // ProductsData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(934, 468);
+            this.Controls.Add(this.ProductsRatingButton);
             this.Controls.Add(this.retrieveProductTypeCount);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.retrieveProducts);
@@ -118,5 +130,6 @@
         private System.Windows.Forms.Button retrieveProducts;
         private System.Windows.Forms.Button retrieveProductTypeCount;
         public System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button ProductsRatingButton;
     }
 }

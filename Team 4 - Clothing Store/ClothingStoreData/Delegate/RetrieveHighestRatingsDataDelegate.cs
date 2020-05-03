@@ -24,7 +24,7 @@ namespace ClothingStoreData.Delegate
                     reader.GetInt32("ProductID"),
                     reader.GetString("SKU"),
                     reader.GetString("ProductName"),
-                    reader.GetInt32("ProductType"),
+                    reader.GetInt32("ProductTypeID"),
                     reader.GetInt32("Quantity"),
                     reader.GetString("Description"),
                     reader.GetString("Price"),

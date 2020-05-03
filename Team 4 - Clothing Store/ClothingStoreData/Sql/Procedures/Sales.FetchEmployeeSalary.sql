@@ -2,11 +2,7 @@ CREATE OR ALTER PROCEDURE Sales.FetchEmployeeSalary
    @GivenEmployeeID INT
 AS
 
-SELECT 
-	E.Email,
-	E.[Name],
-	E.EmployeeRole,
-	E.Salary
+SELECT *
 FROM 
 	Sales.Employees E
 WHERE 

@@ -99,8 +99,8 @@ CREATE TABLE Product
         REFERENCES Product.ProductType(ProductTypeID),
 	Quantity INT NOT NULL,
     [Description] NVARCHAR(MAX) NOT NULL,
-    Price FLOAT NOT NULL,
-	Rating FLOAT NOT NULL  
+    Price NVARCHAR(32) NOT NULL,
+	Rating NVARCHAR(32) NOT NULL  
 );
 
 CREATE TABLE Sales.OrderLines

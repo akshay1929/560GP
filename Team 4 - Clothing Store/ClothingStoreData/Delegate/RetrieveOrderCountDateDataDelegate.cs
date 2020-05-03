@@ -12,33 +12,35 @@ namespace ClothingStoreData.Delegate
 {
     class RetrieveOrderCountDateDataDelegate : DataReaderDelegate<Orders>
     {
-        private readonly DateTimeOffset start;
-        private readonly DateTimeOffset end;
+        private readonly DateTimeOffset startdate;
+        private readonly DateTimeOffset enddate;
 
-        public RetrieveOrderCountDateDataDelegate(DateTimeOffset s, DateTimeOffset e)
+        public RetrieveOrderCountDateDataDelegate(DateTimeOffset startdate, DateTimeOffset enddate)
            : base("Sales.RetrieveOrderCountDate")
         {
-            start = s;
-            end = s;
+            this.startdate = startdate;
+            this.enddate = enddate;
         }
 
         public override void PrepareCommand(SqlCommand command)
         {
             base.PrepareCommand(command);
 
-            command.Parameters.AddWithValue("StartDate", start);
-            command.Parameters.AddWithValue("EndDate", end);
+            command.Parameters.AddWithValue("StartDate", startdate);
+            command.Parameters.AddWithValue("EndDate", enddate);
         }
 
         public override Orders Translate(SqlCommand command, IDataRowReader reader)
         {
+
             if (!reader.Read())
                 return null;
 
             return new Orders(
-               reader.GetInt32("TotalOrders"))
-               
-               ;
+               reader.GetDateTimeOffset("StartDate"),
+               reader.GetDateTimeOffset("EndDate"),
+               reader.GetInt32("TotalOrders")
+               );
         }
     }
 }

@@ -1,15 +1,38 @@
+CREATE OR ALTER PROCEDURE Sales.UpdateEmployeeRole
+   @GivenEmployeeID INT,
+   @Email NVARCHAR(128),
+   @Name NVARCHAR(32),
+   @GivenEmployeeRole NVARCHAR(32),
+   @Salary INT
+AS
+
+SELECT *
+FROM Sales.Employees;
+
+UPDATE Sales.Employees
+SET   
+	Email = @Email,
+	[Name] = @Name,
+	EmployeeRole = @GivenEmployeeRole,
+	Salary = @Salary
+WHERE EmployeeID = @GivenEmployeeID
+GO
+
+/* Retrieve Order Count */
 CREATE OR ALTER PROCEDURE Sales.RetrieveOrderCountDate
  @StartDate DATETIMEOFFSET,
  @EndDate DATETIMEOFFSET
-
- AS
+AS
 
 SELECT 
-    COUNT(O.OrderID) AS TotalOrders
+	 @StartDate AS StartDate,
+	 @EndDate AS EndDate,
+     COUNT(O.OrderID) AS TotalOrders
 FROM 
 	Sales.Orders O
 WHERE
-	O.OrderDate BETWEEN @StartDate AND @EndDate;
+	O.OrderDate BETWEEN @StartDate AND @EndDate
+GROUP BY O.OrderID
 GO
 
 /* Create Product */
@@ -78,12 +101,11 @@ GO
 CREATE OR ALTER PROCEDURE Product.RetrieveHighestRatings
 AS
 
-SELECT 
-	P.ProductId, P.SKU, P.ProductName, P.Quantity, P.[Description], P.Price, P.Rating
+SELECT *
 FROM 
 	Product P
 ORDER BY 
-	P.Rating DESC
+	P.Rating DESC, P.ProductName ASC
 GO
 
 /* Retrieve Employees */
@@ -111,9 +133,7 @@ CREATE OR ALTER PROCEDURE Sales.FetchEmployeeSalary
    @GivenEmployeeID INT
 AS
 
-SELECT 
-	E.[Name],
-	E.Salary
+SELECT *
 FROM 
 	Sales.Employees E
 WHERE 
@@ -164,6 +184,17 @@ FROM Sales.Orders O
 WHERE S.ShipmentAddress = @GivenAddress
 GROUP BY S.ShipmentID, S.ShipmentAddress, O.OrderID
 ORDER BY S.ShipmentID ASC
+GO
+
+/* Retrieve Member Points */
+CREATE OR ALTER PROCEDURE Users.RetrieveMemberPoints
+AS
+
+SELECT *
+FROM 
+	Users.Member M
+ORDER BY 
+	M.Points DESC
 GO
 
 /* Report #1 */
