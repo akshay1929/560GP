@@ -11,6 +11,8 @@ namespace ClothingStoreData
 
         Employees CreateEmployee(string email, string name, string role, int salary);
 
+        void UpdateEmployeeRole(int employeeid, string email, string name, string employeerole, int salary);
+
         // Member GetMember(string Email);
 
         // Member GetMemberPhone(string Phone);

@@ -35,9 +35,9 @@
             // 
             // retrieveShipment
             // 
-            this.retrieveShipment.Location = new System.Drawing.Point(538, 29);
+            this.retrieveShipment.Location = new System.Drawing.Point(421, 15);
             this.retrieveShipment.Name = "retrieveShipment";
-            this.retrieveShipment.Size = new System.Drawing.Size(153, 42);
+            this.retrieveShipment.Size = new System.Drawing.Size(181, 49);
             this.retrieveShipment.TabIndex = 1;
             this.retrieveShipment.Text = "Retrieve Shipments";
             this.retrieveShipment.UseVisualStyleBackColor = true;
@@ -48,18 +48,18 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 15);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(508, 420);
+            this.dataGridView1.Size = new System.Drawing.Size(344, 420);
             this.dataGridView1.TabIndex = 2;
             // 
             // ShipmentsData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(703, 450);
+            this.ClientSize = new System.Drawing.Size(614, 450);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.retrieveShipment);
             this.Name = "ShipmentsData";
-            this.Text = "ShipmentsData";
+            this.Text = "Shipments Data";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 

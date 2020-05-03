@@ -37,25 +37,25 @@
             this.startDatePicker = new System.Windows.Forms.DateTimePicker();
             this.endDatePicker = new System.Windows.Forms.DateTimePicker();
             this.orderCount = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.StartDateLabel = new System.Windows.Forms.Label();
+            this.EndDateLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // GetOrderButton
             // 
-            this.GetOrderButton.Location = new System.Drawing.Point(449, 15);
+            this.GetOrderButton.Location = new System.Drawing.Point(704, 79);
             this.GetOrderButton.Name = "GetOrderButton";
-            this.GetOrderButton.Size = new System.Drawing.Size(212, 42);
+            this.GetOrderButton.Size = new System.Drawing.Size(242, 48);
             this.GetOrderButton.TabIndex = 1;
             this.GetOrderButton.Text = "Get Order";
             this.GetOrderButton.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(449, 141);
+            this.button1.Location = new System.Drawing.Point(704, 184);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(212, 42);
+            this.button1.Size = new System.Drawing.Size(242, 42);
             this.button1.TabIndex = 2;
             this.button1.Text = "Get Order Id";
             this.button1.UseVisualStyleBackColor = true;
@@ -63,7 +63,7 @@
             // ShipmentAddressLabel
             // 
             this.ShipmentAddressLabel.AutoSize = true;
-            this.ShipmentAddressLabel.Location = new System.Drawing.Point(446, 111);
+            this.ShipmentAddressLabel.Location = new System.Drawing.Point(731, 154);
             this.ShipmentAddressLabel.Name = "ShipmentAddressLabel";
             this.ShipmentAddressLabel.Size = new System.Drawing.Size(95, 13);
             this.ShipmentAddressLabel.TabIndex = 3;
@@ -71,16 +71,16 @@
             // 
             // ShipmentAddressTextbox
             // 
-            this.ShipmentAddressTextbox.Location = new System.Drawing.Point(561, 108);
+            this.ShipmentAddressTextbox.Location = new System.Drawing.Point(846, 151);
             this.ShipmentAddressTextbox.Name = "ShipmentAddressTextbox";
             this.ShipmentAddressTextbox.Size = new System.Drawing.Size(100, 20);
             this.ShipmentAddressTextbox.TabIndex = 4;
             // 
             // retrieveOrders
             // 
-            this.retrieveOrders.Location = new System.Drawing.Point(449, 204);
+            this.retrieveOrders.Location = new System.Drawing.Point(704, 15);
             this.retrieveOrders.Name = "retrieveOrders";
-            this.retrieveOrders.Size = new System.Drawing.Size(212, 48);
+            this.retrieveOrders.Size = new System.Drawing.Size(242, 48);
             this.retrieveOrders.TabIndex = 5;
             this.retrieveOrders.Text = "Retrieve Orders";
             this.retrieveOrders.UseVisualStyleBackColor = true;
@@ -91,59 +91,59 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 15);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(428, 420);
+            this.dataGridView1.Size = new System.Drawing.Size(643, 420);
             this.dataGridView1.TabIndex = 6;
             // 
             // startDatePicker
             // 
-            this.startDatePicker.Location = new System.Drawing.Point(506, 268);
+            this.startDatePicker.Location = new System.Drawing.Point(761, 258);
             this.startDatePicker.Name = "startDatePicker";
             this.startDatePicker.Size = new System.Drawing.Size(185, 20);
             this.startDatePicker.TabIndex = 7;
             // 
             // endDatePicker
             // 
-            this.endDatePicker.Location = new System.Drawing.Point(506, 305);
+            this.endDatePicker.Location = new System.Drawing.Point(761, 295);
             this.endDatePicker.Name = "endDatePicker";
             this.endDatePicker.Size = new System.Drawing.Size(185, 20);
             this.endDatePicker.TabIndex = 8;
             // 
             // orderCount
             // 
-            this.orderCount.Location = new System.Drawing.Point(449, 342);
+            this.orderCount.Location = new System.Drawing.Point(704, 335);
             this.orderCount.Name = "orderCount";
-            this.orderCount.Size = new System.Drawing.Size(185, 32);
+            this.orderCount.Size = new System.Drawing.Size(242, 42);
             this.orderCount.TabIndex = 9;
             this.orderCount.Text = "Retrieve Order Count";
             this.orderCount.UseVisualStyleBackColor = true;
             this.orderCount.Click += new System.EventHandler(this.orderCount_Click);
             // 
-            // label1
+            // StartDateLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(446, 274);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 13);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Start Date";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.StartDateLabel.AutoSize = true;
+            this.StartDateLabel.Location = new System.Drawing.Point(701, 261);
+            this.StartDateLabel.Name = "StartDateLabel";
+            this.StartDateLabel.Size = new System.Drawing.Size(58, 13);
+            this.StartDateLabel.TabIndex = 10;
+            this.StartDateLabel.Text = "Start Date:";
+            this.StartDateLabel.Click += new System.EventHandler(this.label1_Click);
             // 
-            // label2
+            // EndDateLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(446, 311);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 13);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "End Date";
+            this.EndDateLabel.AutoSize = true;
+            this.EndDateLabel.Location = new System.Drawing.Point(701, 298);
+            this.EndDateLabel.Name = "EndDateLabel";
+            this.EndDateLabel.Size = new System.Drawing.Size(55, 13);
+            this.EndDateLabel.TabIndex = 11;
+            this.EndDateLabel.Text = "End Date:";
             // 
             // OrdersData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(703, 450);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(958, 450);
+            this.Controls.Add(this.EndDateLabel);
+            this.Controls.Add(this.StartDateLabel);
             this.Controls.Add(this.orderCount);
             this.Controls.Add(this.endDatePicker);
             this.Controls.Add(this.startDatePicker);
@@ -154,7 +154,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.GetOrderButton);
             this.Name = "OrdersData";
-            this.Text = "OrdersData";
+            this.Text = "Orders Data";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -171,7 +171,7 @@
         private System.Windows.Forms.DateTimePicker startDatePicker;
         private System.Windows.Forms.DateTimePicker endDatePicker;
         private System.Windows.Forms.Button orderCount;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label StartDateLabel;
+        private System.Windows.Forms.Label EndDateLabel;
     }
 }

@@ -34,6 +34,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.EmployeeIdTextBox = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.UpdateEmployeeRole = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,7 +54,7 @@
             this.CreateEmployeeButton.Name = "CreateEmployeeButton";
             this.CreateEmployeeButton.Size = new System.Drawing.Size(212, 42);
             this.CreateEmployeeButton.TabIndex = 2;
-            this.CreateEmployeeButton.Text = "Add New Employee";
+            this.CreateEmployeeButton.Text = "Add A Employee";
             this.CreateEmployeeButton.UseVisualStyleBackColor = true;
             this.CreateEmployeeButton.Click += new System.EventHandler(this.CreateEmployeeButton_Click);
             // 
@@ -93,11 +94,22 @@
             this.dataGridView1.TabIndex = 14;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // UpdateEmployeeRole
+            // 
+            this.UpdateEmployeeRole.Location = new System.Drawing.Point(604, 224);
+            this.UpdateEmployeeRole.Name = "UpdateEmployeeRole";
+            this.UpdateEmployeeRole.Size = new System.Drawing.Size(212, 42);
+            this.UpdateEmployeeRole.TabIndex = 15;
+            this.UpdateEmployeeRole.Text = "Update Employee Role";
+            this.UpdateEmployeeRole.UseVisualStyleBackColor = true;
+            this.UpdateEmployeeRole.Click += new System.EventHandler(this.UpdateEmployeeRole_Click);
+            // 
             // EmployeesData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(830, 449);
+            this.Controls.Add(this.UpdateEmployeeRole);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.EmployeeIdTextBox);
@@ -105,7 +117,7 @@
             this.Controls.Add(this.CreateEmployeeButton);
             this.Controls.Add(this.RetrieveEmployeesButton);
             this.Name = "EmployeesData";
-            this.Text = "EmployeesData";
+            this.Text = "Employees Data";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -119,5 +131,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox EmployeeIdTextBox;
         public System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button UpdateEmployeeRole;
     }
 }

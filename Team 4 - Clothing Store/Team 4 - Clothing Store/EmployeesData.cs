@@ -69,5 +69,19 @@ namespace Team_4___Clothing_Store
             CreateEmployeeForm ef = new CreateEmployeeForm();
             ef.ShowDialog();
         }
+
+        private void UpdateEmployeeRole_Click(object sender, EventArgs e)
+        {
+            UpdateEmployeeRoleForm updateForm = new UpdateEmployeeRoleForm();
+
+            updateForm.EmployeeIdText.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            updateForm.EmployeeIdText.ReadOnly = true;
+            updateForm.email = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            updateForm.name = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            updateForm.salary = Convert.ToInt32(dataGridView1.CurrentRow.Cells[4].Value);
+            updateForm.EmployeeRoleText.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+
+            updateForm.ShowDialog();
+        }
     }
 }

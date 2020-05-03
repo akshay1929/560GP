@@ -38,6 +38,7 @@
             this.EmailTextbox = new System.Windows.Forms.TextBox();
             this.CreateEmployeeButton = new System.Windows.Forms.Button();
             this.EmployeeLabel = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // SalaryLabel
@@ -122,11 +123,20 @@
             this.EmployeeLabel.Size = new System.Drawing.Size(0, 13);
             this.EmployeeLabel.TabIndex = 21;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(48, 225);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 13);
+            this.label1.TabIndex = 22;
+            // 
             // CreateEmployeeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(307, 262);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.EmployeeLabel);
             this.Controls.Add(this.CreateEmployeeButton);
             this.Controls.Add(this.SalaryLabel);
@@ -138,7 +148,7 @@
             this.Controls.Add(this.NameTextbox);
             this.Controls.Add(this.EmailTextbox);
             this.Name = "CreateEmployeeForm";
-            this.Text = "CreateEmployeeForm";
+            this.Text = "Create A Employee";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -156,5 +166,6 @@
         private System.Windows.Forms.TextBox EmailTextbox;
         private System.Windows.Forms.Button CreateEmployeeButton;
         private System.Windows.Forms.Label EmployeeLabel;
+        private System.Windows.Forms.Label label1;
     }
 }

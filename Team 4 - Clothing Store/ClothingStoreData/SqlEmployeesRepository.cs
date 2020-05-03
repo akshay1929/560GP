@@ -46,5 +46,20 @@ namespace ClothingStoreData
             var d = new FetchEmployeeSalaryDataDelegate(employeeid);
             return executor.ExecuteReader(d);
         }
+
+        public void UpdateEmployeeRole(int employeeid, string email, string name, string employeerole, int salary)
+        {
+            if (email == null)
+                throw new ArgumentNullException(nameof(email));
+
+            if (name == null)
+                throw new ArgumentNullException(nameof(name));
+
+            if (employeerole == null)
+                throw new ArgumentNullException(nameof(employeerole));
+
+            var d = new UpdateEmployeeRoleDataDelegate(employeeid, email, name, employeerole, salary);
+            executor.ExecuteNonQuery(d);
+        }
     }
 }

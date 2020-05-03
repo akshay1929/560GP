@@ -256,7 +256,7 @@
             this.Controls.Add(this.FirstNameTextBox);
             this.Controls.Add(this.EmailTextBox);
             this.Name = "CreateMemberForm";
-            this.Text = "CreateMemberForm";
+            this.Text = "Create A Member";
             this.Load += new System.EventHandler(this.CreateMemberForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -37,7 +37,7 @@ namespace Team_4___Clothing_Store
                 ProductsData pd = new ProductsData();
                 pd.dataGridView1.DataSource = list;
 
-                // MemberAddedLabel.Text = "Member Addition Succesful.";
+                ProductLabel.Text = "Product Addition Succesful.";
             }
             catch (ArgumentException ex)
             {

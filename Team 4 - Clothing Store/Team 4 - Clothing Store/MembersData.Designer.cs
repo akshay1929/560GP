@@ -43,7 +43,7 @@
             // 
             // FetchMemberStatusButton
             // 
-            this.FetchMemberStatusButton.Location = new System.Drawing.Point(449, 48);
+            this.FetchMemberStatusButton.Location = new System.Drawing.Point(752, 255);
             this.FetchMemberStatusButton.Name = "FetchMemberStatusButton";
             this.FetchMemberStatusButton.Size = new System.Drawing.Size(212, 42);
             this.FetchMemberStatusButton.TabIndex = 1;
@@ -52,7 +52,7 @@
             // 
             // GetMemberIdButton
             // 
-            this.GetMemberIdButton.Location = new System.Drawing.Point(449, 173);
+            this.GetMemberIdButton.Location = new System.Drawing.Point(752, 380);
             this.GetMemberIdButton.Name = "GetMemberIdButton";
             this.GetMemberIdButton.Size = new System.Drawing.Size(212, 42);
             this.GetMemberIdButton.TabIndex = 2;
@@ -63,7 +63,7 @@
             // MemberIdLabel
             // 
             this.MemberIdLabel.AutoSize = true;
-            this.MemberIdLabel.Location = new System.Drawing.Point(446, 18);
+            this.MemberIdLabel.Location = new System.Drawing.Point(749, 225);
             this.MemberIdLabel.Name = "MemberIdLabel";
             this.MemberIdLabel.Size = new System.Drawing.Size(60, 13);
             this.MemberIdLabel.TabIndex = 3;
@@ -71,14 +71,14 @@
             // 
             // MemberIdTextbox
             // 
-            this.MemberIdTextbox.Location = new System.Drawing.Point(561, 15);
+            this.MemberIdTextbox.Location = new System.Drawing.Point(864, 222);
             this.MemberIdTextbox.Name = "MemberIdTextbox";
             this.MemberIdTextbox.Size = new System.Drawing.Size(100, 20);
             this.MemberIdTextbox.TabIndex = 4;
             // 
             // EmailTextbox
             // 
-            this.EmailTextbox.Location = new System.Drawing.Point(504, 140);
+            this.EmailTextbox.Location = new System.Drawing.Point(807, 347);
             this.EmailTextbox.Name = "EmailTextbox";
             this.EmailTextbox.Size = new System.Drawing.Size(157, 20);
             this.EmailTextbox.TabIndex = 6;
@@ -86,7 +86,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(446, 143);
+            this.label1.Location = new System.Drawing.Point(749, 350);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 5;
@@ -94,7 +94,7 @@
             // 
             // retrieveMembers
             // 
-            this.retrieveMembers.Location = new System.Drawing.Point(449, 254);
+            this.retrieveMembers.Location = new System.Drawing.Point(752, 18);
             this.retrieveMembers.Name = "retrieveMembers";
             this.retrieveMembers.Size = new System.Drawing.Size(212, 47);
             this.retrieveMembers.TabIndex = 7;
@@ -107,12 +107,12 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 15);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(415, 420);
+            this.dataGridView1.Size = new System.Drawing.Size(688, 420);
             this.dataGridView1.TabIndex = 8;
             // 
             // memberPoints
             // 
-            this.memberPoints.Location = new System.Drawing.Point(449, 321);
+            this.memberPoints.Location = new System.Drawing.Point(752, 144);
             this.memberPoints.Name = "memberPoints";
             this.memberPoints.Size = new System.Drawing.Size(212, 47);
             this.memberPoints.TabIndex = 9;
@@ -122,7 +122,7 @@
             // 
             // CreateMemberButton
             // 
-            this.CreateMemberButton.Location = new System.Drawing.Point(449, 388);
+            this.CreateMemberButton.Location = new System.Drawing.Point(752, 81);
             this.CreateMemberButton.Name = "CreateMemberButton";
             this.CreateMemberButton.Size = new System.Drawing.Size(212, 47);
             this.CreateMemberButton.TabIndex = 10;
@@ -134,7 +134,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(703, 450);
+            this.ClientSize = new System.Drawing.Size(976, 450);
             this.Controls.Add(this.CreateMemberButton);
             this.Controls.Add(this.memberPoints);
             this.Controls.Add(this.dataGridView1);
@@ -146,7 +146,7 @@
             this.Controls.Add(this.GetMemberIdButton);
             this.Controls.Add(this.FetchMemberStatusButton);
             this.Name = "MembersData";
-            this.Text = "MembersData";
+            this.Text = "Members Data";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

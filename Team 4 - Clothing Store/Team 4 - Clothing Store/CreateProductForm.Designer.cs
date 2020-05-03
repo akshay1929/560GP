@@ -43,6 +43,7 @@
             this.NameTextbox = new System.Windows.Forms.TextBox();
             this.SKUTextbox = new System.Windows.Forms.TextBox();
             this.CreateProductButton = new System.Windows.Forms.Button();
+            this.ProductLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // RatingLabel
@@ -167,11 +168,20 @@
             this.CreateProductButton.UseVisualStyleBackColor = true;
             this.CreateProductButton.Click += new System.EventHandler(this.CreateProductButton_Click);
             // 
+            // ProductLabel
+            // 
+            this.ProductLabel.AutoSize = true;
+            this.ProductLabel.Location = new System.Drawing.Point(45, 285);
+            this.ProductLabel.Name = "ProductLabel";
+            this.ProductLabel.Size = new System.Drawing.Size(0, 13);
+            this.ProductLabel.TabIndex = 31;
+            // 
             // CreateProductForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(324, 317);
+            this.Controls.Add(this.ProductLabel);
             this.Controls.Add(this.RatingLabel);
             this.Controls.Add(this.PriceLabel);
             this.Controls.Add(this.DescriptionLabel);
@@ -211,5 +221,6 @@
         private System.Windows.Forms.TextBox NameTextbox;
         private System.Windows.Forms.TextBox SKUTextbox;
         private System.Windows.Forms.Button CreateProductButton;
+        private System.Windows.Forms.Label ProductLabel;
     }
 }
