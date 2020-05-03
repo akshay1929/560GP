@@ -13,9 +13,8 @@ namespace ClothingStoreData.Models
         public int EmployeeID { get; }
         public int ShipmentID { get; }
         public DateTimeOffset OrderDate { get; }
-        public DateTimeOffset StartDate { get; }
-        public DateTimeOffset EndDate { get; } 
-        public int TotalOrderCount { get; }
+       
+        
         public string ShipmentAddress { get; }
 
         internal Orders (int oID, int mID, int eID, int sID, DateTimeOffset date, string address)
@@ -28,12 +27,7 @@ namespace ClothingStoreData.Models
             ShipmentAddress = address;
         }
 
-        internal Orders(DateTimeOffset startdate, DateTimeOffset enddate, int totalordercount)
-        {
-            StartDate = startdate;
-            EndDate = enddate;
-            TotalOrderCount = totalordercount;
-        }
+       
 
     }
 }
