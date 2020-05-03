@@ -10,7 +10,7 @@ using System.Data.SqlClient;
 
 namespace ClothingStoreData.Delegate
 {
-    class RetrieveOrderCountDateDataDelegate : DataReaderDelegate<Orders>
+    class RetrieveOrderCountDateDataDelegate : DataReaderDelegate<OrderCount>
     {
         private readonly DateTimeOffset startdate;
         private readonly DateTimeOffset enddate;
@@ -30,13 +30,13 @@ namespace ClothingStoreData.Delegate
             command.Parameters.AddWithValue("EndDate", enddate);
         }
 
-        public override Orders Translate(SqlCommand command, IDataRowReader reader)
+        public override OrderCount Translate(SqlCommand command, IDataRowReader reader)
         {
 
             if (!reader.Read())
                 return null;
 
-            return new Orders(
+            return new OrderCount(
                reader.GetDateTimeOffset("StartDate"),
                reader.GetDateTimeOffset("EndDate"),
                reader.GetInt32("TotalOrders")

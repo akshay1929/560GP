@@ -75,6 +75,7 @@
     <Compile Include="Models\Employees.cs" />
     <Compile Include="Models\Member.cs" />
     <Compile Include="Models\OrderLines.cs" />
+    <Compile Include="Models\OrderCount.cs" />
     <Compile Include="Models\Orders.cs" />
     <Compile Include="Models\Shipment.cs" />
     <Compile Include="Models\Product.cs" />

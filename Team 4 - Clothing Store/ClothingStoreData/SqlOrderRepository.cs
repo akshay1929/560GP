@@ -28,7 +28,7 @@ namespace ClothingStoreData
             var d = new GetOrderIdDataDelegate(shipmentAddress);
             return executor.ExecuteReader(d);
         }
-        public Orders RetrieveOrderCountDateDataDelegate(DateTimeOffset start, DateTimeOffset end)
+        public OrderCount RetrieveOrderCountDateDataDelegate(DateTimeOffset start, DateTimeOffset end)
         {
             var d = new RetrieveOrderCountDateDataDelegate(start, end);
             return executor.ExecuteReader(d);

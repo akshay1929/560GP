@@ -35,8 +35,8 @@ namespace Team_4___Clothing_Store
         {
             SqlOrderRepository orders = new SqlOrderRepository(connectionString);
 
-            Orders oo = orders.RetrieveOrderCountDateDataDelegate(startDatePicker.Value, endDatePicker.Value);
-            List<Orders> list = new List<Orders>();
+            OrderCount oo = orders.RetrieveOrderCountDateDataDelegate(startDatePicker.Value, endDatePicker.Value);
+            List<OrderCount> list = new List<OrderCount>();
             list.Add(oo);
             dataGridView1.DataSource = list;
         }
