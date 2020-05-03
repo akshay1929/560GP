@@ -10,9 +10,8 @@ using System.Data.SqlClient;
 namespace ClothingStoreData.Delegate
 {
    // check implementation
-    public class RetrieveProductTypeCountDataDelegate : DataReaderDelegate<IReadOnlyList<Product>>
+    public class RetrieveProductTypeCountDataDelegate : DataReaderDelegate<IReadOnlyList<ProductTypeCount>>
     {
-       
 
         public RetrieveProductTypeCountDataDelegate()
          : base("Product.RetrieveProductTypeCount")
@@ -21,18 +20,16 @@ namespace ClothingStoreData.Delegate
         }
 
 
-        public override IReadOnlyList<Product> Translate(SqlCommand command, IDataRowReader reader)
+        public override IReadOnlyList<ProductTypeCount> Translate(SqlCommand command, IDataRowReader reader)
         {
-            var count = new List<Product>();
+            var count = new List<ProductTypeCount>();
 
             while (reader.Read())
             {
-                count.Add(new Product(
-                    
+                count.Add(new ProductTypeCount(
                     reader.GetString("SKU"),
-                     reader.GetInt32("Count"),
-                    reader.GetString("ProductName")
-                   
+                    reader.GetString("Name"),
+                    reader.GetInt32("OrdersPlaced")
                     ));
             }
 

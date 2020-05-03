@@ -12,11 +12,11 @@ namespace ClothingStoreData
 
         Product GetProduct(int id);
 
-        Product FetchProductQuantity(int quantity);
+        IReadOnlyList<ProductQuantity> FetchProductQuantity(int producttypeid);
 
         IReadOnlyList<Product> RetrieveHighestRatings();
         IReadOnlyList<Product> RetrieveProducts();
-        IReadOnlyList<Product> RetrieveProductCount();
+        IReadOnlyList<ProductTypeCount> RetrieveProductCount();
 
         Product GetProductIdName(int producttype);
 

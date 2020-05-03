@@ -30,7 +30,6 @@
         {
             this.CreateProductButton = new System.Windows.Forms.Button();
             this.FetchProductQuantity = new System.Windows.Forms.Button();
-            this.GetProductNameButton = new System.Windows.Forms.Button();
             this.retrieveProducts = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.retrieveProductTypeCount = new System.Windows.Forms.Button();
@@ -54,17 +53,9 @@
             this.FetchProductQuantity.Name = "FetchProductQuantity";
             this.FetchProductQuantity.Size = new System.Drawing.Size(212, 42);
             this.FetchProductQuantity.TabIndex = 16;
-            this.FetchProductQuantity.Text = "Fetch Product Quantity";
+            this.FetchProductQuantity.Text = "Product Quantities For A Category";
             this.FetchProductQuantity.UseVisualStyleBackColor = true;
-            // 
-            // GetProductNameButton
-            // 
-            this.GetProductNameButton.Location = new System.Drawing.Point(707, 252);
-            this.GetProductNameButton.Name = "GetProductNameButton";
-            this.GetProductNameButton.Size = new System.Drawing.Size(212, 42);
-            this.GetProductNameButton.TabIndex = 17;
-            this.GetProductNameButton.Text = "Get Product Name";
-            this.GetProductNameButton.UseVisualStyleBackColor = true;
+            this.FetchProductQuantity.Click += new System.EventHandler(this.FetchProductQuantity_Click);
             // 
             // retrieveProducts
             // 
@@ -96,7 +87,7 @@
             // 
             // ProductsRatingButton
             // 
-            this.ProductsRatingButton.Location = new System.Drawing.Point(707, 313);
+            this.ProductsRatingButton.Location = new System.Drawing.Point(707, 252);
             this.ProductsRatingButton.Name = "ProductsRatingButton";
             this.ProductsRatingButton.Size = new System.Drawing.Size(212, 42);
             this.ProductsRatingButton.TabIndex = 21;
@@ -113,7 +104,6 @@
             this.Controls.Add(this.retrieveProductTypeCount);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.retrieveProducts);
-            this.Controls.Add(this.GetProductNameButton);
             this.Controls.Add(this.FetchProductQuantity);
             this.Controls.Add(this.CreateProductButton);
             this.Name = "ProductsData";
@@ -126,7 +116,6 @@
         #endregion
         private System.Windows.Forms.Button CreateProductButton;
         private System.Windows.Forms.Button FetchProductQuantity;
-        private System.Windows.Forms.Button GetProductNameButton;
         private System.Windows.Forms.Button retrieveProducts;
         private System.Windows.Forms.Button retrieveProductTypeCount;
         public System.Windows.Forms.DataGridView dataGridView1;

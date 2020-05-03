@@ -49,7 +49,6 @@ namespace Team_4___Clothing_Store
 
         private void FetchEmployeeSalaryButton_Click(object sender, EventArgs e)
         {
-
             SqlEmployeesRepository employees = new SqlEmployeesRepository(connectionString);
             
             Employees ee = employees.FetchEmployeeSalary(Convert.ToInt32(EmployeeIdTextBox.Text));

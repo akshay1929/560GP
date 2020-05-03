@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.GetOrderButton = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.ShipmentAddressLabel = new System.Windows.Forms.Label();
             this.ShipmentAddressTextbox = new System.Windows.Forms.TextBox();
@@ -42,18 +41,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // GetOrderButton
-            // 
-            this.GetOrderButton.Location = new System.Drawing.Point(704, 79);
-            this.GetOrderButton.Name = "GetOrderButton";
-            this.GetOrderButton.Size = new System.Drawing.Size(242, 48);
-            this.GetOrderButton.TabIndex = 1;
-            this.GetOrderButton.Text = "Get Order";
-            this.GetOrderButton.UseVisualStyleBackColor = true;
-            // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(704, 184);
+            this.button1.Location = new System.Drawing.Point(704, 132);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(242, 42);
             this.button1.TabIndex = 2;
@@ -63,7 +53,7 @@
             // ShipmentAddressLabel
             // 
             this.ShipmentAddressLabel.AutoSize = true;
-            this.ShipmentAddressLabel.Location = new System.Drawing.Point(731, 154);
+            this.ShipmentAddressLabel.Location = new System.Drawing.Point(701, 102);
             this.ShipmentAddressLabel.Name = "ShipmentAddressLabel";
             this.ShipmentAddressLabel.Size = new System.Drawing.Size(95, 13);
             this.ShipmentAddressLabel.TabIndex = 3;
@@ -71,9 +61,9 @@
             // 
             // ShipmentAddressTextbox
             // 
-            this.ShipmentAddressTextbox.Location = new System.Drawing.Point(846, 151);
+            this.ShipmentAddressTextbox.Location = new System.Drawing.Point(810, 99);
             this.ShipmentAddressTextbox.Name = "ShipmentAddressTextbox";
-            this.ShipmentAddressTextbox.Size = new System.Drawing.Size(100, 20);
+            this.ShipmentAddressTextbox.Size = new System.Drawing.Size(136, 20);
             this.ShipmentAddressTextbox.TabIndex = 4;
             // 
             // retrieveOrders
@@ -96,21 +86,23 @@
             // 
             // startDatePicker
             // 
-            this.startDatePicker.Location = new System.Drawing.Point(761, 258);
+            this.startDatePicker.Location = new System.Drawing.Point(761, 213);
             this.startDatePicker.Name = "startDatePicker";
             this.startDatePicker.Size = new System.Drawing.Size(185, 20);
             this.startDatePicker.TabIndex = 7;
+            this.startDatePicker.ValueChanged += new System.EventHandler(this.StartDatePicker_ValueChanged);
             // 
             // endDatePicker
             // 
-            this.endDatePicker.Location = new System.Drawing.Point(761, 295);
+            this.endDatePicker.Location = new System.Drawing.Point(761, 250);
             this.endDatePicker.Name = "endDatePicker";
             this.endDatePicker.Size = new System.Drawing.Size(185, 20);
             this.endDatePicker.TabIndex = 8;
+            this.endDatePicker.ValueChanged += new System.EventHandler(this.EndDatePicker_ValueChanged);
             // 
             // orderCount
             // 
-            this.orderCount.Location = new System.Drawing.Point(704, 335);
+            this.orderCount.Location = new System.Drawing.Point(704, 290);
             this.orderCount.Name = "orderCount";
             this.orderCount.Size = new System.Drawing.Size(242, 42);
             this.orderCount.TabIndex = 9;
@@ -121,7 +113,7 @@
             // StartDateLabel
             // 
             this.StartDateLabel.AutoSize = true;
-            this.StartDateLabel.Location = new System.Drawing.Point(701, 261);
+            this.StartDateLabel.Location = new System.Drawing.Point(701, 216);
             this.StartDateLabel.Name = "StartDateLabel";
             this.StartDateLabel.Size = new System.Drawing.Size(58, 13);
             this.StartDateLabel.TabIndex = 10;
@@ -131,11 +123,12 @@
             // EndDateLabel
             // 
             this.EndDateLabel.AutoSize = true;
-            this.EndDateLabel.Location = new System.Drawing.Point(701, 298);
+            this.EndDateLabel.Location = new System.Drawing.Point(701, 253);
             this.EndDateLabel.Name = "EndDateLabel";
             this.EndDateLabel.Size = new System.Drawing.Size(55, 13);
             this.EndDateLabel.TabIndex = 11;
             this.EndDateLabel.Text = "End Date:";
+            this.EndDateLabel.Click += new System.EventHandler(this.EndDateLabel_Click);
             // 
             // OrdersData
             // 
@@ -152,7 +145,6 @@
             this.Controls.Add(this.ShipmentAddressTextbox);
             this.Controls.Add(this.ShipmentAddressLabel);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.GetOrderButton);
             this.Name = "OrdersData";
             this.Text = "Orders Data";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -162,7 +154,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button GetOrderButton;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label ShipmentAddressLabel;
         private System.Windows.Forms.TextBox ShipmentAddressTextbox;

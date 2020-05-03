@@ -16,7 +16,6 @@ namespace ClothingStoreData.Models
         public string Description { get; }
         public string Price { get; }
         public string Rating { get; }
-        public int Count { get; }
 
         internal Product(int id, string sku, string productname,
            int producttype, int quantity, string description, string price, string rating)
@@ -30,17 +29,5 @@ namespace ClothingStoreData.Models
             Price = price;
             Rating = rating;
         }
-
-        internal Product(string productname, int orderCount, string sku)
-          
-        {
-            ProductName = productname;
-            Count = orderCount;
-            SKU = sku;
-           
-            
-            
-        }
-
     }
 }

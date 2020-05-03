@@ -57,7 +57,7 @@
             this.GetMemberIdButton.Name = "GetMemberIdButton";
             this.GetMemberIdButton.Size = new System.Drawing.Size(212, 42);
             this.GetMemberIdButton.TabIndex = 2;
-            this.GetMemberIdButton.Text = "Get Member Id";
+            this.GetMemberIdButton.Text = "Get Member Information";
             this.GetMemberIdButton.UseVisualStyleBackColor = true;
             this.GetMemberIdButton.Click += new System.EventHandler(this.GetMemberIdButton_Click);
             // 

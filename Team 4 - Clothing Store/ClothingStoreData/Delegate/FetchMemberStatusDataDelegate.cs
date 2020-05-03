@@ -5,7 +5,7 @@ using System.Data.SqlClient;
 
 namespace ClothingStoreData.Delegate
 {
-    class FetchMemberStatusDataDelegate : DataReaderDelegate<Member>
+    class FetchMemberStatusDataDelegate : DataReaderDelegate<MemberStatus>
     {
         private readonly int MemberID;
 
@@ -22,14 +22,16 @@ namespace ClothingStoreData.Delegate
             command.Parameters.AddWithValue("GivenMemberid", MemberID);
         }
 
-        public override Member Translate(SqlCommand command, IDataRowReader reader)
+        public override MemberStatus Translate(SqlCommand command, IDataRowReader reader)
         {
             if (!reader.Read())
                 return null;
 
-            return new Member(
+            return new MemberStatus(
                MemberID,
-               
+               reader.GetString("FirstName"),
+               reader.GetString("LastName"),
+               reader.GetInt32("Points"),
                reader.GetString("Status")
                );
         }

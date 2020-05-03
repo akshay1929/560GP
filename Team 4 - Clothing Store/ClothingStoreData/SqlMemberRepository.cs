@@ -42,7 +42,7 @@ namespace ClothingStoreData
             return executor.ExecuteNonQuery(d);
         }
 
-        public Member FetchMemberStatus(int memberid)
+        public MemberStatus FetchMemberStatus(int memberid)
         {
             var d = new FetchMemberStatusDataDelegate(memberid);
             return executor.ExecuteReader(d);

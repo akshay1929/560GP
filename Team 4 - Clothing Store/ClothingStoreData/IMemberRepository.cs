@@ -8,7 +8,7 @@ namespace ClothingStoreData
     {
         IReadOnlyList<Member> RetrieveMember();
         IReadOnlyList<Member> RetrieveMemberPoints();
-        Member FetchMemberStatus(int MemberID);
+        MemberStatus FetchMemberStatus(int MemberID);
 
         Member GetMemberId(string Email);
 

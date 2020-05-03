@@ -45,5 +45,20 @@ namespace Team_4___Clothing_Store
         {
 
         }
+
+        private void StartDatePicker_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EndDateLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EndDatePicker_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

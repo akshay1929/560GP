@@ -49,7 +49,7 @@ namespace Team_4___Clothing_Store
         private void retrieveProductTypeCount_Click(object sender, EventArgs e)
         {
             SqlProductRepository products = new SqlProductRepository(connectionString);
-            IReadOnlyList<Product> productList = products.RetrieveProductCount();
+            IReadOnlyList<ProductTypeCount> productList = products.RetrieveProductCount();
             dataGridView1.DataSource = productList;
         }
 
@@ -58,6 +58,18 @@ namespace Team_4___Clothing_Store
             SqlProductRepository products = new SqlProductRepository(connectionString);
             IReadOnlyList<Product> productList = products.RetrieveHighestRatings();
             dataGridView1.DataSource = productList;
+        }
+
+        private void FetchProductQuantity_Click(object sender, EventArgs e)
+        {
+            SetProductTypeForm productTypeForm = new SetProductTypeForm();
+            productTypeForm.ShowDialog();
+            dataGridView1.DataSource = productTypeForm.productList;
+
+            if(productTypeForm.DialogResult == DialogResult.OK)
+            {
+                productTypeForm.Close();
+            }
         }
     }
 }

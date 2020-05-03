@@ -1,11 +1,11 @@
 CREATE OR ALTER PROCEDURE Product.FetchProductQuantity
-   @GivenProductID INT
+@GivenProductTypeID INT
 AS
 
 SELECT 
-	P.ProductName, P.Quantity
+	P.ProductName, P.[Description], P.Quantity
 FROM 
 	Product P
 WHERE 
-	P.ProductID = @GivenProductID
+	P.ProductTypeID = @GivenProductTypeID
 GO

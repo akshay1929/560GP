@@ -33,24 +33,5 @@ namespace ClothingStoreData.Models
             BirthDate = birthdate;
             Status = status;
         }
-
-        internal Member(int id, string firstName,
-           string lastName, int points, string status)
-        {
-            MemberID = id;
-            FirstName = firstName;
-            LastName = lastName;
-         
-            Points = points;
-            Status = status;
-        }
-
-        internal Member(int id, string status)
-        {
-            MemberID = id;
-            
-            Status = status;
-        }
-
     }
 }

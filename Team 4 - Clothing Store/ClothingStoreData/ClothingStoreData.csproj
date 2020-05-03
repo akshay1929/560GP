@@ -73,10 +73,13 @@
     <Compile Include="IProductRepository.cs" />
     <Compile Include="IShipmentRepository.cs" />
     <Compile Include="Models\Employees.cs" />
+    <Compile Include="Models\MemberStatus.cs" />
     <Compile Include="Models\Member.cs" />
     <Compile Include="Models\OrderLines.cs" />
     <Compile Include="Models\OrderCount.cs" />
     <Compile Include="Models\Orders.cs" />
+    <Compile Include="Models\ProductQuantity.cs" />
+    <Compile Include="Models\ProductTypeCount.cs" />
     <Compile Include="Models\Shipment.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\ProductType.cs" />

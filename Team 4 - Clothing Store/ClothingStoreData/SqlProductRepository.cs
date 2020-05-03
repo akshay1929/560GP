@@ -22,10 +22,9 @@ namespace ClothingStoreData
             return executor.ExecuteReader(d);
         }
 
-        public Product FetchProductQuantity(int quantity)
+        public IReadOnlyList<ProductQuantity> FetchProductQuantity(int producttypeid)
         {
-            var d = new FetchProductQuantityDataDelegate(quantity);
-            return executor.ExecuteReader(d);
+            return executor.ExecuteReader(new FetchProductQuantityDataDelegate(producttypeid));
         }
 
         public Product GetProductIdName(int producttypeid)
@@ -73,7 +72,7 @@ namespace ClothingStoreData
             return executor.ExecuteReader(new RetrieveProductsDataDelegate());
         }
 
-        public IReadOnlyList<Product> RetrieveProductCount()
+        public IReadOnlyList<ProductTypeCount> RetrieveProductCount()
         {
             return executor.ExecuteReader(new RetrieveProductTypeCountDataDelegate());
         }
