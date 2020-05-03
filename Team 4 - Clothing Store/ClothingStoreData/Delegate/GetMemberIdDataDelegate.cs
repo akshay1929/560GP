@@ -19,7 +19,7 @@ namespace ClothingStoreData.Delegate
         {
             base.PrepareCommand(command);
 
-            command.Parameters.AddWithValue("Email", email);
+            command.Parameters.AddWithValue("GivenEmail", email);
         }
 
         public override Member Translate(SqlCommand command, IDataRowReader reader)

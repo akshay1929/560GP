@@ -26,7 +26,9 @@ namespace Team_4___Clothing_Store
 
         private void GetMemberIdButton_Click(object sender, EventArgs e)
         {
-
+            SqlMemberRepository members = new SqlMemberRepository(connectionString);
+           Member memberList = members.GetMemberId(EmailTextbox.Text);
+            dataGridView1.DataSource = memberList;
         }
 
         private void retrieveMembers_Click(object sender, EventArgs e)
@@ -47,6 +49,13 @@ namespace Team_4___Clothing_Store
         {
             CreateMemberForm createMember = new CreateMemberForm();
             createMember.ShowDialog();
+        }
+
+        private void FetchMemberStatusButton_Click(object sender, EventArgs e)
+        {
+            SqlMemberRepository members = new SqlMemberRepository(connectionString);
+            Member memberList = members.FetchMemberStatus(Convert.ToInt32(MemberIdTextbox.Text));
+            dataGridView1.DataSource = memberList;
         }
     }
 }

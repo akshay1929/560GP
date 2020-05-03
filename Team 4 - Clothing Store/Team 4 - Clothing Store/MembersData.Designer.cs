@@ -49,6 +49,7 @@
             this.FetchMemberStatusButton.TabIndex = 1;
             this.FetchMemberStatusButton.Text = "Fetch Member Status";
             this.FetchMemberStatusButton.UseVisualStyleBackColor = true;
+            this.FetchMemberStatusButton.Click += new System.EventHandler(this.FetchMemberStatusButton_Click);
             // 
             // GetMemberIdButton
             // 

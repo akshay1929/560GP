@@ -19,7 +19,7 @@ namespace ClothingStoreData.Delegate
         {
             base.PrepareCommand(command);
 
-            command.Parameters.AddWithValue("MemberID", MemberID);
+            command.Parameters.AddWithValue("GivenMemberid", MemberID);
         }
 
         public override Member Translate(SqlCommand command, IDataRowReader reader)
@@ -29,14 +29,7 @@ namespace ClothingStoreData.Delegate
 
             return new Member(
                MemberID,
-               reader.GetString("Email"),
-               reader.GetString("FirstName"),
-               reader.GetString("LastName"),
-               reader.GetString("Phone"),
-               reader.GetString("BillingAddress"),
-               reader.GetInt32("Points"),
-               reader.GetDateTimeOffset("JoinedOn"),
-               reader.GetDateTimeOffset("BirthDate"),
+               
                reader.GetString("Status")
                );
         }

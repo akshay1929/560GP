@@ -45,5 +45,12 @@ namespace ClothingStoreData.Models
             Status = status;
         }
 
+        internal Member(int id, string status)
+        {
+            MemberID = id;
+            
+            Status = status;
+        }
+
     }
 }
