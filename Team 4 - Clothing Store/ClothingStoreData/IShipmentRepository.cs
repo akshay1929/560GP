@@ -10,5 +10,7 @@ namespace ClothingStoreData
     interface IShipmentRepository
     {
         IReadOnlyList<Shipment> RetrieveShipments();
+
+        Shipment FetchShipmentDate(int orderid);
     }
 }

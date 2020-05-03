@@ -32,5 +32,15 @@ namespace Team_4___Clothing_Store
                 dataGridView1.DataSource = shipmentList;
             }
         }
+
+        private void RecieveShipmentDate_Click(object sender, EventArgs e)
+        {
+            SqlShipmentRepository shipments = new SqlShipmentRepository(connectionString);
+
+            Shipment s = shipments.FetchShipmentDate(Convert.ToInt32(OrderIdTextbox.Text));
+            List<Shipment> list = new List<Shipment>();
+            list.Add(s);
+            dataGridView1.DataSource = list;
+        }
     }
 }

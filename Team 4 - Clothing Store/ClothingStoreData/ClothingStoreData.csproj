@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Delegate\FetchShipmentDateDataDelegate.cs" />
     <Compile Include="Delegate\UpdateEmployeeRoleDataDelegate.cs" />
     <Compile Include="Delegate\CreateMemberDataDelegate.cs" />
     <Compile Include="Delegate\CreateEmployeeDataDelegate.cs" />
@@ -134,6 +135,7 @@
     <Content Include="Sql\Procedures\Sales.CreateEmployee.sql" />
     <Content Include="Sql\Procedures\Product.RetrieveProducts.sql" />
     <Content Include="Sql\Procedures\Users.RetrieveMemberPoints.sql" />
+    <Content Include="Sql\Procedures\Warehouse.FetchShipmentDate.sql" />
     <Content Include="Sql\Procedures\Warehouse.RetrieveShipments.sql" />
     <Content Include="Sql\Procedures\Users.RetrieveMembers.sql" />
     <Content Include="Sql\Procedures\Sales.RetrieveOrders.sql" />

@@ -17,6 +17,12 @@ namespace ClothingStoreData
             executor = new SqlCommandExecutor(connectionString);
         }
 
+        public Shipment FetchShipmentDate(int orderid)
+        {
+            var d = new FetchShipmentDateDataDelegate(orderid);
+            return executor.ExecuteReader(d);
+        }
+
         public IReadOnlyList<Shipment> RetrieveShipments()
         {
             return executor.ExecuteReader(new RetrieveShipmentsDataDelegate());
