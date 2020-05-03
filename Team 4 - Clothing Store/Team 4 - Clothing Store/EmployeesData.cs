@@ -66,19 +66,8 @@ namespace Team_4___Clothing_Store
 
         private void CreateEmployeeButton_Click(object sender, EventArgs e)
         {
-            try
-            {
-                SqlEmployeesRepository employees = new SqlEmployeesRepository(connectionString);
-
-                Employees ee = employees.CreateEmployee(EmailTextbox.Text, NameTextbox.Text, RoleTextbox.Text, Convert.ToInt32(SalaryTextbox.Text));
-                List<Employees> list = new List<Employees>();
-                list.Add(ee);
-                dataGridView1.DataSource = list;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("There cannot be any empty parameters.");
-            }
+            CreateEmployeeForm ef = new CreateEmployeeForm();
+            ef.ShowDialog();
         }
     }
 }
