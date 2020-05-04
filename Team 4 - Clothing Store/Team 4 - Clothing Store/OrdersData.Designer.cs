@@ -36,7 +36,7 @@
             this.StartDateLabel = new System.Windows.Forms.Label();
             this.EndDateLabel = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.UpdateOrderButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -111,7 +111,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.UpdateOrderButton);
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.retrieveOrders);
             this.panel1.Location = new System.Drawing.Point(-2, 90);
@@ -119,14 +119,15 @@
             this.panel1.Size = new System.Drawing.Size(794, 401);
             this.panel1.TabIndex = 12;
             // 
-            // button1
+            // UpdateOrderButton
             // 
-            this.button1.Location = new System.Drawing.Point(205, 13);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(154, 36);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Update Order";
-            this.button1.UseVisualStyleBackColor = true;
+            this.UpdateOrderButton.Location = new System.Drawing.Point(205, 13);
+            this.UpdateOrderButton.Name = "UpdateOrderButton";
+            this.UpdateOrderButton.Size = new System.Drawing.Size(154, 36);
+            this.UpdateOrderButton.TabIndex = 7;
+            this.UpdateOrderButton.Text = "Update Order";
+            this.UpdateOrderButton.UseVisualStyleBackColor = true;
+            this.UpdateOrderButton.Click += new System.EventHandler(this.UpdateOrderButton_Click);
             // 
             // OrdersData
             // 
@@ -157,6 +158,6 @@
         private System.Windows.Forms.Label StartDateLabel;
         private System.Windows.Forms.Label EndDateLabel;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button UpdateOrderButton;
     }
 }
