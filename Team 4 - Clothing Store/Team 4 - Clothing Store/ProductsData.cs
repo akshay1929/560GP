@@ -59,9 +59,6 @@ namespace Team_4___Clothing_Store
 
             for (int i = 0; i < dataGridView1.Columns.Count; i++)
             {
-                DataGridViewColumn columnOne = dataGridView1.Columns[0];
-                columnOne.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-
                 DataGridViewColumn columnTwo = dataGridView1.Columns[1];
                 columnTwo.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
 
@@ -96,7 +93,7 @@ namespace Team_4___Clothing_Store
 
             for (int i = 0; i < dataGridView1.Columns.Count; i++)
             {
-                DataGridViewColumn columnOne = dataGridView1.Columns[1];
+                DataGridViewColumn columnOne = dataGridView1.Columns[2];
                 columnOne.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             }
         }
