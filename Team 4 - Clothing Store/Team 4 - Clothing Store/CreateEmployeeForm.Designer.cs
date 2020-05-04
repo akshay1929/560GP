@@ -141,7 +141,7 @@
             this.Controls.Add(this.NameTextbox);
             this.Controls.Add(this.EmailTextbox);
             this.Name = "CreateEmployeeForm";
-            this.Text = "Create A Employee";
+            this.Text = "Add A Employee";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -47,7 +47,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.CreateMemberButton = new System.Windows.Forms.Button();
-            this.MemberAddedLabel = new System.Windows.Forms.Label();
+            this.CancelButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // EmailTextBox
@@ -214,28 +214,31 @@
             // 
             // CreateMemberButton
             // 
+            this.CreateMemberButton.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.CreateMemberButton.Location = new System.Drawing.Point(33, 302);
             this.CreateMemberButton.Name = "CreateMemberButton";
-            this.CreateMemberButton.Size = new System.Drawing.Size(268, 65);
+            this.CreateMemberButton.Size = new System.Drawing.Size(114, 56);
             this.CreateMemberButton.TabIndex = 20;
-            this.CreateMemberButton.Text = "Create Member";
+            this.CreateMemberButton.Text = "OK";
             this.CreateMemberButton.UseVisualStyleBackColor = true;
             this.CreateMemberButton.Click += new System.EventHandler(this.CreateMemberButton_Click);
             // 
-            // MemberAddedLabel
+            // CancelButton
             // 
-            this.MemberAddedLabel.AutoSize = true;
-            this.MemberAddedLabel.Location = new System.Drawing.Point(30, 386);
-            this.MemberAddedLabel.Name = "MemberAddedLabel";
-            this.MemberAddedLabel.Size = new System.Drawing.Size(0, 13);
-            this.MemberAddedLabel.TabIndex = 21;
+            this.CancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.CancelButton.Location = new System.Drawing.Point(187, 302);
+            this.CancelButton.Name = "CancelButton";
+            this.CancelButton.Size = new System.Drawing.Size(114, 56);
+            this.CancelButton.TabIndex = 21;
+            this.CancelButton.Text = "Cancel";
+            this.CancelButton.UseVisualStyleBackColor = true;
             // 
             // CreateMemberForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(342, 423);
-            this.Controls.Add(this.MemberAddedLabel);
+            this.ClientSize = new System.Drawing.Size(342, 394);
+            this.Controls.Add(this.CancelButton);
             this.Controls.Add(this.CreateMemberButton);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -256,7 +259,7 @@
             this.Controls.Add(this.FirstNameTextBox);
             this.Controls.Add(this.EmailTextBox);
             this.Name = "CreateMemberForm";
-            this.Text = "Create A Member";
+            this.Text = "Add A Member";
             this.Load += new System.EventHandler(this.CreateMemberForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -283,6 +286,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button CreateMemberButton;
-        private System.Windows.Forms.Label MemberAddedLabel;
+        private System.Windows.Forms.Button CancelButton;
     }
 }

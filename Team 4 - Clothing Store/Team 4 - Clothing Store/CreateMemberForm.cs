@@ -40,8 +40,6 @@ namespace Team_4___Clothing_Store
 
                 MembersData md = new MembersData();
                 md.dataGridView1.DataSource = list;
-
-                MemberAddedLabel.Text = "Member Addition Succesful.";
             }
             catch (ArgumentException ex)
             {

@@ -39,6 +39,24 @@ namespace Team_4___Clothing_Store
             SqlMemberRepository members = new SqlMemberRepository(connectionString);
             IReadOnlyList<Member> memberList = members.RetrieveMember();
             dataGridView1.DataSource = memberList;
+
+            for (int i = 0; i < dataGridView1.Columns.Count; i++)
+            {
+                DataGridViewColumn columnOne = dataGridView1.Columns[0];
+                columnOne.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+
+                DataGridViewColumn columnTwo = dataGridView1.Columns[2];
+                columnTwo.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+
+                DataGridViewColumn columnThree = dataGridView1.Columns[3];
+                columnThree.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+
+                DataGridViewColumn columnFour = dataGridView1.Columns[6];
+                columnFour.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+
+                DataGridViewColumn columnFive = dataGridView1.Columns[9];
+                columnFive.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            }
         }
 
         private void memberPoints_Click(object sender, EventArgs e)
@@ -52,6 +70,11 @@ namespace Team_4___Clothing_Store
         {
             CreateMemberForm createMember = new CreateMemberForm();
             createMember.ShowDialog();
+
+            if(createMember.DialogResult == DialogResult.OK || createMember.DialogResult == DialogResult.Cancel)
+            {
+                createMember.Close();
+            }
         }
 
         private void FetchMemberStatusButton_Click(object sender, EventArgs e)
