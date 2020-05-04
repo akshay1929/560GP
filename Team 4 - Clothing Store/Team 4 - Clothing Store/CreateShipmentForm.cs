@@ -12,30 +12,29 @@ using ClothingStoreData.Delegate;
 using ClothingStoreData.Models;
 using DataAccess;
 
-
 namespace Team_4___Clothing_Store
 {
-    public partial class CreateProductForm : Form
+    public partial class CreateShipmentForm : Form
     {
         const string connectionString = "Data Source=mssql.cs.ksu.edu;Initial Catalog = arahman; User ID = arahman; Password=Potc2003";
-        List<Product> list = new List<Product>();
+        List<Shipment> list = new List<Shipment>();
 
-        public CreateProductForm()
+        public CreateShipmentForm()
         {
             InitializeComponent();
         }
 
-        private void CreateProductButton_Click(object sender, EventArgs e)
+        private void CreateShipmentButton_Click(object sender, EventArgs e)
         {
             try
             {
-                SqlProductRepository products = new SqlProductRepository(connectionString);
+                SqlShipmentRepository shipments = new SqlShipmentRepository(connectionString);
 
-                Product createProduct = products.CreateProduct(SKUTextbox.Text, NameTextbox.Text, Convert.ToInt32(TypeIdTextbox.Text), Convert.ToInt32(QuantityTextbox.Text), DescriptionTextBox.Text, PriceTextBox.Text, RatingTextbox.Text);
-                list.Add(createProduct);
+                Shipment createShipment = shipments.CreateShipment(Convert.ToDateTime(ShipmentDateTextbox.Text), ShipmentAddressTextbox.Text);
+                list.Add(createShipment);
 
-                ProductsData pd = new ProductsData();
-                pd.dataGridView1.DataSource = list;
+                ShipmentsData sd = new ShipmentsData();
+                sd.dataGridView1.DataSource = list;
             }
             catch (ArgumentException ex)
             {

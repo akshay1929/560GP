@@ -43,7 +43,7 @@
             this.NameTextbox = new System.Windows.Forms.TextBox();
             this.SKUTextbox = new System.Windows.Forms.TextBox();
             this.CreateProductButton = new System.Windows.Forms.Button();
-            this.ProductLabel = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // RatingLabel
@@ -113,75 +113,78 @@
             // 
             this.RatingTextbox.Location = new System.Drawing.Point(100, 194);
             this.RatingTextbox.Name = "RatingTextbox";
-            this.RatingTextbox.Size = new System.Drawing.Size(157, 20);
+            this.RatingTextbox.Size = new System.Drawing.Size(190, 20);
             this.RatingTextbox.TabIndex = 23;
             // 
             // PriceTextBox
             // 
             this.PriceTextBox.Location = new System.Drawing.Point(100, 165);
             this.PriceTextBox.Name = "PriceTextBox";
-            this.PriceTextBox.Size = new System.Drawing.Size(157, 20);
+            this.PriceTextBox.Size = new System.Drawing.Size(190, 20);
             this.PriceTextBox.TabIndex = 22;
             // 
             // DescriptionTextBox
             // 
             this.DescriptionTextBox.Location = new System.Drawing.Point(121, 136);
             this.DescriptionTextBox.Name = "DescriptionTextBox";
-            this.DescriptionTextBox.Size = new System.Drawing.Size(136, 20);
+            this.DescriptionTextBox.Size = new System.Drawing.Size(169, 20);
             this.DescriptionTextBox.TabIndex = 21;
             // 
             // QuantityTextbox
             // 
             this.QuantityTextbox.Location = new System.Drawing.Point(111, 107);
             this.QuantityTextbox.Name = "QuantityTextbox";
-            this.QuantityTextbox.Size = new System.Drawing.Size(146, 20);
+            this.QuantityTextbox.Size = new System.Drawing.Size(179, 20);
             this.QuantityTextbox.TabIndex = 20;
             // 
             // TypeIdTextbox
             // 
             this.TypeIdTextbox.Location = new System.Drawing.Point(111, 78);
             this.TypeIdTextbox.Name = "TypeIdTextbox";
-            this.TypeIdTextbox.Size = new System.Drawing.Size(146, 20);
+            this.TypeIdTextbox.Size = new System.Drawing.Size(179, 20);
             this.TypeIdTextbox.TabIndex = 19;
             // 
             // NameTextbox
             // 
             this.NameTextbox.Location = new System.Drawing.Point(100, 49);
             this.NameTextbox.Name = "NameTextbox";
-            this.NameTextbox.Size = new System.Drawing.Size(157, 20);
+            this.NameTextbox.Size = new System.Drawing.Size(190, 20);
             this.NameTextbox.TabIndex = 18;
             // 
             // SKUTextbox
             // 
             this.SKUTextbox.Location = new System.Drawing.Point(90, 20);
             this.SKUTextbox.Name = "SKUTextbox";
-            this.SKUTextbox.Size = new System.Drawing.Size(167, 20);
+            this.SKUTextbox.Size = new System.Drawing.Size(200, 20);
             this.SKUTextbox.TabIndex = 17;
             // 
             // CreateProductButton
             // 
+            this.CreateProductButton.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.CreateProductButton.Location = new System.Drawing.Point(45, 227);
             this.CreateProductButton.Name = "CreateProductButton";
-            this.CreateProductButton.Size = new System.Drawing.Size(212, 42);
+            this.CreateProductButton.Size = new System.Drawing.Size(100, 42);
             this.CreateProductButton.TabIndex = 16;
-            this.CreateProductButton.Text = "Create Product";
+            this.CreateProductButton.Text = "OK";
             this.CreateProductButton.UseVisualStyleBackColor = true;
             this.CreateProductButton.Click += new System.EventHandler(this.CreateProductButton_Click);
             // 
-            // ProductLabel
+            // button1
             // 
-            this.ProductLabel.AutoSize = true;
-            this.ProductLabel.Location = new System.Drawing.Point(45, 285);
-            this.ProductLabel.Name = "ProductLabel";
-            this.ProductLabel.Size = new System.Drawing.Size(0, 13);
-            this.ProductLabel.TabIndex = 31;
+            this.button1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.button1.Location = new System.Drawing.Point(190, 227);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(100, 42);
+            this.button1.TabIndex = 32;
+            this.button1.Text = "Cancel";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // CreateProductForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(324, 317);
-            this.Controls.Add(this.ProductLabel);
+            this.ClientSize = new System.Drawing.Size(346, 301);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.RatingLabel);
             this.Controls.Add(this.PriceLabel);
             this.Controls.Add(this.DescriptionLabel);
@@ -221,6 +224,6 @@
         private System.Windows.Forms.TextBox NameTextbox;
         private System.Windows.Forms.TextBox SKUTextbox;
         private System.Windows.Forms.Button CreateProductButton;
-        private System.Windows.Forms.Label ProductLabel;
+        private System.Windows.Forms.Button button1;
     }
 }

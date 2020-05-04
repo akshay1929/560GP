@@ -28,6 +28,15 @@ namespace ClothingStoreData
             return executor.ExecuteReader(new RetrieveShipmentsDataDelegate());
         }
 
+        public Shipment CreateShipment(DateTimeOffset shipmentdate, string shipmentaddress)
+        {
+            if (string.IsNullOrWhiteSpace(shipmentaddress))
+                throw new ArgumentException("The parameter cannot be null or empty.", nameof(shipmentaddress));
+
+            var d = new CreateShipmentDataDelegate(shipmentdate, shipmentaddress);
+            return executor.ExecuteNonQuery(d);
+        }
+
         static void Main()
         {
 

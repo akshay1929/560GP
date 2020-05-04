@@ -84,7 +84,7 @@
             // 
             // retrieveProductTypeCount
             // 
-            this.retrieveProductTypeCount.Location = new System.Drawing.Point(651, 64);
+            this.retrieveProductTypeCount.Location = new System.Drawing.Point(678, 64);
             this.retrieveProductTypeCount.Name = "retrieveProductTypeCount";
             this.retrieveProductTypeCount.Size = new System.Drawing.Size(212, 43);
             this.retrieveProductTypeCount.TabIndex = 20;

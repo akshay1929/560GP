@@ -37,6 +37,11 @@ namespace Team_4___Clothing_Store
         {
             CreateProductForm createProduct = new CreateProductForm();
             createProduct.ShowDialog();
+
+            if(createProduct.DialogResult == DialogResult.OK || createProduct.DialogResult == DialogResult.Cancel)
+            {
+                createProduct.Close();
+            }
         }
 
         private void retrieveProducts_Click(object sender, EventArgs e)

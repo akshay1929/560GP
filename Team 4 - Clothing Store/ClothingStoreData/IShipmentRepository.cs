@@ -12,5 +12,7 @@ namespace ClothingStoreData
         IReadOnlyList<Shipment> RetrieveShipments();
 
         Shipment FetchShipmentDate(int orderid);
+
+        Shipment CreateShipment(DateTimeOffset shipmentdate, string shipmentaddress);
     }
 }

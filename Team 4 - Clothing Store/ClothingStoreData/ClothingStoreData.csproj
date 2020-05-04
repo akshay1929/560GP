@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Delegate\CreateShipmentDataDelegate.cs" />
     <Compile Include="Delegate\FetchShipmentDateDataDelegate.cs" />
     <Compile Include="Delegate\UpdateOrderDataDelegate.cs" />
     <Compile Include="Delegate\UpdateMemberDataDelegate.cs" />
@@ -131,6 +132,7 @@
     <Content Include="Sql\Data\Sales.Employees.sql" />
     <Content Include="Sql\Data\Sales.OrderLines.sql" />
     <Content Include="Sql\Data\Sales.Orders.sql" />
+    <Content Include="Sql\Procedures\Warehouse.CreateShipment.sql" />
     <Content Include="Sql\Procedures\Sales.UpdateOrder.sql" />
     <Content Include="Sql\Procedures\Users.UpdateMember.sql" />
     <Content Include="Sql\Procedures\Sales.UpdateEmployeeRole.sql" />

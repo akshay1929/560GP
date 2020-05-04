@@ -48,5 +48,16 @@ namespace Team_4___Clothing_Store
             list.Add(s);
             dataGridView1.DataSource = list;
         }
+
+        private void AddAShipmentButton_Click(object sender, EventArgs e)
+        {
+            CreateShipmentForm createShipment = new CreateShipmentForm();
+            createShipment.ShowDialog();
+
+            if(createShipment.DialogResult == DialogResult.OK || createShipment.DialogResult == DialogResult.Cancel)
+            {
+                createShipment.Close();
+            }
+        }
     }
 }
