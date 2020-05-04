@@ -40,7 +40,7 @@
             // 
             // RetrieveEmployeesButton
             // 
-            this.RetrieveEmployeesButton.Location = new System.Drawing.Point(604, 12);
+            this.RetrieveEmployeesButton.Location = new System.Drawing.Point(12, 12);
             this.RetrieveEmployeesButton.Name = "RetrieveEmployeesButton";
             this.RetrieveEmployeesButton.Size = new System.Drawing.Size(212, 42);
             this.RetrieveEmployeesButton.TabIndex = 1;
@@ -50,7 +50,7 @@
             // 
             // CreateEmployeeButton
             // 
-            this.CreateEmployeeButton.Location = new System.Drawing.Point(604, 70);
+            this.CreateEmployeeButton.Location = new System.Drawing.Point(242, 12);
             this.CreateEmployeeButton.Name = "CreateEmployeeButton";
             this.CreateEmployeeButton.Size = new System.Drawing.Size(212, 42);
             this.CreateEmployeeButton.TabIndex = 2;
@@ -60,7 +60,7 @@
             // 
             // FetchEmployeeSalaryButton
             // 
-            this.FetchEmployeeSalaryButton.Location = new System.Drawing.Point(604, 166);
+            this.FetchEmployeeSalaryButton.Location = new System.Drawing.Point(474, 45);
             this.FetchEmployeeSalaryButton.Name = "FetchEmployeeSalaryButton";
             this.FetchEmployeeSalaryButton.Size = new System.Drawing.Size(212, 42);
             this.FetchEmployeeSalaryButton.TabIndex = 3;
@@ -71,7 +71,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(601, 136);
+            this.label1.Location = new System.Drawing.Point(471, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(68, 13);
             this.label1.TabIndex = 13;
@@ -79,7 +79,7 @@
             // 
             // EmployeeIdTextBox
             // 
-            this.EmployeeIdTextBox.Location = new System.Drawing.Point(698, 133);
+            this.EmployeeIdTextBox.Location = new System.Drawing.Point(568, 12);
             this.EmployeeIdTextBox.Name = "EmployeeIdTextBox";
             this.EmployeeIdTextBox.Size = new System.Drawing.Size(118, 20);
             this.EmployeeIdTextBox.TabIndex = 12;
@@ -90,15 +90,15 @@
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 142);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(561, 423);
+            this.dataGridView1.Size = new System.Drawing.Size(806, 337);
             this.dataGridView1.TabIndex = 14;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // UpdateEmployeeRole
             // 
-            this.UpdateEmployeeRole.Location = new System.Drawing.Point(604, 224);
+            this.UpdateEmployeeRole.Location = new System.Drawing.Point(539, 94);
             this.UpdateEmployeeRole.Name = "UpdateEmployeeRole";
             this.UpdateEmployeeRole.Size = new System.Drawing.Size(212, 42);
             this.UpdateEmployeeRole.TabIndex = 15;
@@ -110,7 +110,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(830, 449);
+            this.ClientSize = new System.Drawing.Size(830, 491);
             this.Controls.Add(this.UpdateEmployeeRole);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);

@@ -38,6 +38,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.CurrentTimeLabel = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.SearchDatabaseButton = new System.Windows.Forms.Button();
+            this.ReportFormsButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -54,7 +56,7 @@
             // 
             // MembersButton
             // 
-            this.MembersButton.Location = new System.Drawing.Point(246, 204);
+            this.MembersButton.Location = new System.Drawing.Point(246, 194);
             this.MembersButton.Name = "MembersButton";
             this.MembersButton.Size = new System.Drawing.Size(224, 49);
             this.MembersButton.TabIndex = 1;
@@ -64,7 +66,7 @@
             // 
             // OrdersButton
             // 
-            this.OrdersButton.Location = new System.Drawing.Point(246, 276);
+            this.OrdersButton.Location = new System.Drawing.Point(246, 256);
             this.OrdersButton.Name = "OrdersButton";
             this.OrdersButton.Size = new System.Drawing.Size(224, 49);
             this.OrdersButton.TabIndex = 2;
@@ -74,7 +76,7 @@
             // 
             // ProductsButton
             // 
-            this.ProductsButton.Location = new System.Drawing.Point(246, 349);
+            this.ProductsButton.Location = new System.Drawing.Point(246, 319);
             this.ProductsButton.Name = "ProductsButton";
             this.ProductsButton.Size = new System.Drawing.Size(224, 49);
             this.ProductsButton.TabIndex = 3;
@@ -84,7 +86,7 @@
             // 
             // ShipmentsButton
             // 
-            this.ShipmentsButton.Location = new System.Drawing.Point(246, 422);
+            this.ShipmentsButton.Location = new System.Drawing.Point(246, 382);
             this.ShipmentsButton.Name = "ShipmentsButton";
             this.ShipmentsButton.Size = new System.Drawing.Size(224, 49);
             this.ShipmentsButton.TabIndex = 4;
@@ -98,7 +100,7 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(-1, -1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(198, 493);
+            this.panel1.Size = new System.Drawing.Size(198, 581);
             this.panel1.TabIndex = 5;
             // 
             // label1
@@ -129,12 +131,32 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // SearchDatabaseButton
+            // 
+            this.SearchDatabaseButton.Location = new System.Drawing.Point(246, 444);
+            this.SearchDatabaseButton.Name = "SearchDatabaseButton";
+            this.SearchDatabaseButton.Size = new System.Drawing.Size(224, 49);
+            this.SearchDatabaseButton.TabIndex = 8;
+            this.SearchDatabaseButton.Text = "Search Database";
+            this.SearchDatabaseButton.UseVisualStyleBackColor = true;
+            // 
+            // ReportFormsButton
+            // 
+            this.ReportFormsButton.Location = new System.Drawing.Point(246, 505);
+            this.ReportFormsButton.Name = "ReportFormsButton";
+            this.ReportFormsButton.Size = new System.Drawing.Size(224, 49);
+            this.ReportFormsButton.TabIndex = 9;
+            this.ReportFormsButton.Text = "Report Forms";
+            this.ReportFormsButton.UseVisualStyleBackColor = true;
+            // 
             // MainDataSelection
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(734, 488);
+            this.ClientSize = new System.Drawing.Size(734, 574);
+            this.Controls.Add(this.ReportFormsButton);
+            this.Controls.Add(this.SearchDatabaseButton);
             this.Controls.Add(this.CurrentTimeLabel);
             this.Controls.Add(this.ShipmentsButton);
             this.Controls.Add(this.label1);
@@ -163,6 +185,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label CurrentTimeLabel;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button SearchDatabaseButton;
+        private System.Windows.Forms.Button ReportFormsButton;
     }
 }
 

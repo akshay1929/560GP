@@ -49,13 +49,19 @@ namespace Team_4___Clothing_Store
 
         private void FetchEmployeeSalaryButton_Click(object sender, EventArgs e)
         {
+
             SqlEmployeesRepository employees = new SqlEmployeesRepository(connectionString);
             
             Employees ee = employees.FetchEmployeeSalary(Convert.ToInt32(EmployeeIdTextBox.Text));
             List<Employees> list = new List<Employees>();
             list.Add(ee);
             dataGridView1.DataSource = list;
-            
+
+            foreach (DataGridViewColumn column in dataGridView1.Columns)
+            {
+                column.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            }
+
         }
 
         private void EmployeeIdTextBox_TextChanged(object sender, EventArgs e)
