@@ -17,7 +17,7 @@ namespace Team_4___Clothing_Store
 {
     public partial class ProductsData : Form
     {
-        const string connectionString = "Data Source=mssql.cs.ksu.edu;Initial Catalog = arahman; User ID = arahman; Password=Potc2003";
+        const string connectionString = "Data Source=mssql.cs.ksu.edu;Initial Catalog = arahman; User ID = arahman; Password=Cicko1999";
         public ProductsData()
         {
             InitializeComponent();
@@ -95,6 +95,25 @@ namespace Team_4___Clothing_Store
             {
                 DataGridViewColumn columnOne = dataGridView1.Columns[2];
                 columnOne.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            }
+        }
+
+        private void UpdateProductButton_Click(object sender, EventArgs e)
+        {
+            UpdateProductForm updateForm = new UpdateProductForm();
+
+            updateForm.ProductIdText.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            updateForm.ProductIdText.ReadOnly = true;
+            updateForm.SKUTextbox.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            updateForm.ProductNameTextbox.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            updateForm.QuantityTextbox.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+            updateForm.ProductTypeIDTextbox.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+
+            updateForm.ShowDialog();
+
+            if (updateForm.DialogResult == DialogResult.OK || updateForm.DialogResult == DialogResult.Cancel)
+            {
+                updateForm.Close();
             }
         }
     }

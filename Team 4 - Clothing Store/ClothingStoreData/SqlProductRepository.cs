@@ -76,5 +76,20 @@ namespace ClothingStoreData
         {
             return executor.ExecuteReader(new RetrieveProductTypeCountDataDelegate());
         }
+
+        public void UpdateProduct(int productid, string sku, string productname, int producttypeid, int quantity, string description, float price, string rating)
+        {
+            if (sku == null)
+                throw new ArgumentNullException(nameof(sku));
+
+            if (description == null)
+                throw new ArgumentNullException(nameof(description));
+
+            if (rating == null)
+                throw new ArgumentNullException(nameof(rating));
+
+            var d = new UpdateProductDataDelegate(productid, sku, productname, producttypeid, quantity, description, price, rating);
+            executor.ExecuteNonQuery(d);
+        }
     }
 }

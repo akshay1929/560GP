@@ -1,9 +1,75 @@
+CREATE OR ALTER PROCEDURE Warehouse.CreateShipment
+   @ShipmentDate DATETIMEOFFSET,
+   @ShipmentAddress NVARCHAR(128),
+   @ShipmentID INT OUTPUT
+AS
+
+INSERT Warehouse.Shipment(ShipmentDate, ShipmentAddress)
+VALUES(@ShipmentDate, @ShipmentAddress);
+
+SET @ShipmentID = SCOPE_IDENTITY();
+GO
+
+CREATE OR ALTER PROCEDURE Sales.UpdateOrder
+   @GivenOrderID INT,
+   @GivenMemberID INT,
+   @GivenEmployeeID INT,
+   @GivenShipmentID INT,
+   @GivenOrderDate DATETIMEOFFSET,
+   @GivenShipmentAddress NVARCHAR(128)
+AS
+
+SELECT *
+FROM Sales.Orders;
+
+UPDATE Sales.Orders
+SET   
+	MemberID = @GivenMemberID,
+	EmployeeID = @GivenEmployeeID,
+	ShipmentID = @GivenShipmentID,
+	OrderDate = @GivenOrderDate,
+	ShipmentAddress = @GivenShipmentAddress
+WHERE OrderID = @GivenOrderID
+GO
+
+/* Update Member */
+CREATE OR ALTER PROCEDURE Users.UpdateMember
+   @GivenMemberID INT,
+   @GivenEmail NVARCHAR(128),
+   @GivenFirstName NVARCHAR(32),
+   @GivenLastName NVARCHAR(32),
+   @GivenPhone NVARCHAR(32),
+   @GivenBillingAddress NVARCHAR(128),
+   @GivenPoints INT,
+   @GivenJoinedOn DATETIMEOFFSET,
+   @GivenBirthDate DATETIMEOFFSET,
+   @GivenStatus NVARCHAR(32)
+AS
+
+SELECT *
+FROM Users.Member;
+
+UPDATE Users.Member
+SET   
+	Email = @GivenEmail,
+	FirstName = @GivenFirstName,
+	LastName = @GivenLastName,
+	Phone = @GivenPhone,
+	BillingAddress = @GivenBillingAddress,
+	Points = @GivenPoints,
+	JoinedOn = @GivenJoinedOn,
+	BirthDate = @GivenBirthDate,
+	[Status] = @GivenStatus
+WHERE MemberID = @GivenMemberID
+GO
+
+/* Update Employee Role */
 CREATE OR ALTER PROCEDURE Sales.UpdateEmployeeRole
    @GivenEmployeeID INT,
-   @Email NVARCHAR(128),
-   @Name NVARCHAR(32),
+   @GivenEmail NVARCHAR(128),
+   @GivenName NVARCHAR(32),
    @GivenEmployeeRole NVARCHAR(32),
-   @Salary INT
+   @GivenSalary INT
 AS
 
 SELECT *
@@ -11,10 +77,10 @@ FROM Sales.Employees;
 
 UPDATE Sales.Employees
 SET   
-	Email = @Email,
-	[Name] = @Name,
+	Email = @GivenEmail,
+	[Name] = @GivenName,
 	EmployeeRole = @GivenEmployeeRole,
-	Salary = @Salary
+	Salary = @GivenSalary
 WHERE EmployeeID = @GivenEmployeeID
 GO
 

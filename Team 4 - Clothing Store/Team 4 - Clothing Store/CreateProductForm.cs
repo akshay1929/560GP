@@ -17,7 +17,7 @@ namespace Team_4___Clothing_Store
 {
     public partial class CreateProductForm : Form
     {
-        const string connectionString = "Data Source=mssql.cs.ksu.edu;Initial Catalog = arahman; User ID = arahman; Password=Potc2003";
+        const string connectionString = "Data Source=mssql.cs.ksu.edu;Initial Catalog = arahman; User ID = arahman; Password=Cicko1999";
         List<Product> list = new List<Product>();
 
         public CreateProductForm()

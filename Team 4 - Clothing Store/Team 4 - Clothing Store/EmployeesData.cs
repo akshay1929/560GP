@@ -18,7 +18,7 @@ namespace Team_4___Clothing_Store
 {
     public partial class EmployeesData : Form
     {
-        const string connectionString = "Data Source=mssql.cs.ksu.edu;Initial Catalog = arahman; User ID = arahman; Password=Potc2003";
+        const string connectionString = "Data Source=mssql.cs.ksu.edu;Initial Catalog = arahman; User ID = arahman; Password=Cicko1999";
 
         public EmployeesData()
         {
