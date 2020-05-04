@@ -67,6 +67,18 @@ namespace Team_4___Clothing_Store
             List<Employees> list = new List<Employees>();
             list.Add(ee);
             dataGridView1.DataSource = list;
+
+            for (int i = 0; i < dataGridView1.Columns.Count; i++)
+            {
+                DataGridViewColumn columnOne = dataGridView1.Columns[0];
+                columnOne.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+
+                DataGridViewColumn columnTwo = dataGridView1.Columns[2];
+                columnTwo.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+
+                DataGridViewColumn columnThree = dataGridView1.Columns[3];
+                columnThree.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            }
         }
 
         private void EmployeeIdTextBox_TextChanged(object sender, EventArgs e)

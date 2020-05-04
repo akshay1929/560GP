@@ -79,6 +79,18 @@ namespace Team_4___Clothing_Store
             MemberStatus memberList = members.FetchMemberStatus(Convert.ToInt32(MemberIdTextbox.Text));
             member.Add(memberList);
             dataGridView1.DataSource = member;
+
+            for (int i = 0; i < dataGridView1.Columns.Count; i++)
+            {
+                DataGridViewColumn columnOne = dataGridView1.Columns[0];
+                columnOne.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+
+                DataGridViewColumn columnTwo = dataGridView1.Columns[3];
+                columnTwo.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+
+                DataGridViewColumn columnThree = dataGridView1.Columns[4];
+                columnTwo.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            }
         }
 
         private void UpdateMemberButton_Click(object sender, EventArgs e)

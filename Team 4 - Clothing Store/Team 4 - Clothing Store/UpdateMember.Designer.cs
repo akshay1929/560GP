@@ -261,7 +261,7 @@
             this.Controls.Add(this.FirstNameTextBox);
             this.Controls.Add(this.EmailTextBox);
             this.Name = "UpdateMember";
-            this.Text = "UpdateMember";
+            this.Text = "Update Member";
             this.ResumeLayout(false);
             this.PerformLayout();
 
