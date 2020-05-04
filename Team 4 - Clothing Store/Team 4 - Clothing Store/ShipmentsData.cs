@@ -41,12 +41,24 @@ namespace Team_4___Clothing_Store
 
         private void RecieveShipmentDate_Click(object sender, EventArgs e)
         {
-            SqlShipmentRepository shipments = new SqlShipmentRepository(connectionString);
+            try
+            {
+                SqlShipmentRepository shipments = new SqlShipmentRepository(connectionString);
 
-            Shipment s = shipments.FetchShipmentDate(Convert.ToInt32(OrderIdTextbox.Text));
-            List<Shipment> list = new List<Shipment>();
-            list.Add(s);
-            dataGridView1.DataSource = list;
+                Shipment s = shipments.FetchShipmentDate(Convert.ToInt32(OrderIdTextbox.Text));
+                List<Shipment> list = new List<Shipment>();
+                list.Add(s);
+                dataGridView1.DataSource = list;
+
+                for (int i = 0; i < dataGridView1.Columns.Count; i++)
+                {
+                    DataGridViewColumn columnOne = dataGridView1.Columns[0];
+                    columnOne.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                }
+            }catch(Exception ex)
+            {
+                MessageBox.Show("Incorrect input. Parameter takes an integer.");
+            }
         }
 
         private void AddAShipmentButton_Click(object sender, EventArgs e)

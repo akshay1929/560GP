@@ -33,7 +33,13 @@ namespace Team_4___Clothing_Store
         {
             SqlProductRepository products = new SqlProductRepository(connectionString);
 
-            productList = products.FetchProductQuantity(Convert.ToInt32(TypeIDTextbox.Text));
+            try
+            {
+                productList = products.FetchProductQuantity(Convert.ToInt32(TypeIDTextbox.Text));
+            }catch(Exception ex)
+            {
+                MessageBox.Show("Incorrect input. Parameter takes an integer.");
+            }
         }
     }
 }

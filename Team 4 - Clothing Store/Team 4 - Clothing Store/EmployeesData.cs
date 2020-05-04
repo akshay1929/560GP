@@ -61,23 +61,29 @@ namespace Team_4___Clothing_Store
 
         private void FetchEmployeeSalaryButton_Click(object sender, EventArgs e)
         {
-            SqlEmployeesRepository employees = new SqlEmployeesRepository(connectionString);
-            
-            Employees ee = employees.FetchEmployeeSalary(Convert.ToInt32(EmployeeIdTextBox.Text));
-            List<Employees> list = new List<Employees>();
-            list.Add(ee);
-            dataGridView1.DataSource = list;
-
-            for (int i = 0; i < dataGridView1.Columns.Count; i++)
+            try
             {
-                DataGridViewColumn columnOne = dataGridView1.Columns[0];
-                columnOne.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                SqlEmployeesRepository employees = new SqlEmployeesRepository(connectionString);
 
-                DataGridViewColumn columnTwo = dataGridView1.Columns[2];
-                columnTwo.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                Employees ee = employees.FetchEmployeeSalary(Convert.ToInt32(EmployeeIdTextBox.Text));
+                List<Employees> list = new List<Employees>();
+                list.Add(ee);
+                dataGridView1.DataSource = list;
 
-                DataGridViewColumn columnThree = dataGridView1.Columns[3];
-                columnThree.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                for (int i = 0; i < dataGridView1.Columns.Count; i++)
+                {
+                    DataGridViewColumn columnOne = dataGridView1.Columns[0];
+                    columnOne.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+
+                    DataGridViewColumn columnTwo = dataGridView1.Columns[2];
+                    columnTwo.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+
+                    DataGridViewColumn columnThree = dataGridView1.Columns[3];
+                    columnThree.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                }
+            }catch(Exception ex)
+            {
+                MessageBox.Show("Incorrect Input. Parameter takes an integer.");
             }
         }
 
@@ -99,20 +105,26 @@ namespace Team_4___Clothing_Store
 
         private void UpdateEmployeeRole_Click(object sender, EventArgs e)
         {
-            UpdateEmployeeRoleForm updateForm = new UpdateEmployeeRoleForm();
-
-            updateForm.EmployeeIdText.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-            updateForm.EmployeeIdText.ReadOnly = true;
-            updateForm.EmailTextbox.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-            updateForm.NameTextbox.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
-            updateForm.SalaryTextbox.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
-            updateForm.EmployeeRoleText.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
-
-            updateForm.ShowDialog();
-
-            if(updateForm.DialogResult == DialogResult.OK || updateForm.DialogResult == DialogResult.Cancel)
+            try
             {
-                updateForm.Close();
+                UpdateEmployeeRoleForm updateForm = new UpdateEmployeeRoleForm();
+
+                updateForm.EmployeeIdText.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+                updateForm.EmployeeIdText.ReadOnly = true;
+                updateForm.EmailTextbox.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+                updateForm.NameTextbox.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+                updateForm.SalaryTextbox.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+                updateForm.EmployeeRoleText.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+
+                updateForm.ShowDialog();
+
+                if (updateForm.DialogResult == DialogResult.OK || updateForm.DialogResult == DialogResult.Cancel)
+                {
+                    updateForm.Close();
+                }
+            } catch(NullReferenceException ex)
+            {
+                MessageBox.Show("Select a Employee.");
             }
         }
     }

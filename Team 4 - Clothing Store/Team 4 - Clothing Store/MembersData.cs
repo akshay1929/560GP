@@ -70,47 +70,59 @@ namespace Team_4___Clothing_Store
 
         private void FetchMemberStatusButton_Click(object sender, EventArgs e)
         {
-            SqlMemberRepository members = new SqlMemberRepository(connectionString);
-
-            List<MemberStatus> member = new List<MemberStatus>();
-            MemberStatus memberList = members.FetchMemberStatus(Convert.ToInt32(MemberIdTextbox.Text));
-            member.Add(memberList);
-            dataGridView1.DataSource = member;
-
-            for (int i = 0; i < dataGridView1.Columns.Count; i++)
+            try
             {
-                DataGridViewColumn columnOne = dataGridView1.Columns[0];
-                columnOne.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                SqlMemberRepository members = new SqlMemberRepository(connectionString);
 
-                DataGridViewColumn columnTwo = dataGridView1.Columns[3];
-                columnTwo.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                List<MemberStatus> member = new List<MemberStatus>();
+                MemberStatus memberList = members.FetchMemberStatus(Convert.ToInt32(MemberIdTextbox.Text));
+                member.Add(memberList);
+                dataGridView1.DataSource = member;
 
-                DataGridViewColumn columnThree = dataGridView1.Columns[4];
-                columnTwo.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                for (int i = 0; i < dataGridView1.Columns.Count; i++)
+                {
+                    DataGridViewColumn columnOne = dataGridView1.Columns[0];
+                    columnOne.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+
+                    DataGridViewColumn columnTwo = dataGridView1.Columns[3];
+                    columnTwo.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+
+                    DataGridViewColumn columnThree = dataGridView1.Columns[4];
+                    columnTwo.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                }
+            }catch(Exception ex)
+            {
+                MessageBox.Show("Incorrect input. Parameter takes an int.");
             }
         }
 
         private void UpdateMemberButton_Click(object sender, EventArgs e)
         {
-            UpdateMember updateForm = new UpdateMember();
-
-            updateForm.MemberIdTextbox.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-            updateForm.MemberIdTextbox.ReadOnly = true;
-            updateForm.EmailTextBox.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-            updateForm.FirstNameTextBox.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
-            updateForm.LastNameTextBox.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
-            updateForm.PhoneTextBox.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
-            updateForm.BillingAddressTextBox.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
-            updateForm.PointsTextBox.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
-            updateForm.JoinedOnTextBox.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
-            updateForm.BirthDateTextBox.Text = dataGridView1.CurrentRow.Cells[8].Value.ToString();
-            updateForm.StatusTextBox.Text = dataGridView1.CurrentRow.Cells[9].Value.ToString();
-
-            updateForm.ShowDialog();
-
-            if (updateForm.DialogResult == DialogResult.OK || updateForm.DialogResult == DialogResult.Cancel)
+            try
             {
-                updateForm.Close();
+                UpdateMember updateForm = new UpdateMember();
+
+                updateForm.MemberIdTextbox.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+                updateForm.MemberIdTextbox.ReadOnly = true;
+                updateForm.EmailTextBox.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+                updateForm.FirstNameTextBox.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+                updateForm.LastNameTextBox.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+                updateForm.PhoneTextBox.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+                updateForm.BillingAddressTextBox.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
+                updateForm.PointsTextBox.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
+                updateForm.JoinedOnTextBox.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
+                updateForm.BirthDateTextBox.Text = dataGridView1.CurrentRow.Cells[8].Value.ToString();
+                updateForm.StatusTextBox.Text = dataGridView1.CurrentRow.Cells[9].Value.ToString();
+
+                updateForm.ShowDialog();
+
+                if (updateForm.DialogResult == DialogResult.OK || updateForm.DialogResult == DialogResult.Cancel)
+                {
+                    updateForm.Close();
+                }
+            } catch(NullReferenceException ex)
+            {
+                MessageBox.Show("Select a Member.");
             }
         }
     }

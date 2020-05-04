@@ -1,3 +1,31 @@
+CREATE OR ALTER PROCEDURE Product.UpdateProduct
+   @GivenProductID INT,
+   @GivenSKU NVARCHAR(32),
+   @GivenProductName NVARCHAR(64),
+   @GivenProductTypeID INT,
+   @GivenQuantity INT,
+   @GivenDescription NVARCHAR(MAX),
+   @GivenPrice Float,
+   @GivenRating NVARCHAR(32)
+AS
+
+SELECT *
+FROM Product;
+
+UPDATE Product
+SET   
+	SKU = @GivenSKU,
+	ProductName = @GivenProductName,
+	ProductTypeID = @GivenProductTypeID,
+	Quantity = @GivenQuantity,
+	[Description] = @GivenDescription,
+	Price = @GivenPrice,
+	Rating = @GivenRating
+
+WHERE ProductID = @GivenProductID
+GO
+
+/* Create Shipment */
 CREATE OR ALTER PROCEDURE Warehouse.CreateShipment
    @ShipmentDate DATETIMEOFFSET,
    @ShipmentAddress NVARCHAR(128),
@@ -10,6 +38,7 @@ VALUES(@ShipmentDate, @ShipmentAddress);
 SET @ShipmentID = SCOPE_IDENTITY();
 GO
 
+/* Update Order */
 CREATE OR ALTER PROCEDURE Sales.UpdateOrder
    @GivenOrderID INT,
    @GivenMemberID INT,
@@ -98,7 +127,6 @@ FROM
 	Sales.Orders O
 WHERE
 	O.OrderDate BETWEEN @StartDate AND @EndDate
-GROUP BY O.OrderID
 GO
 
 /* Create Product */
@@ -121,15 +149,15 @@ GO
 
 /* Fetch Product Quantity */
 CREATE OR ALTER PROCEDURE Product.FetchProductQuantity
-   @GivenProductID INT
+@GivenProductTypeID INT
 AS
 
 SELECT 
-	P.ProductName, P.Quantity
+	P.ProductName, P.[Description], P.Quantity
 FROM 
 	Product P
 WHERE 
-	P.ProductID = @GivenProductID
+	P.ProductTypeID = @GivenProductTypeID
 GO
 
 /* Get Product Name */
@@ -186,12 +214,13 @@ GO
 CREATE OR ALTER PROCEDURE Product.RetrieveProductTypeCount
 AS
 
-SELECT PT.[Name], COUNT(O.OrderID) AS OrderCount, P.SKU
+SELECT PT.[Name], COUNT(O.OrderID) AS OrdersPlaced, P.SKU
 FROM Product.ProductType PT
     INNER JOIN Product P ON P.ProductTypeID = PT.ProductTypeID
-	INNER JOIN Sales.Orders O ON O.OrderID = P.ProductID
+	INNER JOIN Sales.OrderLines OL ON OL.ProductID = P.ProductID
+	INNER JOIN Sales.Orders O ON O.OrderID = OL.OrderID
 GROUP BY PT.[Name], P.SKU
-ORDER BY COUNT(P.ProductID) DESC, P.SKU DESC
+ORDER BY COUNT(O.OrderID) DESC, P.SKU DESC
 GO
 
 /* Fetch Employee Salary */
@@ -222,11 +251,10 @@ CREATE OR ALTER PROCEDURE Users.FetchMemberStatus
    @GivenMemberid INT
 AS
 
-SELECT M.MemberID, M.[Status]
+SELECT M.MemberID, M.FirstName, M.LastName, M.Points, M.[Status]
 FROM Users.Member M
 WHERE M.MemberID = @GivenMemberid
-GROUP BY M.MemberID, M.[Status]
-ORDER BY M.MemberID ASC
+GROUP BY M.MemberID, M.[Status], M.FirstName, M.LastName, M.Points
 GO
 
 /* Get MemberId */
@@ -234,7 +262,7 @@ CREATE OR ALTER PROCEDURE Users.GetMemberId
    @GivenEmail NVARCHAR(128)
 AS
 
-SELECT M.MemberID, M.FirstName, M.LastName
+SELECT *
 FROM Users.Member M
 WHERE M.Email = @GivenEmail
 GO

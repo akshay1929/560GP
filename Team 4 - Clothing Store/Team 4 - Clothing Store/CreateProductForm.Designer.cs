@@ -201,7 +201,7 @@
             this.Controls.Add(this.SKUTextbox);
             this.Controls.Add(this.CreateProductButton);
             this.Name = "CreateProductForm";
-            this.Text = "Create A Product";
+            this.Text = "Add A Product";
             this.ResumeLayout(false);
             this.PerformLayout();
 

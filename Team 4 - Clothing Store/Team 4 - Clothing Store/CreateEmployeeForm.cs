@@ -38,7 +38,7 @@ namespace Team_4___Clothing_Store
             }
             catch (Exception ex)
             {
-                MessageBox.Show("There cannot be any empty parameters.");
+                MessageBox.Show("There cannot be any empty or incorrectly entered parameters. Check submission.");
             }
         }
     }

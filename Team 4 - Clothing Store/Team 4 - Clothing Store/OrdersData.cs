@@ -87,25 +87,31 @@ namespace Team_4___Clothing_Store
 
         private void UpdateOrderButton_Click(object sender, EventArgs e)
         {
-            UpdateOrder updateForm = new UpdateOrder();
-
-            updateForm.OrderIDTextbox.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-            updateForm.OrderIDTextbox.ReadOnly = true;
-            updateForm.MemberIDTextbox.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-            updateForm.MemberIDTextbox.ReadOnly = true;
-            updateForm.EmployeeIDTextbox.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
-            updateForm.EmployeeIDTextbox.ReadOnly = true;
-            updateForm.ShipmentIDTextbox.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
-            updateForm.ShipmentIDTextbox.ReadOnly = true;
-            updateForm.OrderDateTextBox.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
-            updateForm.ShipmentAddressTextbox.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
-
-
-            updateForm.ShowDialog();
-
-            if (updateForm.DialogResult == DialogResult.OK || updateForm.DialogResult == DialogResult.Cancel)
+            try
             {
-                updateForm.Close();
+                UpdateOrder updateForm = new UpdateOrder();
+
+                updateForm.OrderIDTextbox.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+                updateForm.OrderIDTextbox.ReadOnly = true;
+                updateForm.MemberIDTextbox.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+                updateForm.MemberIDTextbox.ReadOnly = true;
+                updateForm.EmployeeIDTextbox.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+                updateForm.EmployeeIDTextbox.ReadOnly = true;
+                updateForm.ShipmentIDTextbox.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+                updateForm.ShipmentIDTextbox.ReadOnly = true;
+                updateForm.OrderDateTextBox.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+                updateForm.ShipmentAddressTextbox.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
+
+
+                updateForm.ShowDialog();
+
+                if (updateForm.DialogResult == DialogResult.OK || updateForm.DialogResult == DialogResult.Cancel)
+                {
+                    updateForm.Close();
+                }
+            }catch(NullReferenceException ex)
+            {
+                MessageBox.Show("Select a Order.");
             }
         }
     }

@@ -41,9 +41,9 @@ namespace Team_4___Clothing_Store
                 MembersData md = new MembersData();
                 md.dataGridView1.DataSource = list;
             }
-            catch (ArgumentException ex)
+            catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show("There cannot be any empty or incorrectly entered parameters.Check submission.");
             }
         }
 

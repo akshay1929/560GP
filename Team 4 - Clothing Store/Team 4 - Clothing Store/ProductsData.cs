@@ -100,23 +100,29 @@ namespace Team_4___Clothing_Store
 
         private void UpdateProductButton_Click(object sender, EventArgs e)
         {
-            UpdateProductForm updateForm = new UpdateProductForm();
-
-            updateForm.ProductIdTextbox.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-            updateForm.ProductIdTextbox.ReadOnly = true;
-            updateForm.SKUTextbox.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-            updateForm.ProductNameTextbox.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
-            updateForm.ProductTypeIDTextbox.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
-            updateForm.QuantityTextbox.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
-            updateForm.DescriptionTextbox.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
-            updateForm.PriceTextbox.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
-            updateForm.RatingTextbox.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
-
-            updateForm.ShowDialog();
-
-            if (updateForm.DialogResult == DialogResult.OK || updateForm.DialogResult == DialogResult.Cancel)
+            try
             {
-                updateForm.Close();
+                UpdateProductForm updateForm = new UpdateProductForm();
+
+                updateForm.ProductIdTextbox.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+                updateForm.ProductIdTextbox.ReadOnly = true;
+                updateForm.SKUTextbox.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+                updateForm.ProductNameTextbox.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+                updateForm.ProductTypeIDTextbox.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+                updateForm.QuantityTextbox.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+                updateForm.DescriptionTextbox.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
+                updateForm.PriceTextbox.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
+                updateForm.RatingTextbox.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
+
+                updateForm.ShowDialog();
+
+                if (updateForm.DialogResult == DialogResult.OK || updateForm.DialogResult == DialogResult.Cancel)
+                {
+                    updateForm.Close();
+                }
+            }catch(NullReferenceException ex)
+            {
+                MessageBox.Show("Select a Product.");
             }
         }
     }
