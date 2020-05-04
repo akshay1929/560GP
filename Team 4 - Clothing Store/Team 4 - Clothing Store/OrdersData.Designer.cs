@@ -141,7 +141,7 @@
             this.Controls.Add(this.startDatePicker);
             this.Controls.Add(this.panel1);
             this.Name = "OrdersData";
-            this.Text = "Orders Data";
+            this.Text = "Orders Data Information";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);

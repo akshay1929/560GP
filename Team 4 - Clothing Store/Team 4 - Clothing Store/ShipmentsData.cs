@@ -31,6 +31,12 @@ namespace Team_4___Clothing_Store
                 IReadOnlyList<Shipment> shipmentList = shipment.RetrieveShipments();
                 dataGridView1.DataSource = shipmentList;
             }
+
+            for (int i = 0; i < dataGridView1.Columns.Count; i++)
+            {
+                DataGridViewColumn columnOne = dataGridView1.Columns[0];
+                columnOne.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            }
         }
 
         private void RecieveShipmentDate_Click(object sender, EventArgs e)

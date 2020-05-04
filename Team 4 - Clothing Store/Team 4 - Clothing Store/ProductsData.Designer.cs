@@ -75,9 +75,9 @@
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 135);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 77);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1058, 377);
+            this.dataGridView1.Size = new System.Drawing.Size(1317, 320);
             this.dataGridView1.TabIndex = 19;
             // 
             // retrieveProductTypeCount
@@ -105,23 +105,23 @@
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel1.Controls.Add(this.CreateProductButton);
             this.panel1.Controls.Add(this.retrieveProducts);
+            this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Location = new System.Drawing.Point(0, 61);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1084, 465);
+            this.panel1.Size = new System.Drawing.Size(1342, 422);
             this.panel1.TabIndex = 22;
             // 
             // ProductsData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1082, 524);
+            this.ClientSize = new System.Drawing.Size(1341, 471);
             this.Controls.Add(this.ProductsRatingButton);
             this.Controls.Add(this.retrieveProductTypeCount);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.FetchProductQuantity);
             this.Controls.Add(this.panel1);
             this.Name = "ProductsData";
-            this.Text = "ProductsData";
+            this.Text = "Products Data Information";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);

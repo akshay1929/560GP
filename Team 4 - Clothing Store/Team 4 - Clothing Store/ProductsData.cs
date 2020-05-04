@@ -44,6 +44,18 @@ namespace Team_4___Clothing_Store
             SqlProductRepository products = new SqlProductRepository(connectionString);
             IReadOnlyList<Product> productList = products.RetrieveProducts();
             dataGridView1.DataSource = productList;
+
+            for (int i = 0; i < dataGridView1.Columns.Count; i++)
+            {
+                DataGridViewColumn columnOne = dataGridView1.Columns[0];
+                columnOne.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+
+                DataGridViewColumn columnFour = dataGridView1.Columns[6];
+                columnFour.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+
+                DataGridViewColumn columnFive = dataGridView1.Columns[7];
+                columnFive.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            }
         }
 
         private void retrieveProductTypeCount_Click(object sender, EventArgs e)
@@ -51,6 +63,18 @@ namespace Team_4___Clothing_Store
             SqlProductRepository products = new SqlProductRepository(connectionString);
             IReadOnlyList<ProductTypeCount> productList = products.RetrieveProductCount();
             dataGridView1.DataSource = productList;
+
+            for (int i = 0; i < dataGridView1.Columns.Count; i++)
+            {
+                DataGridViewColumn columnOne = dataGridView1.Columns[0];
+                columnOne.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+
+                DataGridViewColumn columnTwo = dataGridView1.Columns[1];
+                columnTwo.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+
+                DataGridViewColumn columnThree = dataGridView1.Columns[2];
+                columnThree.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            }
         }
 
         private void ProductsRatingButton_Click(object sender, EventArgs e)
@@ -58,6 +82,12 @@ namespace Team_4___Clothing_Store
             SqlProductRepository products = new SqlProductRepository(connectionString);
             IReadOnlyList<Product> productList = products.RetrieveHighestRatings();
             dataGridView1.DataSource = productList;
+
+            for (int i = 0; i < dataGridView1.Columns.Count; i++)
+            {
+                DataGridViewColumn columnOne = dataGridView1.Columns[0];
+                columnOne.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            }
         }
 
         private void FetchProductQuantity_Click(object sender, EventArgs e)
@@ -69,6 +99,15 @@ namespace Team_4___Clothing_Store
             if(productTypeForm.DialogResult == DialogResult.OK)
             {
                 productTypeForm.Close();
+            }
+
+            for (int i = 0; i < dataGridView1.Columns.Count; i++)
+            {
+                DataGridViewColumn columnOne = dataGridView1.Columns[0];
+                columnOne.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+
+                DataGridViewColumn columnTwo = dataGridView1.Columns[1];
+                columnTwo.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             }
         }
     }
