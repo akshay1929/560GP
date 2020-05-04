@@ -35,8 +35,6 @@ namespace Team_4___Clothing_Store
 
                 EmployeesData ed = new EmployeesData();
                 ed.dataGridView1.DataSource = list;
-
-                EmployeeLabel.Text = "Employee Addition Succesful.";
             }
             catch (Exception ex)
             {

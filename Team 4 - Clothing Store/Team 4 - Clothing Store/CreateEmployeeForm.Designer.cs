@@ -37,14 +37,13 @@
             this.NameTextbox = new System.Windows.Forms.TextBox();
             this.EmailTextbox = new System.Windows.Forms.TextBox();
             this.CreateEmployeeButton = new System.Windows.Forms.Button();
-            this.EmployeeLabel = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // SalaryLabel
             // 
             this.SalaryLabel.AutoSize = true;
-            this.SalaryLabel.Location = new System.Drawing.Point(45, 117);
+            this.SalaryLabel.Location = new System.Drawing.Point(12, 117);
             this.SalaryLabel.Name = "SalaryLabel";
             this.SalaryLabel.Size = new System.Drawing.Size(39, 13);
             this.SalaryLabel.TabIndex = 19;
@@ -53,7 +52,7 @@
             // RoleLabel
             // 
             this.RoleLabel.AutoSize = true;
-            this.RoleLabel.Location = new System.Drawing.Point(45, 88);
+            this.RoleLabel.Location = new System.Drawing.Point(12, 88);
             this.RoleLabel.Name = "RoleLabel";
             this.RoleLabel.Size = new System.Drawing.Size(32, 13);
             this.RoleLabel.TabIndex = 18;
@@ -62,7 +61,7 @@
             // NameLabel
             // 
             this.NameLabel.AutoSize = true;
-            this.NameLabel.Location = new System.Drawing.Point(45, 59);
+            this.NameLabel.Location = new System.Drawing.Point(12, 59);
             this.NameLabel.Name = "NameLabel";
             this.NameLabel.Size = new System.Drawing.Size(38, 13);
             this.NameLabel.TabIndex = 17;
@@ -71,7 +70,7 @@
             // EmailLabel
             // 
             this.EmailLabel.AutoSize = true;
-            this.EmailLabel.Location = new System.Drawing.Point(45, 30);
+            this.EmailLabel.Location = new System.Drawing.Point(12, 30);
             this.EmailLabel.Name = "EmailLabel";
             this.EmailLabel.Size = new System.Drawing.Size(35, 13);
             this.EmailLabel.TabIndex = 16;
@@ -79,65 +78,59 @@
             // 
             // SalaryTextbox
             // 
-            this.SalaryTextbox.Location = new System.Drawing.Point(111, 114);
+            this.SalaryTextbox.Location = new System.Drawing.Point(69, 114);
             this.SalaryTextbox.Name = "SalaryTextbox";
-            this.SalaryTextbox.Size = new System.Drawing.Size(149, 20);
+            this.SalaryTextbox.Size = new System.Drawing.Size(226, 20);
             this.SalaryTextbox.TabIndex = 15;
             // 
             // RoleTextbox
             // 
-            this.RoleTextbox.Location = new System.Drawing.Point(111, 85);
+            this.RoleTextbox.Location = new System.Drawing.Point(69, 85);
             this.RoleTextbox.Name = "RoleTextbox";
-            this.RoleTextbox.Size = new System.Drawing.Size(149, 20);
+            this.RoleTextbox.Size = new System.Drawing.Size(226, 20);
             this.RoleTextbox.TabIndex = 14;
             // 
             // NameTextbox
             // 
-            this.NameTextbox.Location = new System.Drawing.Point(111, 56);
+            this.NameTextbox.Location = new System.Drawing.Point(69, 56);
             this.NameTextbox.Name = "NameTextbox";
-            this.NameTextbox.Size = new System.Drawing.Size(149, 20);
+            this.NameTextbox.Size = new System.Drawing.Size(226, 20);
             this.NameTextbox.TabIndex = 13;
             // 
             // EmailTextbox
             // 
-            this.EmailTextbox.Location = new System.Drawing.Point(111, 27);
+            this.EmailTextbox.Location = new System.Drawing.Point(69, 27);
             this.EmailTextbox.Name = "EmailTextbox";
-            this.EmailTextbox.Size = new System.Drawing.Size(149, 20);
+            this.EmailTextbox.Size = new System.Drawing.Size(226, 20);
             this.EmailTextbox.TabIndex = 12;
             // 
             // CreateEmployeeButton
             // 
-            this.CreateEmployeeButton.Location = new System.Drawing.Point(48, 158);
+            this.CreateEmployeeButton.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.CreateEmployeeButton.Location = new System.Drawing.Point(15, 158);
             this.CreateEmployeeButton.Name = "CreateEmployeeButton";
-            this.CreateEmployeeButton.Size = new System.Drawing.Size(212, 46);
+            this.CreateEmployeeButton.Size = new System.Drawing.Size(103, 46);
             this.CreateEmployeeButton.TabIndex = 20;
-            this.CreateEmployeeButton.Text = "Create Employee";
+            this.CreateEmployeeButton.Text = "OK";
             this.CreateEmployeeButton.UseVisualStyleBackColor = true;
             this.CreateEmployeeButton.Click += new System.EventHandler(this.CreateEmployeeButton_Click);
             // 
-            // EmployeeLabel
+            // button1
             // 
-            this.EmployeeLabel.AutoSize = true;
-            this.EmployeeLabel.Location = new System.Drawing.Point(45, 226);
-            this.EmployeeLabel.Name = "EmployeeLabel";
-            this.EmployeeLabel.Size = new System.Drawing.Size(0, 13);
-            this.EmployeeLabel.TabIndex = 21;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(48, 225);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 13);
-            this.label1.TabIndex = 22;
+            this.button1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.button1.Location = new System.Drawing.Point(192, 158);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(103, 46);
+            this.button1.TabIndex = 21;
+            this.button1.Text = "Cancel";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // CreateEmployeeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(307, 262);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.EmployeeLabel);
+            this.ClientSize = new System.Drawing.Size(307, 237);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.CreateEmployeeButton);
             this.Controls.Add(this.SalaryLabel);
             this.Controls.Add(this.RoleLabel);
@@ -165,7 +158,6 @@
         private System.Windows.Forms.TextBox NameTextbox;
         private System.Windows.Forms.TextBox EmailTextbox;
         private System.Windows.Forms.Button CreateEmployeeButton;
-        private System.Windows.Forms.Label EmployeeLabel;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
     }
 }

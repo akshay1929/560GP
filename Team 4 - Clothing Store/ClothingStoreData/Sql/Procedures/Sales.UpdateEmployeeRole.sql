@@ -1,9 +1,9 @@
 CREATE OR ALTER PROCEDURE Sales.UpdateEmployeeRole
    @GivenEmployeeID INT,
-   @Email NVARCHAR(128),
-   @Name NVARCHAR(32),
+   @GivenEmail NVARCHAR(128),
+   @GivenName NVARCHAR(32),
    @GivenEmployeeRole NVARCHAR(32),
-   @Salary INT
+   @GivenSalary INT
 AS
 
 SELECT *

@@ -35,10 +35,10 @@ namespace ClothingStoreData.Delegate
             base.PrepareCommand(command);
 
             command.Parameters.AddWithValue("GivenEmployeeID", employeeid);
-            command.Parameters.AddWithValue("Email", email);
-            command.Parameters.AddWithValue("Name", name);
+            command.Parameters.AddWithValue("GivenEmail", email);
+            command.Parameters.AddWithValue("GivenName", name);
             command.Parameters.AddWithValue("GivenEmployeeRole", employeerole);
-            command.Parameters.AddWithValue("Salary", salary);
+            command.Parameters.AddWithValue("GivenSalary", salary);
         }
     }
 }

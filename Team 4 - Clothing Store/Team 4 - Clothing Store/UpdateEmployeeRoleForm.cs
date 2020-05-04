@@ -18,9 +18,9 @@ namespace Team_4___Clothing_Store
     {
         const string connectionString = "Data Source=mssql.cs.ksu.edu;Initial Catalog = arahman; User ID = arahman; Password=Potc2003";
 
-        public string email;
-        public string name;
-        public int salary;
+        // public string email;
+        // public string name;
+        // public int salary;
 
         public UpdateEmployeeRoleForm()
         {
@@ -34,9 +34,7 @@ namespace Team_4___Clothing_Store
                 EmployeesData ed = new EmployeesData();
 
                 SqlEmployeesRepository employees = new SqlEmployeesRepository(connectionString);
-                employees.UpdateEmployeeRole(Convert.ToInt32(EmployeeIdText.Text), email, name, EmployeeRoleText.Text, salary);
-
-                UpdateEmployeeLabel.Text = "Employee's Role is Updated.";
+                employees.UpdateEmployeeRole(Convert.ToInt32(EmployeeIdText.Text), EmailTextbox.Text, NameTextbox.Text, EmployeeRoleText.Text, Convert.ToInt32(SalaryTextbox.Text));
 
             }
             catch (Exception ex)

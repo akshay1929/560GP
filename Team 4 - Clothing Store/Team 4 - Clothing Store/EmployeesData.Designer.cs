@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.RetrieveEmployeesButton = new System.Windows.Forms.Button();
             this.CreateEmployeeButton = new System.Windows.Forms.Button();
             this.FetchEmployeeSalaryButton = new System.Windows.Forms.Button();
@@ -35,14 +38,16 @@
             this.EmployeeIdTextBox = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.UpdateEmployeeRole = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // RetrieveEmployeesButton
             // 
-            this.RetrieveEmployeesButton.Location = new System.Drawing.Point(12, 12);
+            this.RetrieveEmployeesButton.Location = new System.Drawing.Point(43, 10);
             this.RetrieveEmployeesButton.Name = "RetrieveEmployeesButton";
-            this.RetrieveEmployeesButton.Size = new System.Drawing.Size(212, 42);
+            this.RetrieveEmployeesButton.Size = new System.Drawing.Size(154, 36);
             this.RetrieveEmployeesButton.TabIndex = 1;
             this.RetrieveEmployeesButton.Text = "Retrieve Employees";
             this.RetrieveEmployeesButton.UseVisualStyleBackColor = true;
@@ -50,9 +55,9 @@
             // 
             // CreateEmployeeButton
             // 
-            this.CreateEmployeeButton.Location = new System.Drawing.Point(242, 12);
+            this.CreateEmployeeButton.Location = new System.Drawing.Point(203, 10);
             this.CreateEmployeeButton.Name = "CreateEmployeeButton";
-            this.CreateEmployeeButton.Size = new System.Drawing.Size(212, 42);
+            this.CreateEmployeeButton.Size = new System.Drawing.Size(154, 36);
             this.CreateEmployeeButton.TabIndex = 2;
             this.CreateEmployeeButton.Text = "Add A Employee";
             this.CreateEmployeeButton.UseVisualStyleBackColor = true;
@@ -89,38 +94,74 @@
             // 
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 142);
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dataGridView1.Location = new System.Drawing.Point(43, 55);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(806, 337);
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.dataGridView1.Size = new System.Drawing.Size(698, 321);
             this.dataGridView1.TabIndex = 14;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // UpdateEmployeeRole
             // 
-            this.UpdateEmployeeRole.Location = new System.Drawing.Point(539, 94);
+            this.UpdateEmployeeRole.Location = new System.Drawing.Point(363, 10);
             this.UpdateEmployeeRole.Name = "UpdateEmployeeRole";
-            this.UpdateEmployeeRole.Size = new System.Drawing.Size(212, 42);
+            this.UpdateEmployeeRole.Size = new System.Drawing.Size(154, 36);
             this.UpdateEmployeeRole.TabIndex = 15;
-            this.UpdateEmployeeRole.Text = "Update Employee Role";
+            this.UpdateEmployeeRole.Text = "Update Employee";
             this.UpdateEmployeeRole.UseVisualStyleBackColor = true;
             this.UpdateEmployeeRole.Click += new System.EventHandler(this.UpdateEmployeeRole_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.UpdateEmployeeRole);
+            this.panel1.Controls.Add(this.RetrieveEmployeesButton);
+            this.panel1.Controls.Add(this.CreateEmployeeButton);
+            this.panel1.Location = new System.Drawing.Point(-2, 117);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(788, 394);
+            this.panel1.TabIndex = 16;
             // 
             // EmployeesData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(830, 491);
-            this.Controls.Add(this.UpdateEmployeeRole);
-            this.Controls.Add(this.dataGridView1);
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.ClientSize = new System.Drawing.Size(783, 509);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.EmployeeIdTextBox);
             this.Controls.Add(this.FetchEmployeeSalaryButton);
-            this.Controls.Add(this.CreateEmployeeButton);
-            this.Controls.Add(this.RetrieveEmployeesButton);
             this.Name = "EmployeesData";
-            this.Text = "Employees Data";
+            this.Text = "Employees Data Information";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -134,5 +175,6 @@
         private System.Windows.Forms.TextBox EmployeeIdTextBox;
         public System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button UpdateEmployeeRole;
+        private System.Windows.Forms.Panel panel1;
     }
 }
