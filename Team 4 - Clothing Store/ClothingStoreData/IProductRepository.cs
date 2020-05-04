@@ -20,7 +20,7 @@ namespace ClothingStoreData
 
         Product GetProductIdName(int producttype);
 
-        void UpdateProduct(int productid, string sku, string productname, int producttypeid, int quantity, string description, float price, string rating);
+        void UpdateProduct(int productid, string sku, string productname, int producttypeid, int quantity, string description, string price, string rating);
 
         Product CreateProduct(string sku, string productname,
            int producttypeId, int quantity, string description, string price, string rating);

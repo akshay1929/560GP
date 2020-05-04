@@ -115,6 +115,7 @@
             this.UpdateProductButton.TabIndex = 37;
             this.UpdateProductButton.Text = "OK";
             this.UpdateProductButton.UseVisualStyleBackColor = true;
+            this.UpdateProductButton.Click += new System.EventHandler(this.UpdateProductButton_Click);
             // 
             // EmployeeRoleLabel
             // 

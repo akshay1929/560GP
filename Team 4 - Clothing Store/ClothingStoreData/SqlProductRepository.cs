@@ -77,7 +77,7 @@ namespace ClothingStoreData
             return executor.ExecuteReader(new RetrieveProductTypeCountDataDelegate());
         }
 
-        public void UpdateProduct(int productid, string sku, string productname, int producttypeid, int quantity, string description, float price, string rating)
+        public void UpdateProduct(int productid, string sku, string productname, int producttypeid, int quantity, string description, string price, string rating)
         {
             if (sku == null)
                 throw new ArgumentNullException(nameof(sku));
@@ -87,6 +87,9 @@ namespace ClothingStoreData
 
             if (rating == null)
                 throw new ArgumentNullException(nameof(rating));
+
+            if (price == null)
+                throw new ArgumentNullException(nameof(price));
 
             var d = new UpdateProductDataDelegate(productid, sku, productname, producttypeid, quantity, description, price, rating);
             executor.ExecuteNonQuery(d);

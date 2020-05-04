@@ -19,12 +19,12 @@ namespace ClothingStoreData.Delegate
         public readonly int producttypeid;
         public readonly int quantity;
         public readonly string description;
-        public readonly float price;
+        public readonly string price;
         public readonly string rating;
 
         public UpdateProductDataDelegate(int productid, string sku, string productname, int producttypeid, int quantity,
-           string description, float price, string rating)
-           : base("Sales.UpdateEmployeeRole")
+           string description, string price, string rating)
+           : base("Product.UpdateProduct")
         {
             this.productid = productid;
             this.sku = sku;
