@@ -35,13 +35,15 @@
             this.retrieveProductTypeCount = new System.Windows.Forms.Button();
             this.ProductsRatingButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // CreateProductButton
             // 
-            this.CreateProductButton.Location = new System.Drawing.Point(172, 17);
+            this.CreateProductButton.Location = new System.Drawing.Point(172, 165);
             this.CreateProductButton.Name = "CreateProductButton";
             this.CreateProductButton.Size = new System.Drawing.Size(154, 36);
             this.CreateProductButton.TabIndex = 1;
@@ -51,7 +53,7 @@
             // 
             // FetchProductQuantity
             // 
-            this.FetchProductQuantity.Location = new System.Drawing.Point(583, 12);
+            this.FetchProductQuantity.Location = new System.Drawing.Point(36, 64);
             this.FetchProductQuantity.Name = "FetchProductQuantity";
             this.FetchProductQuantity.Size = new System.Drawing.Size(212, 42);
             this.FetchProductQuantity.TabIndex = 16;
@@ -61,7 +63,7 @@
             // 
             // retrieveProducts
             // 
-            this.retrieveProducts.Location = new System.Drawing.Point(12, 17);
+            this.retrieveProducts.Location = new System.Drawing.Point(12, 165);
             this.retrieveProducts.Name = "retrieveProducts";
             this.retrieveProducts.Size = new System.Drawing.Size(154, 36);
             this.retrieveProducts.TabIndex = 18;
@@ -75,14 +77,14 @@
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 77);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 225);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(1317, 320);
             this.dataGridView1.TabIndex = 19;
             // 
             // retrieveProductTypeCount
             // 
-            this.retrieveProductTypeCount.Location = new System.Drawing.Point(365, 12);
+            this.retrieveProductTypeCount.Location = new System.Drawing.Point(651, 64);
             this.retrieveProductTypeCount.Name = "retrieveProductTypeCount";
             this.retrieveProductTypeCount.Size = new System.Drawing.Size(212, 43);
             this.retrieveProductTypeCount.TabIndex = 20;
@@ -92,7 +94,7 @@
             // 
             // ProductsRatingButton
             // 
-            this.ProductsRatingButton.Location = new System.Drawing.Point(147, 12);
+            this.ProductsRatingButton.Location = new System.Drawing.Point(433, 64);
             this.ProductsRatingButton.Name = "ProductsRatingButton";
             this.ProductsRatingButton.Size = new System.Drawing.Size(212, 42);
             this.ProductsRatingButton.TabIndex = 21;
@@ -102,28 +104,51 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.ProductsRatingButton);
             this.panel1.Controls.Add(this.CreateProductButton);
+            this.panel1.Controls.Add(this.retrieveProductTypeCount);
             this.panel1.Controls.Add(this.retrieveProducts);
+            this.panel1.Controls.Add(this.FetchProductQuantity);
             this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Location = new System.Drawing.Point(0, 61);
+            this.panel1.Location = new System.Drawing.Point(0, -2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1342, 422);
+            this.panel1.Size = new System.Drawing.Size(1342, 601);
             this.panel1.TabIndex = 22;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(12, 11);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(126, 19);
+            this.label2.TabIndex = 22;
+            this.label2.Text = "Search Database:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(429, 11);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(119, 19);
+            this.label3.TabIndex = 23;
+            this.label3.Text = "Report Form(s):";
             // 
             // ProductsData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1341, 471);
-            this.Controls.Add(this.ProductsRatingButton);
-            this.Controls.Add(this.retrieveProductTypeCount);
-            this.Controls.Add(this.FetchProductQuantity);
+            this.ClientSize = new System.Drawing.Size(1341, 593);
             this.Controls.Add(this.panel1);
             this.Name = "ProductsData";
             this.Text = "Products Data Information";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -136,5 +161,7 @@
         public System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button ProductsRatingButton;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }

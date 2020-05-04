@@ -116,7 +116,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(18, 244);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1019, 320);
+            this.dataGridView1.Size = new System.Drawing.Size(1050, 320);
             this.dataGridView1.TabIndex = 8;
             // 
             // memberPoints
@@ -157,7 +157,7 @@
             this.panel1.Controls.Add(this.FetchMemberStatusButton);
             this.panel1.Location = new System.Drawing.Point(-2, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1049, 614);
+            this.panel1.Size = new System.Drawing.Size(1091, 614);
             this.panel1.TabIndex = 11;
             // 
             // UpdateMemberButton
@@ -194,7 +194,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1043, 615);
+            this.ClientSize = new System.Drawing.Size(1088, 615);
             this.Controls.Add(this.panel1);
             this.Name = "MembersData";
             this.Text = "Members Data Information";

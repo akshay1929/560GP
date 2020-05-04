@@ -42,9 +42,6 @@ namespace Team_4___Clothing_Store
 
             for (int i = 0; i < dataGridView1.Columns.Count; i++)
             {
-                DataGridViewColumn columnOne = dataGridView1.Columns[0];
-                columnOne.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-
                 DataGridViewColumn columnFour = dataGridView1.Columns[6];
                 columnFour.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
 

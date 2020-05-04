@@ -44,18 +44,6 @@ namespace Team_4___Clothing_Store
             SqlProductRepository products = new SqlProductRepository(connectionString);
             IReadOnlyList<Product> productList = products.RetrieveProducts();
             dataGridView1.DataSource = productList;
-
-            for (int i = 0; i < dataGridView1.Columns.Count; i++)
-            {
-                DataGridViewColumn columnOne = dataGridView1.Columns[0];
-                columnOne.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-
-                DataGridViewColumn columnFour = dataGridView1.Columns[6];
-                columnFour.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-
-                DataGridViewColumn columnFive = dataGridView1.Columns[7];
-                columnFive.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            }
         }
 
         private void retrieveProductTypeCount_Click(object sender, EventArgs e)
@@ -103,11 +91,8 @@ namespace Team_4___Clothing_Store
 
             for (int i = 0; i < dataGridView1.Columns.Count; i++)
             {
-                DataGridViewColumn columnOne = dataGridView1.Columns[0];
+                DataGridViewColumn columnOne = dataGridView1.Columns[1];
                 columnOne.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-
-                DataGridViewColumn columnTwo = dataGridView1.Columns[1];
-                columnTwo.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             }
         }
     }
