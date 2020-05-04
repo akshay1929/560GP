@@ -35,9 +35,9 @@
             this.retrieveProductTypeCount = new System.Windows.Forms.Button();
             this.ProductsRatingButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.UpdateProductButton = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.UpdateProductButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -80,7 +80,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 225);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1317, 320);
+            this.dataGridView1.Size = new System.Drawing.Size(1335, 320);
             this.dataGridView1.TabIndex = 19;
             // 
             // retrieveProductTypeCount
@@ -117,8 +117,18 @@
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Location = new System.Drawing.Point(0, -2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1342, 601);
+            this.panel1.Size = new System.Drawing.Size(1363, 601);
             this.panel1.TabIndex = 22;
+            // 
+            // UpdateProductButton
+            // 
+            this.UpdateProductButton.Location = new System.Drawing.Point(332, 165);
+            this.UpdateProductButton.Name = "UpdateProductButton";
+            this.UpdateProductButton.Size = new System.Drawing.Size(154, 36);
+            this.UpdateProductButton.TabIndex = 24;
+            this.UpdateProductButton.Text = "Update Product";
+            this.UpdateProductButton.UseVisualStyleBackColor = true;
+            this.UpdateProductButton.Click += new System.EventHandler(this.UpdateProductButton_Click);
             // 
             // label3
             // 
@@ -140,21 +150,11 @@
             this.label2.TabIndex = 22;
             this.label2.Text = "Search Database:";
             // 
-            // UpdateProductButton
-            // 
-            this.UpdateProductButton.Location = new System.Drawing.Point(332, 165);
-            this.UpdateProductButton.Name = "UpdateProductButton";
-            this.UpdateProductButton.Size = new System.Drawing.Size(154, 36);
-            this.UpdateProductButton.TabIndex = 24;
-            this.UpdateProductButton.Text = "Update Product";
-            this.UpdateProductButton.UseVisualStyleBackColor = true;
-            this.UpdateProductButton.Click += new System.EventHandler(this.UpdateProductButton_Click);
-            // 
             // ProductsData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1341, 593);
+            this.ClientSize = new System.Drawing.Size(1359, 593);
             this.Controls.Add(this.panel1);
             this.Name = "ProductsData";
             this.Text = "Products Data Information";

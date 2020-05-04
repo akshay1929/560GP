@@ -17,22 +17,12 @@ namespace ClothingStoreData
             executor = new SqlCommandExecutor(connectionString);
         }
 
-        public Orders GetOrder(int id)
-        {
-            var d = new GetOrderDataDelegate(id);
-            return executor.ExecuteReader(d);
-        }
-
-        public Orders GetOrderId(string shipmentAddress)
-        {
-            var d = new GetOrderIdDataDelegate(shipmentAddress);
-            return executor.ExecuteReader(d);
-        }
-        public OrderCount RetrieveOrderCountDateDataDelegate(DateTimeOffset start, DateTimeOffset end)
+        public OrderCount RetrieveOrderCount(DateTimeOffset start, DateTimeOffset end)
         {
             var d = new RetrieveOrderCountDateDataDelegate(start, end);
             return executor.ExecuteReader(d);
         }
+
         public IReadOnlyList<Orders> RetrieveOrders()
         {
             return executor.ExecuteReader(new RetrieveOrdersDataDelegate());

@@ -65,7 +65,6 @@
     <Compile Include="Delegate\RetrieveOrdersDataDelegate.cs" />
     <Compile Include="Delegate\RetrieveEmployeesDataDelegate.cs" />
     <Compile Include="Delegate\RetrieveProductTypeCountDataDelegate.cs" />
-    <Compile Include="Delegate\GetOrderIdDataDelegate.cs" />
     <Compile Include="Delegate\RetrieveHighestRatingsDataDelegate.cs" />
     <Compile Include="Delegate\FetchEmployeeSalaryDataDelegate.cs" />
     <Compile Include="Delegate\GetMemberIdDataDelegate.cs" />
@@ -143,7 +142,6 @@
     <Content Include="Sql\Procedures\Sales.CreateEmployee.sql" />
     <Content Include="Sql\Procedures\Product.RetrieveProducts.sql" />
     <Content Include="Sql\Procedures\Users.RetrieveMemberPoints.sql" />
-    <Content Include="Sql\Procedures\Warehouse.FetchShipmentDate.sql" />
     <Content Include="Sql\Procedures\Warehouse.RetrieveShipments.sql" />
     <Content Include="Sql\Procedures\Users.RetrieveMembers.sql" />
     <Content Include="Sql\Procedures\Sales.RetrieveOrders.sql" />
@@ -155,7 +153,7 @@
     <Content Include="Sql\Procedures\Product.FetchProductQuantity.sql" />
     <Content Include="Sql\Procedures\Product.RetrieveProductTypeCount.sql" />
     <Content Include="Sql\Procedures\Sales.RetrieveEmployeeCount.sql" />
-    <Content Include="Sql\Procedures\Warehouse.GetOrderId.sql" />
+    <Content Include="Sql\Procedures\Warehouse.GetShipmentAddress.sql" />
     <Content Include="Sql\Procedures\Users.FetchMemberStatus.sql" />
     <Content Include="Sql\Procedures\Product.GetOrderIdName.sql" />
     <Content Include="Sql\Procedures\Product.GetProductIdName.sql" />

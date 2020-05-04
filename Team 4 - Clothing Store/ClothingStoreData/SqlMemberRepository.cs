@@ -81,6 +81,7 @@ namespace ClothingStoreData
         {
             return executor.ExecuteReader(new RetrieveMembersDataDelegate());
         }
+
         public IReadOnlyList<Member> RetrieveMemberPoints()
         {
             return executor.ExecuteReader(new RetrieveMemberPointsDataDelegate());

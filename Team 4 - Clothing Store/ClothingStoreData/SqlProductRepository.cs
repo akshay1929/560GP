@@ -38,7 +38,6 @@ namespace ClothingStoreData
             return executor.ExecuteReader(new RetrieveHighestRatingsDataDelegate());
         }
 
-
         public Product CreateProduct(string sku, string productname,
            int producttypeId, int quantity, string description, string price, string rating)
         {

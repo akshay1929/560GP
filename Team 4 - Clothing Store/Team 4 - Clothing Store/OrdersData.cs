@@ -19,6 +19,7 @@ namespace Team_4___Clothing_Store
     public partial class OrdersData : Form
     {
         const string connectionString = "Data Source=mssql.cs.ksu.edu;Initial Catalog = arahman; User ID = arahman; Password=Cicko1999";
+
         public OrdersData()
         {
             InitializeComponent();
@@ -47,7 +48,7 @@ namespace Team_4___Clothing_Store
         {
             SqlOrderRepository orders = new SqlOrderRepository(connectionString);
 
-            OrderCount oo = orders.RetrieveOrderCountDateDataDelegate(startDatePicker.Value, endDatePicker.Value);
+            OrderCount oo = orders.RetrieveOrderCount(startDatePicker.Value, endDatePicker.Value);
             List<OrderCount> list = new List<OrderCount>();
             list.Add(oo);
             dataGridView1.DataSource = list;
@@ -109,7 +110,7 @@ namespace Team_4___Clothing_Store
                 {
                     updateForm.Close();
                 }
-            }catch(NullReferenceException ex)
+            }catch(Exception ex)
             {
                 MessageBox.Show("Select a Order.");
             }

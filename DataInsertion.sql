@@ -20,8 +20,6 @@ SELECT *
 FROM Sales.Employees
 
 
-
-
 INSERT Users.Member(Email, FirstName, LastName, Phone, BillingAddress, Points, JoinedOn, BirthDate, [Status])
 VALUES 
     (N'art@venere.org', N'Art', N'Venere', N'856-636-8749', N'8 W Cerritos Ave #54', N'30', N'2017-11-22', N'1999-10-06', N'Active'),
@@ -62,10 +60,9 @@ VALUES
     (N'2018-10-27 11:00:00.0000000 -05:00', N'1 N San Saba'),
     (N'2019-11-09 11:00:00.0000000 -05:00', N'82 Winsor St #54');
 
-
-
 SELECT *
 FROM Warehouse.Shipment
+
 
 INSERT Sales.Orders(MemberID, EmployeeID, ShipmentID, OrderDate, ShipmentAddress)
 VALUES 
@@ -85,11 +82,8 @@ VALUES
     (14, 14, 14, N'2019-09-15', N'Ap #276-1618 Orci. St.'), 
     (15, 15, 15, N'2019-12-18', N'Ap #241-3034 Cursus Av.'); 
 
-
-
 SELECT *
 FROM Sales.Orders
-
 
 
 INSERT Product.ProductType([Name])
@@ -107,9 +101,9 @@ VALUES
 	(N'Mini Skirts'),
 	(N'Midi Skirts');
 
-
 SELECT *
 FROM Product.ProductType
+
 
 INSERT Product(SKU, ProductName, Quantity, [Description], Price, Rating, ProductTypeID)
 VALUES 
@@ -129,9 +123,9 @@ VALUES
     (N'UL23ZOXC', N'Teddy Coat', 500, N'Oversized faux fur coat. Collared neckline. Front zip fastening. Twin front pockets. Elasticated cuffs and band. 100% Polyester', 67.55, 4.4, 9),
     (N'EV77KGZB', N'Polly Puffer Jacket', 500, N'Puffer jacket. Front zip fastening. Twin pockets at front. High neckline. Corduroy design. 100% cotton', 75.08, 4.6, 10); 
 
-
 SELECT *
 FROM Product
+
 
 INSERT Sales.OrderLines(OrderID, ProductID, Quantity, UnitPrice)
 VALUES    

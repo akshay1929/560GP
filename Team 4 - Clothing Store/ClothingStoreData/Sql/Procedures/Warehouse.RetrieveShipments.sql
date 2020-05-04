@@ -2,5 +2,5 @@ CREATE OR ALTER PROCEDURE Warehouse.RetrieveShipments
 AS
 
 SELECT *
-FROM Warehouse.Shipments S;
+FROM Warehouse.Shipment S;
 GO

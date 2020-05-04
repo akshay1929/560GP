@@ -7,7 +7,9 @@ namespace ClothingStoreData
     public interface IMemberRepository
     {
         IReadOnlyList<Member> RetrieveMember();
+
         IReadOnlyList<Member> RetrieveMemberPoints();
+
         MemberStatus FetchMemberStatus(int MemberID);
 
         void UpdateMember(int memberid, string email, string firstname, string lastname, string phone, string billingaddress, int points, DateTimeOffset joinedon, DateTimeOffset birthdate, string status);

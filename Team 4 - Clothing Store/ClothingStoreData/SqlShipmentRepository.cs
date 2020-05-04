@@ -37,9 +37,6 @@ namespace ClothingStoreData
             return executor.ExecuteNonQuery(d);
         }
 
-        static void Main()
-        {
-
-        }
+        static void Main() {    }
     }
 }

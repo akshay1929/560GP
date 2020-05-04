@@ -12,11 +12,6 @@ BEGIN
       (
          EmployeeID ASC
       )
-		
-		UNIQUE
-	    (
-	        Email
-	    )
 	);
 END;
 

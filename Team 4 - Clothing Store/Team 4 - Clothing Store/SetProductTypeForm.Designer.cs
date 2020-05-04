@@ -167,9 +167,9 @@
             // 
             // TypeIDTextbox
             // 
-            this.TypeIDTextbox.Location = new System.Drawing.Point(86, 355);
+            this.TypeIDTextbox.Location = new System.Drawing.Point(135, 355);
             this.TypeIDTextbox.Name = "TypeIDTextbox";
-            this.TypeIDTextbox.Size = new System.Drawing.Size(237, 20);
+            this.TypeIDTextbox.Size = new System.Drawing.Size(188, 20);
             this.TypeIDTextbox.TabIndex = 13;
             // 
             // label14
@@ -177,9 +177,9 @@
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(12, 358);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(48, 13);
+            this.label14.Size = new System.Drawing.Size(99, 13);
             this.label14.TabIndex = 14;
-            this.label14.Text = "Type ID:";
+            this.label14.Text = "Type ID Parameter:";
             // 
             // GetProductQuantityButton
             // 
