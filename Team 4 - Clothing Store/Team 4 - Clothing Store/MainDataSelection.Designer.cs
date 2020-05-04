@@ -46,9 +46,9 @@
             // 
             this.EmployeesButton.Location = new System.Drawing.Point(246, 131);
             this.EmployeesButton.Name = "EmployeesButton";
-            this.EmployeesButton.Size = new System.Drawing.Size(204, 49);
+            this.EmployeesButton.Size = new System.Drawing.Size(224, 49);
             this.EmployeesButton.TabIndex = 0;
-            this.EmployeesButton.Text = "Employees";
+            this.EmployeesButton.Text = "Employees Information";
             this.EmployeesButton.UseVisualStyleBackColor = true;
             this.EmployeesButton.Click += new System.EventHandler(this.EmployeesButton_Click);
             // 
@@ -56,9 +56,9 @@
             // 
             this.MembersButton.Location = new System.Drawing.Point(246, 204);
             this.MembersButton.Name = "MembersButton";
-            this.MembersButton.Size = new System.Drawing.Size(204, 49);
+            this.MembersButton.Size = new System.Drawing.Size(224, 49);
             this.MembersButton.TabIndex = 1;
-            this.MembersButton.Text = "Members";
+            this.MembersButton.Text = "Members Information";
             this.MembersButton.UseVisualStyleBackColor = true;
             this.MembersButton.Click += new System.EventHandler(this.MembersButton_Click);
             // 
@@ -66,9 +66,9 @@
             // 
             this.OrdersButton.Location = new System.Drawing.Point(246, 276);
             this.OrdersButton.Name = "OrdersButton";
-            this.OrdersButton.Size = new System.Drawing.Size(204, 49);
+            this.OrdersButton.Size = new System.Drawing.Size(224, 49);
             this.OrdersButton.TabIndex = 2;
-            this.OrdersButton.Text = "Orders";
+            this.OrdersButton.Text = "Orders Information";
             this.OrdersButton.UseVisualStyleBackColor = true;
             this.OrdersButton.Click += new System.EventHandler(this.OrdersButton_Click);
             // 
@@ -76,9 +76,9 @@
             // 
             this.ProductsButton.Location = new System.Drawing.Point(246, 349);
             this.ProductsButton.Name = "ProductsButton";
-            this.ProductsButton.Size = new System.Drawing.Size(204, 49);
+            this.ProductsButton.Size = new System.Drawing.Size(224, 49);
             this.ProductsButton.TabIndex = 3;
-            this.ProductsButton.Text = "Products";
+            this.ProductsButton.Text = "Products Information";
             this.ProductsButton.UseVisualStyleBackColor = true;
             this.ProductsButton.Click += new System.EventHandler(this.ProductsButton_Click);
             // 
@@ -86,9 +86,9 @@
             // 
             this.ShipmentsButton.Location = new System.Drawing.Point(246, 422);
             this.ShipmentsButton.Name = "ShipmentsButton";
-            this.ShipmentsButton.Size = new System.Drawing.Size(204, 49);
+            this.ShipmentsButton.Size = new System.Drawing.Size(224, 49);
             this.ShipmentsButton.TabIndex = 4;
-            this.ShipmentsButton.Text = "Shipments";
+            this.ShipmentsButton.Text = "Shipments Information";
             this.ShipmentsButton.UseVisualStyleBackColor = true;
             this.ShipmentsButton.Click += new System.EventHandler(this.ShipmentsButton_Click);
             // 
@@ -104,17 +104,17 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Candara", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(236, 22);
+            this.label1.Font = new System.Drawing.Font("Candara", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(236, 32);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(445, 59);
+            this.label1.Size = new System.Drawing.Size(474, 42);
             this.label1.TabIndex = 6;
-            this.label1.Text = "IT Clothing Boutique";
+            this.label1.Text = "IT Clothing Boutique Database";
             // 
             // CurrentTimeLabel
             // 
             this.CurrentTimeLabel.AutoSize = true;
-            this.CurrentTimeLabel.Location = new System.Drawing.Point(246, 97);
+            this.CurrentTimeLabel.Location = new System.Drawing.Point(246, 90);
             this.CurrentTimeLabel.Name = "CurrentTimeLabel";
             this.CurrentTimeLabel.Size = new System.Drawing.Size(0, 13);
             this.CurrentTimeLabel.TabIndex = 7;
@@ -124,7 +124,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 1);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(195, 180);
+            this.pictureBox1.Size = new System.Drawing.Size(198, 180);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -144,7 +144,7 @@
             this.Controls.Add(this.MembersButton);
             this.Controls.Add(this.EmployeesButton);
             this.Name = "MainDataSelection";
-            this.Text = "Data Selection";
+            this.Text = "Database Data Selection";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

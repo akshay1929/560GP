@@ -12,12 +12,10 @@ namespace Team_4___Clothing_Store
 {
     public partial class MainDataSelection : Form
     {
-        public DateTime DateTimeUpdated { get; set; }
         public MainDataSelection()
         {
             InitializeComponent();
-            DateTimeUpdated = DateTime.Now;
-            CurrentTimeLabel.Text = DateTimeUpdated.ToLongDateString() + ", " + DateTimeUpdated.ToShortTimeString();
+            CurrentTimeLabel.Text = DateTime.Now.ToLongDateString();
         }
 
         private void ShipmentsButton_Click(object sender, EventArgs e)
