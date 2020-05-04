@@ -42,6 +42,30 @@ namespace ClothingStoreData
             return executor.ExecuteNonQuery(d);
         }
 
+        public void UpdateMember(int memberid, string email, string firstname, string lastname, string phone, string billingaddress, int points, DateTimeOffset joinedon, DateTimeOffset birthdate, string status)
+        {
+            if (email == null)
+                throw new ArgumentNullException(nameof(email));
+
+            if (firstname == null)
+                throw new ArgumentNullException(nameof(firstname));
+
+            if (lastname == null)
+                throw new ArgumentNullException(nameof(lastname));
+
+            if (phone == null)
+                throw new ArgumentNullException(nameof(phone));
+
+            if (billingaddress == null)
+                throw new ArgumentNullException(nameof(billingaddress));
+
+            if (status == null)
+                throw new ArgumentNullException(nameof(status));
+
+            var d = new UpdateMemberDataDelegate(memberid, email, firstname, lastname, phone, billingaddress, points, joinedon, birthdate, status);
+            executor.ExecuteNonQuery(d);
+        }
+
         public MemberStatus FetchMemberStatus(int memberid)
         {
             var d = new FetchMemberStatusDataDelegate(memberid);

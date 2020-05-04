@@ -14,5 +14,7 @@ namespace ClothingStoreData
         Orders GetOrderId(string shipmentAddress);
 
         OrderCount RetrieveOrderCountDateDataDelegate(DateTimeOffset start, DateTimeOffset end);
+
+        void UpdateOrder(int orderid, int memberid, int employeeid, int shipmentid, DateTimeOffset orderdate, string shipmentaddress);
     }
 }

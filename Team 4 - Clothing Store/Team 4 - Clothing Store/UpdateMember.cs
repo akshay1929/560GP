@@ -14,23 +14,23 @@ using DataAccess;
 
 namespace Team_4___Clothing_Store
 {
-    public partial class UpdateEmployeeRoleForm : Form
+    public partial class UpdateMember : Form
     {
         const string connectionString = "Data Source=mssql.cs.ksu.edu;Initial Catalog = arahman; User ID = arahman; Password=Potc2003";
 
-        public UpdateEmployeeRoleForm()
+        public UpdateMember()
         {
             InitializeComponent();
         }
 
-        private void UpdateEmployeeRoleButton_Click(object sender, EventArgs e)
+        private void UpdateMemberButton_Click(object sender, EventArgs e)
         {
             try
             {
-                EmployeesData ed = new EmployeesData();
+                MembersData ed = new MembersData();
 
-                SqlEmployeesRepository employees = new SqlEmployeesRepository(connectionString);
-                employees.UpdateEmployeeRole(Convert.ToInt32(EmployeeIdText.Text), EmailTextbox.Text, NameTextbox.Text, EmployeeRoleText.Text, Convert.ToInt32(SalaryTextbox.Text));
+                SqlMemberRepository members = new SqlMemberRepository(connectionString);
+                members.UpdateMember(Convert.ToInt32(MemberIdTextbox.Text), EmailTextBox.Text, FirstNameTextBox.Text, LastNameTextBox.Text, PhoneTextBox.Text, BillingAddressTextBox.Text, Convert.ToInt32(PointsTextBox.Text), Convert.ToDateTime(JoinedOnTextBox.Text), Convert.ToDateTime(BirthDateTextBox.Text), StatusTextBox.Text);
 
             }
             catch (Exception ex)

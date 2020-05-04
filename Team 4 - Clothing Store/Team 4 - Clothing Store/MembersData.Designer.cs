@@ -39,6 +39,7 @@
             this.memberPoints = new System.Windows.Forms.Button();
             this.CreateMemberButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.UpdateMemberButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -97,7 +98,7 @@
             // 
             // retrieveMembers
             // 
-            this.retrieveMembers.Location = new System.Drawing.Point(23, 15);
+            this.retrieveMembers.Location = new System.Drawing.Point(14, 15);
             this.retrieveMembers.Name = "retrieveMembers";
             this.retrieveMembers.Size = new System.Drawing.Size(154, 36);
             this.retrieveMembers.TabIndex = 7;
@@ -111,9 +112,9 @@
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(23, 66);
+            this.dataGridView1.Location = new System.Drawing.Point(14, 66);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(908, 320);
+            this.dataGridView1.Size = new System.Drawing.Size(1019, 320);
             this.dataGridView1.TabIndex = 8;
             // 
             // memberPoints
@@ -128,7 +129,7 @@
             // 
             // CreateMemberButton
             // 
-            this.CreateMemberButton.Location = new System.Drawing.Point(183, 15);
+            this.CreateMemberButton.Location = new System.Drawing.Point(174, 15);
             this.CreateMemberButton.Name = "CreateMemberButton";
             this.CreateMemberButton.Size = new System.Drawing.Size(154, 36);
             this.CreateMemberButton.TabIndex = 10;
@@ -139,19 +140,30 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.Controls.Add(this.UpdateMemberButton);
             this.panel1.Controls.Add(this.CreateMemberButton);
             this.panel1.Controls.Add(this.retrieveMembers);
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Location = new System.Drawing.Point(-2, 122);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(952, 403);
+            this.panel1.Size = new System.Drawing.Size(1049, 403);
             this.panel1.TabIndex = 11;
+            // 
+            // UpdateMemberButton
+            // 
+            this.UpdateMemberButton.Location = new System.Drawing.Point(334, 15);
+            this.UpdateMemberButton.Name = "UpdateMemberButton";
+            this.UpdateMemberButton.Size = new System.Drawing.Size(154, 36);
+            this.UpdateMemberButton.TabIndex = 11;
+            this.UpdateMemberButton.Text = "Update Member";
+            this.UpdateMemberButton.UseVisualStyleBackColor = true;
+            this.UpdateMemberButton.Click += new System.EventHandler(this.UpdateMemberButton_Click);
             // 
             // MembersData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(948, 520);
+            this.ClientSize = new System.Drawing.Size(1043, 520);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.memberPoints);
             this.Controls.Add(this.EmailTextbox);
@@ -181,5 +193,6 @@
         private System.Windows.Forms.Button CreateMemberButton;
         public System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button UpdateMemberButton;
     }
 }

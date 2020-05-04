@@ -114,6 +114,18 @@
     <Compile Include="UpdateEmployeeRoleForm.Designer.cs">
       <DependentUpon>UpdateEmployeeRoleForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="UpdateMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateMember.Designer.cs">
+      <DependentUpon>UpdateMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateOrder.Designer.cs">
+      <DependentUpon>UpdateOrder.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="CreateEmployeeForm.resx">
       <DependentUpon>CreateEmployeeForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -155,6 +167,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UpdateEmployeeRoleForm.resx">
       <DependentUpon>UpdateEmployeeRoleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateMember.resx">
+      <DependentUpon>UpdateMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateOrder.resx">
+      <DependentUpon>UpdateOrder.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -29,6 +29,18 @@ namespace Team_4___Clothing_Store
             SqlOrderRepository orders = new SqlOrderRepository(connectionString);
             IReadOnlyList<Orders> orderList = orders.RetrieveOrders();
             dataGridView1.DataSource = orderList;
+
+            for (int i = 0; i < dataGridView1.Columns.Count; i++)
+            {
+                DataGridViewColumn columnOne = dataGridView1.Columns[0];
+                columnOne.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+
+                DataGridViewColumn columnTwo = dataGridView1.Columns[1];
+                columnTwo.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+
+                DataGridViewColumn columnThree = dataGridView1.Columns[2];
+                columnThree.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            }
         }
 
         private void orderCount_Click(object sender, EventArgs e)

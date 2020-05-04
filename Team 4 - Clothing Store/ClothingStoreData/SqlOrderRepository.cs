@@ -37,5 +37,14 @@ namespace ClothingStoreData
         {
             return executor.ExecuteReader(new RetrieveOrdersDataDelegate());
         }
+
+        public void UpdateOrder(int orderid, int memberid, int employeeid, int shipmentid, DateTimeOffset orderdate, string shipmentaddress)
+        {
+            if (shipmentaddress == null)
+                throw new ArgumentNullException(nameof(shipmentaddress));
+
+            var d = new UpdateOrderDataDelegate(orderid, memberid, employeeid, shipmentid, orderdate, shipmentaddress);
+            executor.ExecuteNonQuery(d);
+        }
     }
 }
