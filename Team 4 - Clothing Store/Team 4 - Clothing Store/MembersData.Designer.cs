@@ -110,7 +110,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 15);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(688, 420);
+            this.dataGridView1.Size = new System.Drawing.Size(679, 420);
             this.dataGridView1.TabIndex = 8;
             // 
             // memberPoints
@@ -129,7 +129,7 @@
             this.CreateMemberButton.Name = "CreateMemberButton";
             this.CreateMemberButton.Size = new System.Drawing.Size(212, 47);
             this.CreateMemberButton.TabIndex = 10;
-            this.CreateMemberButton.Text = "Create Member";
+            this.CreateMemberButton.Text = "Add A Member";
             this.CreateMemberButton.UseVisualStyleBackColor = true;
             this.CreateMemberButton.Click += new System.EventHandler(this.CreateMemberButton_Click);
             // 

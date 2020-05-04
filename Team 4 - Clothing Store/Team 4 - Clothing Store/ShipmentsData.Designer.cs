@@ -38,7 +38,7 @@
             // 
             // retrieveShipment
             // 
-            this.retrieveShipment.Location = new System.Drawing.Point(408, 15);
+            this.retrieveShipment.Location = new System.Drawing.Point(454, 15);
             this.retrieveShipment.Name = "retrieveShipment";
             this.retrieveShipment.Size = new System.Drawing.Size(194, 49);
             this.retrieveShipment.TabIndex = 1;
@@ -53,13 +53,13 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 15);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(371, 420);
+            this.dataGridView1.Size = new System.Drawing.Size(404, 420);
             this.dataGridView1.TabIndex = 2;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(405, 98);
+            this.label1.Location = new System.Drawing.Point(451, 98);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(50, 13);
             this.label1.TabIndex = 3;
@@ -67,14 +67,14 @@
             // 
             // OrderIdTextbox
             // 
-            this.OrderIdTextbox.Location = new System.Drawing.Point(475, 95);
+            this.OrderIdTextbox.Location = new System.Drawing.Point(521, 95);
             this.OrderIdTextbox.Name = "OrderIdTextbox";
             this.OrderIdTextbox.Size = new System.Drawing.Size(127, 20);
             this.OrderIdTextbox.TabIndex = 4;
             // 
             // RecieveShipmentDate
             // 
-            this.RecieveShipmentDate.Location = new System.Drawing.Point(408, 126);
+            this.RecieveShipmentDate.Location = new System.Drawing.Point(454, 126);
             this.RecieveShipmentDate.Name = "RecieveShipmentDate";
             this.RecieveShipmentDate.Size = new System.Drawing.Size(194, 50);
             this.RecieveShipmentDate.TabIndex = 5;
@@ -86,7 +86,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(614, 450);
+            this.ClientSize = new System.Drawing.Size(660, 450);
             this.Controls.Add(this.RecieveShipmentDate);
             this.Controls.Add(this.OrderIdTextbox);
             this.Controls.Add(this.label1);

@@ -43,7 +43,7 @@
             this.CreateProductButton.Name = "CreateProductButton";
             this.CreateProductButton.Size = new System.Drawing.Size(212, 42);
             this.CreateProductButton.TabIndex = 1;
-            this.CreateProductButton.Text = "Create Product";
+            this.CreateProductButton.Text = "Add A Product";
             this.CreateProductButton.UseVisualStyleBackColor = true;
             this.CreateProductButton.Click += new System.EventHandler(this.CreateProductButton_Click);
             // 

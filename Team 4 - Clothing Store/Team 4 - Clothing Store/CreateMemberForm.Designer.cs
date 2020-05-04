@@ -218,7 +218,7 @@
             this.CreateMemberButton.Name = "CreateMemberButton";
             this.CreateMemberButton.Size = new System.Drawing.Size(268, 65);
             this.CreateMemberButton.TabIndex = 20;
-            this.CreateMemberButton.Text = "Add New Member";
+            this.CreateMemberButton.Text = "Create Member";
             this.CreateMemberButton.UseVisualStyleBackColor = true;
             this.CreateMemberButton.Click += new System.EventHandler(this.CreateMemberButton_Click);
             // 

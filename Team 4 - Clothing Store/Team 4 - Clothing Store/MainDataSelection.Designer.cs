@@ -33,13 +33,15 @@
             this.OrdersButton = new System.Windows.Forms.Button();
             this.ProductsButton = new System.Windows.Forms.Button();
             this.ShipmentsButton = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // EmployeesButton
             // 
-            this.EmployeesButton.Location = new System.Drawing.Point(11, 61);
+            this.EmployeesButton.Location = new System.Drawing.Point(28, 118);
             this.EmployeesButton.Name = "EmployeesButton";
-            this.EmployeesButton.Size = new System.Drawing.Size(275, 190);
+            this.EmployeesButton.Size = new System.Drawing.Size(193, 49);
             this.EmployeesButton.TabIndex = 0;
             this.EmployeesButton.Text = "Employees";
             this.EmployeesButton.UseVisualStyleBackColor = true;
@@ -47,9 +49,9 @@
             // 
             // MembersButton
             // 
-            this.MembersButton.Location = new System.Drawing.Point(352, 61);
+            this.MembersButton.Location = new System.Drawing.Point(28, 191);
             this.MembersButton.Name = "MembersButton";
-            this.MembersButton.Size = new System.Drawing.Size(275, 190);
+            this.MembersButton.Size = new System.Drawing.Size(193, 49);
             this.MembersButton.TabIndex = 1;
             this.MembersButton.Text = "Members";
             this.MembersButton.UseVisualStyleBackColor = true;
@@ -57,9 +59,9 @@
             // 
             // OrdersButton
             // 
-            this.OrdersButton.Location = new System.Drawing.Point(694, 61);
+            this.OrdersButton.Location = new System.Drawing.Point(28, 263);
             this.OrdersButton.Name = "OrdersButton";
-            this.OrdersButton.Size = new System.Drawing.Size(275, 190);
+            this.OrdersButton.Size = new System.Drawing.Size(193, 49);
             this.OrdersButton.TabIndex = 2;
             this.OrdersButton.Text = "Orders";
             this.OrdersButton.UseVisualStyleBackColor = true;
@@ -67,9 +69,9 @@
             // 
             // ProductsButton
             // 
-            this.ProductsButton.Location = new System.Drawing.Point(180, 272);
+            this.ProductsButton.Location = new System.Drawing.Point(28, 336);
             this.ProductsButton.Name = "ProductsButton";
-            this.ProductsButton.Size = new System.Drawing.Size(275, 190);
+            this.ProductsButton.Size = new System.Drawing.Size(193, 49);
             this.ProductsButton.TabIndex = 3;
             this.ProductsButton.Text = "Products";
             this.ProductsButton.UseVisualStyleBackColor = true;
@@ -77,26 +79,35 @@
             // 
             // ShipmentsButton
             // 
-            this.ShipmentsButton.Location = new System.Drawing.Point(523, 272);
+            this.ShipmentsButton.Location = new System.Drawing.Point(28, 409);
             this.ShipmentsButton.Name = "ShipmentsButton";
-            this.ShipmentsButton.Size = new System.Drawing.Size(275, 190);
+            this.ShipmentsButton.Size = new System.Drawing.Size(193, 49);
             this.ShipmentsButton.TabIndex = 4;
             this.ShipmentsButton.Text = "Shipments";
             this.ShipmentsButton.UseVisualStyleBackColor = true;
             this.ShipmentsButton.Click += new System.EventHandler(this.ShipmentsButton_Click);
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.ShipmentsButton);
+            this.panel1.Controls.Add(this.ProductsButton);
+            this.panel1.Controls.Add(this.OrdersButton);
+            this.panel1.Controls.Add(this.MembersButton);
+            this.panel1.Controls.Add(this.EmployeesButton);
+            this.panel1.Location = new System.Drawing.Point(-1, -1);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(254, 484);
+            this.panel1.TabIndex = 5;
+            // 
             // MainDataSelection
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(982, 528);
-            this.Controls.Add(this.ShipmentsButton);
-            this.Controls.Add(this.ProductsButton);
-            this.Controls.Add(this.OrdersButton);
-            this.Controls.Add(this.MembersButton);
-            this.Controls.Add(this.EmployeesButton);
+            this.ClientSize = new System.Drawing.Size(857, 473);
+            this.Controls.Add(this.panel1);
             this.Name = "MainDataSelection";
             this.Text = "Data Selection";
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -108,6 +119,7 @@
         private System.Windows.Forms.Button OrdersButton;
         private System.Windows.Forms.Button ProductsButton;
         private System.Windows.Forms.Button ShipmentsButton;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 
